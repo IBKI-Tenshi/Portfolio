@@ -1,12 +1,14 @@
 
 
 #header {
-    margin: 10px;
     background-color: rgba(255, 255, 255, 0.223);
     height: 80px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 24px;
+
+    // width: 100vw; // body hat overflow-x: hidden; damit keine scrollbar entsteht
 }
 
 a {
