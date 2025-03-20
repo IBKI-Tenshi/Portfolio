@@ -1,0 +1,57 @@
+
+
+#header {
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.223);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    padding: 16px;
+    color: white;
+}
+
+.nav-link {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+
+    >img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: auto;
+
+        transition: clip-path 0.5s ease-in-out; /* "Vorhang"-Effekt animieren */
+
+    }
+
+    &:hover {
+        >img {
+            clip-path: inset(0 0 0 0);
+            /* Bild wird sichtbar beim Hover */
+        }
+    }
+}
+
+
+// clip-path: inset(100% 0 0 0); /* unten nach oben */
+// clip-path: inset(0 100% 0 0); /* links nach rechts */
+// clip-path: inset(0 0 100% 0); /* oben nach unten */
+// clip-path: inset(0 0 0 100%); /* rechts nach links */
+.hover_top_to_bottom {
+    clip-path: inset(0 0 100% 0);
+}
+
+.hover_left_to_right {
+    clip-path: inset(0 100% 0 0);
+}
