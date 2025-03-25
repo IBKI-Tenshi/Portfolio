@@ -16,30 +16,59 @@
 }
 
 #central_div {
-    background-color: rgba(127, 255, 212, 0.421);
+    // background-color: rgba(127, 255, 212, 0.421);
     width: 65%;
     display: flex;
     flex-direction: column;
+    position: relative;
 
     >#hello_div {
         display: flex;
         align-items: flex-start;
         // justify-content: flex-start;
         flex-direction: column;
-
-
-
     }
 
-    >#title_amd_img {
+    >#h1_first {
         display: flex;
         flex-direction: row;
     }
 
     >#h1_second {
         align-self: flex-end;
+        display: flex;
+        flex-direction: row;
     }
 
+}
+
+h1 {
+    color: white;
+    font-size: 120px;
+    margin: 0;
+    padding: 16px 0;
+}
+
+.letter_to_low {
+    transition: text-transform 0.3s ease;
+    /* Smooth transition */
+}
+
+.letter_to_low:hover {
+    color: #f7c518;
+    text-transform: lowercase;
+    /* Ändert den Text zu Kleinbuchstaben beim Hover */
+}
+
+.letter_to_high {
+    transition: text-transform 0.3s ease;
+    /* Smooth transition */
+}
+
+.letter_to_high:hover {
+    color: #f7c518;
+    text-transform: uppercase;
+    /* Und hier das Gegenteil */
 }
 
 button {
@@ -55,7 +84,6 @@ button {
     color: white;
 }
 
-
 #hello_button {
     font-size: 20px;
     padding: 10px 20px;
@@ -64,6 +92,10 @@ button {
     cursor: pointer;
     width: 140px;
     position: relative;
+
+    transform-origin: left;
+    /* Nur nach rechts skalieren */
+    transition: transform 0.3s ease-out;
 
     &::after {
         content: "I'M Borna Kitak";
@@ -80,11 +112,12 @@ button {
 
         background-color: #007bff;
         clip-path: inset(0% 50% 0% 50%);
-        // transition: clip-path 0.3s ease-in-out;
-        transition: clip-path 0.3s ease-in-out, width 0.3s ease-in-out, padding 0.4s ease-in-out;
+        // transition: clip-path 0.3s ease-in-out, width 0.4s ease-in-out;
+        transition: clip-path 0.3s ease-in-out;
     }
 
     &:hover {
+        animation: bounceScaleRight 0.6s ease-out forwards;
         width: 190px;
         /* Vergrößert den Button */
     }
@@ -95,16 +128,39 @@ button {
     }
 }
 
+@keyframes bounceScaleRight {
+    0% {
+        transform: scaleX(1);
+    }
 
-h1 {
-    color: white;
-    font-size: 120px;
-    margin: 0;
+    30% {
+        transform: scaleX(1.08);
+    }
+
+    50% {
+        transform: scaleX(0.99);
+    }
+
+    70% {
+        transform: scaleX(1.04);
+    }
+
+    85% {
+        transform: scaleX(1.01);
+    }
+
+    100% {
+        transform: scaleX(1.03);
+    }
 }
 
 #my_picture {
-    height: 200px;
+    height: 240px;
     width: 200px;
+
+    position: absolute;
+    top: 24px;
+    right: 8px;
 }
 
 #get_in_touch_button {
