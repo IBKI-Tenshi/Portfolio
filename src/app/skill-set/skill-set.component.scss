@@ -12,11 +12,47 @@
 }
 
 #title_and_description {
+    width: 100%;
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
 
-    >#title {
+    >#whole_title {
         color: white;
+        margin: 0 100px;
+
+
+
+        >#big_title {
+            position: relative;
+            display: inline-block;
+
+            >h2 {
+                font-size: 64px;
+                margin: 0;
+                z-index: 2;
+                position: relative;
+            }
+
+            >img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 250px;
+                height: auto;
+                transform: translate(-50%, -50%) scaleX(-1);
+                z-index: 1;
+            }
+        }
+
+        >h3 {
+            font-size: 20px;
+            text-align: end;
+
+        }
+
+
     }
 
     >#description {
@@ -30,23 +66,43 @@
 #skills {
     display: flex;
     flex-direction: row;
-    width: 50%;
+    // width: 50%;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
 
     >.skill {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 16px;
+
+        width: 50px;
+
+        flex: 1 0 18%; // Basisbreite ist 18%
+        // max-width: 18%;    // Maximalbreite 18%
 
         >img {
-            height: 100px;
-            width: 100px;
+            height: 80px;
+            width: 80px;
+
+            filter: grayscale(100%);
+            transition: filter 0.3s ease, transform 0.1s ease-in-out;
+
+            &:hover {
+                filter: grayscale(0%);
+                transform: scale(0.75);
+            }
         }
 
         >span {
             color: white;
             padding-top: 8px;
+
+            display: inline-block; // macht Zeilenumbruch und Zentrierung möglich
+            text-align: center;
+
         }
     }
 }

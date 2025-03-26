@@ -1,64 +1,23 @@
 <div id="skill_set_screen">
 
     <div id="title_and_description">
-        <div id="title">
+        <div id="whole_title">
             <h3>MY Stack</h3>
-            <h2>Skill set</h2>
+            <div id="big_title">
+                <h2>Skill set</h2>
+                <img src="/assets/images/skill_set_frame.png" alt="">
+
+            </div>
+          
         </div>
         <div id="description">
             <img src="/assets/images/white_paper.png" alt="">
         </div>
     </div>
 
-    <!-- <div id="skills">
-        <div class="skill">
-            <img src="/assets/images/skills/HTML_icon.png" alt="">
-            <span>HTML</span>
-        </div>
-        <div class="skill">
-            <img src="/assets/images/skills/CSS_icon.png" alt="">
-            <span>CSS</span>
-        </div>
-        <div class="skill">
-            <img src="/assets/images/skills/JS_icon.png" alt="">
-            <span>JavaScript</span>
-        </div>
-        <div class="skill">
-            <img src="/assets/images/skills/TS_icon.png" alt="">
-            <span>TypeScript</span>
-        </div>
-        <div class="skill">
-            <img src="/assets/images/skills/Angular_icon.png" alt="">
-            <span>Angular</span>
-        </div>
-        <div class="skill">
-            <img src="/assets/images/skills/Firebase_icon.png" alt="">
-            <span>Firebase</span>
-        </div>
-        <div class="skill">
-            <img src="/assets/images/skills/Git_icon.png" alt="">
-            <span>Git</span>
-        </div>
-        <div class="skill">
-            <img src="/assets/images/skills/Rest-Api_icon.png" alt="">
-            <span>Rest-Api</span>
-        </div>
-        <div class="skill">
-            <img src="/assets/images/skills/Scrum_icon.png" alt="">
-            <span>Scrum</span>
-        </div>
-        <div class="skill">
-            <img src="/assets/images/skills/Material_Design_icon.png" alt="">
-            <span>Material <br> Design</span>
+    <div id="skills">
+        <div class="skill" *ngFor="let skill of skills">
+            <img [src]="skill.img" [alt]="skill.name">
+            <span [innerHTML]="skill.name.replace(' ', '<br>')"></span>
         </div>
     </div>
-
-</div> -->
-
-<div id="skills">
-    <div class="skill" *ngFor="let skill of skills">
-      <img [src]="skill.img" [alt]="skill.name">
-      <span [innerHTML]="skill.name.replace(' ', '<br>')"></span>
-    </div>
-  </div>
-  
