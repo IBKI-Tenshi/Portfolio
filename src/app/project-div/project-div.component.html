@@ -1,5 +1,32 @@
+
+
 <div id="project_div">
-    <img src="" alt="XXXXXXXXXXXXXX">
-    <h3>Project name</h3>
-    <p>descripotion</p>
+    <img src="{{ project.image }}" alt="XXXXXXXXXXXXXX">
+    <button>zum projekt</button>
+    <div id="title_and_description">
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.description }}</p>
+    </div>
 </div>
+
+<!-- <div class="project">
+    <h3>{{ project.title }}</h3>
+    <p>{{ project.description }}</p>
+    <img [src]="project.image" alt="{{ project.title }}">
+  
+    <div class="skills">
+      <div *ngFor="let skill of project.used_Skills" class="skill">
+        <img [src]="skill.skill_image" [alt]="skill.skill_name">
+        <span>{{ skill.skill_name }}</span>
+      </div>
+    </div>
+  
+    <a [href]="project.project_link" target="_blank">Live Demo</a>
+    <a [href]="project.github_link" target="_blank">GitHub</a>
+  
+    <div class="details">
+      <p><strong>Dauer:</strong> {{ project.duration }}</p>
+      <p>{{ project.info_details }}</p>
+    </div>
+  </div>
+   -->

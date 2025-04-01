@@ -1,0 +1,16 @@
+#project_div {
+    display: flex;
+    flex-direction: column;
+
+    width: 400px;
+    padding: 32px;
+
+    >img {
+        width: 400px;
+        height: 200px;
+    }
+
+    >#title_and_description {
+
+    }
+}

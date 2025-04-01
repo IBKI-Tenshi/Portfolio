@@ -9,6 +9,11 @@
     padding: 0 24px;
 
     // width: 100vw; // body hat overflow-x: hidden; damit keine scrollbar entsteht
+
+    >img {
+        width: auto;
+        height: 50px;
+    }
 }
 
 a {

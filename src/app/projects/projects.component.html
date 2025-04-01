@@ -5,7 +5,16 @@
         <p>Encourage people to take a look and interact with your projects.
             Highlight your approach to creating responsive, user-friendly projects with efficient code.</p>
     </div>
+
+
     <div id="projects">
-        <app-project-div></app-project-div>
-    </div>
+        <app-project-div
+          *ngFor="let project of projects"
+          [project]="project">
+        </app-project-div>
+      </div>
+      
+
+
+
 </div>
