@@ -44,9 +44,9 @@
 
 h1 {
     color: white;
-    font-size: 120px;
+    font-size: 112px;
     margin: 0;
-    padding: 16px 0;
+    padding: 12px 0;
 }
 
 .letter_to_low {
@@ -85,7 +85,7 @@ button {
 }
 
 #hello_button {
-    font-size: 20px;
+    font-size: 18px;
     padding: 10px 20px;
     color: white;
     background-color: rgba(255, 255, 255, 0);
@@ -150,7 +150,7 @@ button {
     }
 
     100% {
-        transform: scaleX(1.03);
+        transform: scaleX(1.00);
     }
 }
 

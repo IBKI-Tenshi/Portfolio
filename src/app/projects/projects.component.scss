@@ -1,0 +1,19 @@
+#projects_component {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    >#title {
+        width: 40%;
+        height: 300px;
+    }
+
+    // >#projects {
+    //     display: flex;
+    //     flex-wrap: wrap;
+    //     flex-direction: row;
+
+    // }
+}
+

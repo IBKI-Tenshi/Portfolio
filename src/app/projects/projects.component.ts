@@ -29,46 +29,49 @@ export class ProjectsComponent {
           skill_image: 'link zum image',
           skill_name: 'CSS'
         }
-      ]
+      ],
+      highlighted: true
     },
-    // {
-    //   title: 'El Pollo Loco',
-    //   description: 'El Pollo Loco description',
-    //   info_details: 'tiefere infos zum projekt',
-    //   image: 'link zum image',
-    //   project_link: 'link zum projekt',
-    //   github_link: 'link zu gitgub',
-    //   duration: 'benötigte wochen',
-    //   used_Skills: [
-    //     {
-    //       skill_image: 'link zum image',
-    //       skill_name: 'HTML'
-    //     },
-    //     {
-    //       skill_image: 'link zum image',
-    //       skill_name: 'CSS'
-    //     }
-    //   ]
-    // },
-    // {
-    //   title: 'pokedex',
-    //   description: 'pokedex description',
-    //   info_details: 'tiefere infos zum projekt',
-    //   image: 'link zum image',
-    //   project_link: 'link zum projekt',
-    //   github_link: 'link zu gitgub',
-    //   duration: 'benötigte wochen',
-    //   used_Skills: [
-    //     {
-    //       skill_image: 'link zum image',
-    //       skill_name: 'HTML'
-    //     },
-    //     {
-    //       skill_image: 'link zum image',
-    //       skill_name: 'CSS'
-    //     }
-    //   ]
-    // },
+    {
+      title: 'El Pollo Loco',
+      description: 'El Pollo Loco description',
+      info_details: 'tiefere infos zum projekt',
+      image: '/assets/images/project_images/el_pollo_loco_image.png',
+      project_link: 'link zum projekt',
+      github_link: 'link zu gitgub',
+      duration: 'benötigte wochen',
+      used_Skills: [
+        {
+          skill_image: 'link zum image',
+          skill_name: 'HTML'
+        },
+        {
+          skill_image: 'link zum image',
+          skill_name: 'CSS'
+        }
+      ],
+      highlighted: false
+    },
+    {
+      title: 'pokedex',
+      description: 'pokedex description',
+      info_details: 'tiefere infos zum projekt',
+      image: '/assets/images/project_images/pokedex_image.png',
+      project_link: 'link zum projekt',
+      github_link: 'link zu gitgub',
+      duration: 'benötigte wochen',
+      used_Skills: [
+        {
+          skill_image: 'link zum image',
+          skill_name: 'HTML'
+        },
+        {
+          skill_image: 'link zum image',
+          skill_name: 'CSS'
+        }
+      ],
+      highlighted: false
+    },
 
   ]
 }
