@@ -1,0 +1,16 @@
+<div class="thought" 
+     [ngClass]="{ 'hovered': hovered }"
+     (mouseenter)="hovered = true"
+     (mouseleave)="hovered = false"
+     [style.background-image]="'url(' + thought.backgroundimage + ')'">
+    <p class="comment">{{ thought.comment }}</p>
+
+    <div class="colleague_info">
+        <div class="name_and_title">
+            <span>{{ thought.name }}</span>
+            <span>{{ thought.title }}</span>
+        </div>
+        <span>{{ thought.profileLink }}</span>
+    </div>
+
+</div>

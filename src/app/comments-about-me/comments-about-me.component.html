@@ -1,4 +1,16 @@
 <div id="comments-about-me">
-    <h3>IN THEIR WORDS:</h3>
-    <h2>Colleagues' Thoughts</h2>
+    <div id="title">
+        <img src="" alt="pfeil">
+        <h3>IN THEIR WORDS:</h3>
+        <h2>Colleagues' Thoughts</h2>
+    </div>
+
+
+    <div id="thoughts">
+        <app-thoughts class="hover_effect" *ngFor="let thought of thoughts" [thought]="thought"></app-thoughts>
+    </div>
+
+    <!-- <img src="/assets/images/thoughts_hover.png" alt=""> -->
+
 </div>
+

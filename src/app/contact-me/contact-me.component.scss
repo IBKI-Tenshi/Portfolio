@@ -1,0 +1,27 @@
+
+#contact_me_component {
+    width: 100%;
+    height: 100vh;
+
+    background-image: url('/assets/images/contact-me_background.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    color: white;
+    padding-top: 120px;
+
+
+    display: flex;
+}
+
+#infos {
+    width: 50%;
+}
+
+#input_infos {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
