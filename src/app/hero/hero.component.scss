@@ -22,12 +22,36 @@
     flex-direction: column;
     position: relative;
 
+    padding-top: 100px;
+
     >#hello_div {
         display: flex;
-        align-items: flex-start;
+        align-items: flex-end;
         // justify-content: flex-start;
         flex-direction: column;
+
+        background-color: rgba(255, 166, 0, 0.419);
+
+        width: 140px;
+        transition: width 0.4s ease-in-out;
+
+        &:hover{
+            width: 190px;
+            transform-origin: left;
+
+        }
     }
+
+    .logo {
+        transform: rotate(-180deg); /* Start-Rotation */
+    
+        transition: transform 0.4s ease-in-out; /* Smooth Transition für Rotation und Verschiebung */
+    
+        &:hover {
+            transform: rotate(12deg) translateX(50px); /* Rotation und Verschiebung nach rechts */
+        }
+    }
+    
 
     >#h1_first {
         display: flex;
@@ -50,7 +74,7 @@ h1 {
 }
 
 .letter_to_low {
-    transition: text-transform 0.3s ease;
+    transition: text-transform 2.0s ease;
     /* Smooth transition */
 }
 
@@ -61,7 +85,7 @@ h1 {
 }
 
 .letter_to_high {
-    transition: text-transform 0.3s ease;
+    transition: text-transform 2.0s ease;
     /* Smooth transition */
 }
 
@@ -84,73 +108,77 @@ button {
     color: white;
 }
 
+
+
 #hello_button {
     font-size: 18px;
     padding: 10px 20px;
     color: white;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: transparent;
     cursor: pointer;
     width: 140px;
     position: relative;
-
+    overflow: hidden;
     transform-origin: left;
-    /* Nur nach rechts skalieren */
-    transition: transform 0.3s ease-out;
+    transition: width 0.4s ease-in-out;
+
+    >span {
+        position: relative;
+        z-index: 2;
+        color: white;
+    }
 
     &::after {
         content: "I'M Borna Kitak";
-        /* Neuer Text */
         position: absolute;
-        text-align: left;
         inset: 0;
         display: flex;
         align-items: center;
         justify-content: center;
-
         border: 1px solid white;
+        transform-origin: left;
         border-radius: 25px;
-
         background-color: #007bff;
         clip-path: inset(0% 50% 0% 50%);
-        // transition: clip-path 0.3s ease-in-out, width 0.4s ease-in-out;
-        transition: clip-path 0.3s ease-in-out;
+        transition: clip-path 0.4s ease-in-out;
+        z-index: 3;
     }
 
     &:hover {
-        animation: bounceScaleRight 0.6s ease-out forwards;
         width: 190px;
-        /* Vergrößert den Button */
     }
 
     &:hover::after {
-        clip-path: inset(0 0 0 0);
-        /* Öffnet sich von der Mitte nach außen */
+        clip-path: inset(0% 0% 0% 0%);
+        animation: edgeBounce 0.6s ease-out;
+        animation-delay: 0.4s; // <<<<< Verzögerung!
+        animation-fill-mode: both; // <- wichtig, damit es sichtbar bleibt
     }
 }
 
-@keyframes bounceScaleRight {
+@keyframes edgeBounce {
     0% {
         transform: scaleX(1);
     }
 
-    30% {
-        transform: scaleX(1.08);
+    25% {
+        transform: scaleX(1.1);
     }
 
-    50% {
-        transform: scaleX(0.99);
+    45% {
+        transform: scaleX(0.97);
     }
 
-    70% {
-        transform: scaleX(1.04);
+    65% {
+        transform: scaleX(1.05);
     }
 
-    85% {
-        transform: scaleX(1.01);
+    80% {
+        transform: scaleX(0.995);
     }
 
     100% {
-        transform: scaleX(1.00);
+        transform: scaleX(1.0);
     }
 }
 
