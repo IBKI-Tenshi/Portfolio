@@ -35,64 +35,23 @@
         width: 140px;
         transition: width 0.4s ease-in-out;
 
-        &:hover{
+        &:hover {
             width: 190px;
             transform-origin: left;
 
         }
     }
 
-    .logo {
-        transform: rotate(-180deg); /* Start-Rotation */
-    
-        transition: transform 0.4s ease-in-out; /* Smooth Transition für Rotation und Verschiebung */
-    
+    .waving_hand {
+        background-color: aqua;
+        transform: rotate(-180deg);
+        transition: transform 0.4s ease-in-out;
+
         &:hover {
-            transform: rotate(12deg) translateX(50px); /* Rotation und Verschiebung nach rechts */
+            transform: rotate(12deg) translateX(50px);
         }
     }
-    
 
-    >#h1_first {
-        display: flex;
-        flex-direction: row;
-    }
-
-    >#h1_second {
-        align-self: flex-end;
-        display: flex;
-        flex-direction: row;
-    }
-
-}
-
-h1 {
-    color: white;
-    font-size: 112px;
-    margin: 0;
-    padding: 12px 0;
-}
-
-.letter_to_low {
-    transition: text-transform 2.0s ease;
-    /* Smooth transition */
-}
-
-.letter_to_low:hover {
-    color: #f7c518;
-    text-transform: lowercase;
-    /* Ändert den Text zu Kleinbuchstaben beim Hover */
-}
-
-.letter_to_high {
-    transition: text-transform 2.0s ease;
-    /* Smooth transition */
-}
-
-.letter_to_high:hover {
-    color: #f7c518;
-    text-transform: uppercase;
-    /* Und hier das Gegenteil */
 }
 
 button {
@@ -181,6 +140,48 @@ button {
         transform: scaleX(1.0);
     }
 }
+
+h1 {
+    color: white;
+    font-size: 112px;
+    margin: 0;
+    padding: 12px 0;
+}
+
+#h1_first {
+    display: flex;
+    flex-direction: row;
+}
+
+#h1_second {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+}
+
+.letter_to_low {
+    transition: text-transform 2.0s ease;
+    /* Smooth transition */
+}
+
+.letter_to_low:hover {
+    color: #f7c518;
+    text-transform: lowercase;
+    /* Ändert den Text zu Kleinbuchstaben beim Hover */
+}
+
+.letter_to_high {
+    transition: text-transform 2.0s ease;
+    /* Smooth transition */
+}
+
+.letter_to_high:hover {
+    color: #f7c518;
+    text-transform: uppercase;
+    /* Und hier das Gegenteil */
+}
+
+
 
 #my_picture {
     height: 240px;
