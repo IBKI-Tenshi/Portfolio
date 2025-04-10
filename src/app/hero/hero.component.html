@@ -43,7 +43,9 @@
         </div> -->
 
 
-        <div id="h1_first">
+
+
+        <!-- <div id="h1_first">
             <ng-container *ngFor="let letter of getLetter(firstLine_normal); let i = index">
               <h1 [ngClass]="i === 0 ? 'letter_to_low' : 'letter_to_high'">{{ letter }}</h1>
             </ng-container>
@@ -51,14 +53,58 @@
             <ng-container *ngFor="let letter of getLetter(firstLine_transformed); let i = index">
                 <h1 [ngClass]="i === 0 ? 'letter_to_low' : 'letter_to_high'">{{ letter }}</h1>
               </ng-container>
+          </div> -->
+
+
+
+        <!-- <div id="h1_first">
+            <div class="word-layer">
+              <ng-container *ngFor="let letter of getLetter(firstLine_normal); let i = index">
+                <h1 [ngClass]="i === 0 ? 'letter_to_low' : 'letter_to_high'">{{ letter }}</h1>
+              </ng-container>
+            </div>
+          
+            <div class="word-layer">
+              <ng-container *ngFor="let letter of getLetter(firstLine_transformed); let i = index">
+                <h1 [ngClass]="i === 0 ? 'letter_to_low' : 'letter_to_high'">{{ letter }}</h1>
+              </ng-container>
+            </div>
+          </div> -->
+
+
+<!--                   
+          <div class="h1_first">
+            <span *ngFor="let letter of getLetter(firstLine_normal); let i = index" class="letter-wrapper">
+              <h1 class="normal">{{ letter }}</h1>
+              <h1 class="transformed">{{ getLetter(firstLine_transformed)[i] }}</h1>
+            </span>
+          </div> -->
+
+
+
+
+
+          <div id="h1_first">
+            <span class="letter-pair" *ngFor="let letter of getLetters()">
+              <span class="stack">
+                <span class="normal">{{ letter.normal }}</span>
+                <span class="transformed">{{ letter.transformed }}</span>
+              </span>
+            </span>
           </div>
           
-          <div id="h1_second">
+
+
+
+
+
+
+        <!-- <div id="h1_second">
             <ng-container *ngFor="let letter of getLetter(secondLine_normal); let i = index">
               <h1 [ngClass]="i === 0 ? 'letter_to_low' : 'letter_to_high'">{{ letter }}</h1>
             </ng-container>
-          </div>
-          
+          </div> -->
+
 
 
         <button id="get_in_touch_button">Get in Touch</button>

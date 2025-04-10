@@ -23,16 +23,27 @@ export class HeroComponent {
 
 
 
+  // firstLine_normal: string = 'Frontend';
+  // firstLine_transformed: string = 'fRONTEND';
+
+  // secondLine_normal: string = 'Developer';
+  // secondLine_transformed: string = 'dEVELOPER';
+
+  // getLetter(word: string): string[] {
+  //   return word.split('');
+  // }
+
+
+
   firstLine_normal: string = 'Frontend';
-  firstLine_transformed: string = 'fRONTEND';
+firstLine_transformed: string = 'fRONTEND';
 
-  secondLine_normal: string = 'Developer';
-  secondLine_transformed: string = 'dEVELOPER';
-
-  getLetter(word: string): string[] {
-    return word.split('');
-  }
-
+getLetters(): { normal: string; transformed: string }[] {
+  return this.firstLine_normal.split('').map((char, i) => ({
+    normal: char,
+    transformed: this.firstLine_transformed[i]
+  }));
+}
 
 
 }
