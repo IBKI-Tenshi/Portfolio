@@ -45,10 +45,16 @@
     .waving_hand {
         background-color: aqua;
         transform: rotate(-180deg);
-        transition: transform 0.4s ease-in-out;
+        // transition: transform 0.4s ease-in-out;
+        // transform-origin: 50% 50%; // rotation über mitte des bildes
+        transition: opacity 0.45s ease, transform 0.45s ease;
+        opacity: 0;
 
         &:hover {
-            transform: rotate(12deg) translateX(50px);
+            // transform: rotate(12deg) translateX(50px);
+            transform: rotate(12deg);
+
+            opacity: 1;
         }
     }
 
@@ -150,7 +156,6 @@ h1 {
 
 
 // opacityeffekt passt aber Wortfluss passt nicht
-
 #h1_first,
 #h1_second {
     font-weight: bold;
@@ -174,14 +179,12 @@ h1 {
     width: auto;
     height: auto;
     grid-template-columns: auto;
-    /* Passt die Breite der Zelle der Breite des Buchstabens an */
     grid-template-rows: auto;
-    /* Passt die Höhe der Zelle der Höhe des Buchstabens an */
-}
 
-.stack span {
-    grid-area: 1 / 1;
-    transition: opacity 0.45s ease, transform 0.45s ease;
+    >span {
+        grid-area: 1 / 1;
+        transition: opacity 0.45s ease, transform 0.45s ease;
+    }
 }
 
 .normal {
@@ -207,150 +210,13 @@ h1 {
 
 .letter-pair:hover .normal {
     opacity: 0;
+    display: none;            // wenn aktiv passt der wortfluss aber der übergangseffekt dann nicht mehr
 }
 
 .letter-pair:hover .transformed {
     opacity: 1;
     display: block;
 }
-
-
-
-// Wortfluss passt aber opacityeffekt passt nicht
-
-// #h1_first,
-// #h1_second {
-//   font-weight: bold;
-//   display: flex;
-// //   flex-wrap: wrap; // falls Wort umbricht
-// }
-
-// #h1_second {
-//   align-self: flex-end;
-// }
-
-// .letter-pair {
-//   display: inline-block;
-//   position: relative;
-// }
-
-// .stack {
-//     display: grid;
-//     place-items: center;
-//     grid-template-columns: auto;
-//     grid-template-rows: auto;
-//     width: auto;
-//     height: auto;
-//   }
-
-//   .stack span {
-//     grid-area: 1 / 1;
-//     transition: opacity 0.45s ease, transform 0.45s ease;
-//   }
-
-//   .normal {
-//     display: block;
-//     color: white;
-//     font-size: 112px;
-//     padding: 12px 0;
-
-//     opacity: 1;
-//   }
-
-//   .transformed {
-//     display: none;
-//     color: #f7c518;
-//     font-size: 112px;
-//     padding: 12px 0;
-
-//     opacity: 0;
-//   }
-
-//   .letter-pair:hover .normal {
-//     display: none;
-
-//     opacity: 0;
-//   }
-
-//   .letter-pair:hover .transformed {
-//     display: block;
-
-//     opacity: 1;
-//   }
-
-
-
-
-
-
-// Wortfluss passt aber opacityeffekt passt nicht
-
-// #h1_first,
-// #h1_second {
-//     display: flex;
-//     flex-wrap: nowrap;
-//     font-weight: bold;
-// }
-
-// #h1_second {
-//     align-self: flex-end;
-// }
-
-// .letter-pair {
-//     display: block;
-//     position: relative;
-//     width: auto;
-// }
-
-// .stack {
-//     display: grid;
-//     place-items: center;
-//     grid-template-columns: auto;
-//     grid-template-rows: auto;
-//     width: auto;
-//     height: auto;
-//     position: relative;
-// }
-
-// .stack .normal,
-// .stack .transformed {
-//     grid-area: 1 / 1;
-//     transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-//     font-size: 112px;
-//     padding: 12px 0;
-//     white-space: nowrap;
-// }
-
-// .normal {
-//     color: white;
-//     opacity: 1;
-//     visibility: visible;
-// }
-
-// .transformed {
-//     color: #f7c518;
-//     opacity: 0;
-//     visibility: hidden;
-//     position: absolute;
-// }
-
-// .letter-pair:hover .normal {
-//     opacity: 0;
-//     visibility: hidden;
-//     position: absolute;
-// }
-
-// .letter-pair:hover .transformed {
-//     opacity: 1;
-//     visibility: visible;
-//     position: relative;
-// }
-
-
-
-
-
-
 
 #my_picture {
     height: 240px;
