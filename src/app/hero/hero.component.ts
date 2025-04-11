@@ -14,36 +14,19 @@ import { CommonModule, NgClass } from '@angular/common';
 })
 export class HeroComponent {
 
-
-    // hovered: boolean = false;
-
-    // onHover(isHovered: boolean): void {
-    //   this.hovered = isHovered;
-    // }
-
-
-
-  // firstLine_normal: string = 'Frontend';
-  // firstLine_transformed: string = 'fRONTEND';
-
-  // secondLine_normal: string = 'Developer';
-  // secondLine_transformed: string = 'dEVELOPER';
-
-  // getLetter(word: string): string[] {
-  //   return word.split('');
-  // }
-
-
-
   firstLine_normal: string = 'Frontend';
-firstLine_transformed: string = 'fRONTEND';
+  firstLine_transformed: string = 'fRONTEND';
 
-getLetters(): { normal: string; transformed: string }[] {
-  return this.firstLine_normal.split('').map((char, i) => ({
-    normal: char,
-    transformed: this.firstLine_transformed[i]
-  }));
+  secondLine_normal: string = 'DEVELOPER';
+  secondLine_transformed: string = 'developer';
+
+  getLetters(letters_normal:string, letters_transformed:string): { normal: string; transformed: string }[] {
+    return letters_normal.split('').map((letter, i) => ({
+      normal: letter,
+      transformed: letters_transformed[i]
+    }));
+  }
+
+
 }
 
-
-}

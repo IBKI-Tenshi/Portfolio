@@ -1,105 +1,41 @@
 <div id="hero_screen">
 
-    <app-header id="header_component"></app-header>
+  <app-header id="header_component"></app-header>
 
-    <div id="central_div">
-        <div id="hello_div">
-            <img class="waving_hand" src="/assets/icons/waving_hand.png" alt="">
+  <div id="central_div">
+    <div id="hello_div">
+      <img class="waving_hand" src="/assets/icons/waving_hand.png" alt="">
 
-            <button id="hello_button">
-                <span>Hello World</span>
-            </button>
+      <button id="hello_button">
+        <span>Hello World</span>
+      </button>
+    </div>
 
+    <div id="h1_first">
+      <span class="letter-pair" *ngFor="let letter of getLetters(this.firstLine_normal, this.firstLine_transformed)">
+        <span class="stack">
+          <span class="normal">{{ letter.normal }}</span>
+          <span class="transformed">{{ letter.transformed }}</span>
+        </span>
+      </span>
+    </div>
 
-        </div>
-
-
-        <!-- <button id="hello_button" (mouseenter)="onHover(true)" (mouseleave)="onHover(false)">
-                <span class="text static-text">Hello World</span>
-                <span class="text animated-text" [class.show]="hovered">I'M Borna Kitak</span>
-            </button> -->
-
-        <!-- <div id="h1_first">
-            <h1 class="letter_to_low">F</h1>
-            <h1 class="letter_to_high">r</h1>
-            <h1 class="letter_to_high">o</h1>
-            <h1 class="letter_to_high">n</h1>
-            <h1 class="letter_to_high">t</h1>
-            <h1 class="letter_to_high">e</h1>
-            <h1 class="letter_to_high">n</h1>
-            <h1 class="letter_to_high">d</h1>
-        </div>
-
-        <div id="h1_second">
-            <h1 class="letter_to_low">D</h1>
-            <h1 class="letter_to_high">e</h1>
-            <h1 class="letter_to_high">v</h1>
-            <h1 class="letter_to_high">e</h1>
-            <h1 class="letter_to_high">l</h1>
-            <h1 class="letter_to_high">o</h1>
-            <h1 class="letter_to_high">p</h1>
-            <h1 class="letter_to_high">e</h1>
-            <h1 class="letter_to_high">r</h1>
-        </div> -->
-
-
-
-
-        <!-- <div id="h1_first">
-            <ng-container *ngFor="let letter of getLetter(firstLine_normal); let i = index">
-              <h1 [ngClass]="i === 0 ? 'letter_to_low' : 'letter_to_high'">{{ letter }}</h1>
-            </ng-container>
-
-            <ng-container *ngFor="let letter of getLetter(firstLine_transformed); let i = index">
-                <h1 [ngClass]="i === 0 ? 'letter_to_low' : 'letter_to_high'">{{ letter }}</h1>
-              </ng-container>
-          </div> -->
-
-
-
-        <!-- <div id="h1_first">
-            <div class="word-layer">
-              <ng-container *ngFor="let letter of getLetter(firstLine_normal); let i = index">
-                <h1 [ngClass]="i === 0 ? 'letter_to_low' : 'letter_to_high'">{{ letter }}</h1>
-              </ng-container>
-            </div>
-          
-            <div class="word-layer">
-              <ng-container *ngFor="let letter of getLetter(firstLine_transformed); let i = index">
-                <h1 [ngClass]="i === 0 ? 'letter_to_low' : 'letter_to_high'">{{ letter }}</h1>
-              </ng-container>
-            </div>
-          </div> -->
-
-
-<!--                   
-          <div class="h1_first">
-            <span *ngFor="let letter of getLetter(firstLine_normal); let i = index" class="letter-wrapper">
-              <h1 class="normal">{{ letter }}</h1>
-              <h1 class="transformed">{{ getLetter(firstLine_transformed)[i] }}</h1>
-            </span>
-          </div> -->
-
-
-
-
-
-          <div id="h1_first">
-            <span class="letter-pair" *ngFor="let letter of getLetters()">
-              <span class="stack">
-                <span class="normal">{{ letter.normal }}</span>
-                <span class="transformed">{{ letter.transformed }}</span>
-              </span>
-            </span>
-          </div>
-          
+    <div id="h1_second">
+      <span class="letter-pair" *ngFor="let letter of getLetters(this.secondLine_normal, this.secondLine_transformed)">
+        <span class="stack">
+          <span class="normal">{{ letter.normal }}</span>
+          <span class="transformed">{{ letter.transformed }}</span>
+        </span>
+      </span>
+    </div>
 
 
 
 
 
 
-        <!-- <div id="h1_second">
+
+    <!-- <div id="h1_second">
             <ng-container *ngFor="let letter of getLetter(secondLine_normal); let i = index">
               <h1 [ngClass]="i === 0 ? 'letter_to_low' : 'letter_to_high'">{{ letter }}</h1>
             </ng-container>
@@ -107,15 +43,15 @@
 
 
 
-        <button id="get_in_touch_button">Get in Touch</button>
+    <button id="get_in_touch_button">Get in Touch</button>
 
-        <img id="my_picture" src="/assets/images/Photoframe.png" alt="">
-    </div>
+    <img id="my_picture" src="/assets/images/Photoframe.png" alt="">
+  </div>
 
-    <div class="social_icons">
-        <img src="/assets/icons/linkedin-icon.svg" alt="">
-        <img src="/assets/icons/github-icon.svg" alt="">
-        <img src="/assets/icons/e.mail-icon.svg" alt="">
-    </div>
+  <div class="social_icons">
+    <img src="/assets/icons/linkedin-icon.svg" alt="">
+    <img src="/assets/icons/github-icon.svg" alt="">
+    <img src="/assets/icons/e.mail-icon.svg" alt="">
+  </div>
 
 </div>

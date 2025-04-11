@@ -148,110 +148,43 @@ h1 {
     padding: 12px 0;
 }
 
-#h1_first {
-    display: flex;
-    flex-direction: row;
 
-    position: relative;
-}
+// opacityeffekt passt aber Wortfluss passt nicht
 
-// #h1_first {
-//     position: relative;
-
-//   }
-
-//   .word-layer {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     display: flex;
-//     flex-direction: row;
-//   }
-
-
-// zweite option
-
-
-// .h1_first {
-//     display: flex;
-//     gap: 0; // Kein extra Abstand – wirkt wie ein echtes Wort
-//   }
-  
-//   .letter-wrapper {
-//     position: relative;
-//     display: inline-block;
-//     width: auto;
-//     margin: 0;
-//     padding: 0;
-//   }
-  
-//   .normal,
-//   .transformed {
-//     font-size: 3rem;
-//     line-height: 1;
-//     margin: 0;
-//     padding: 0;
-//   }
-  
-//   .normal {
-//     position: relative;
-//     color: black;
-//     z-index: 1;
-//   }
-  
-//   .transformed {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     color: red;
-//     opacity: 0;
-//     transition: opacity 0.3s ease;
-//     z-index: 2;
-//   }
-  
-//   .letter-wrapper:hover .transformed {
-//     opacity: 1;
-//   }
-  
-//   .letter-wrapper:hover .normal {
-//     opacity: 0;
-//   }
-  
-
-
-
-
-
-#h1_first {
-    // font-size: 3rem;
+#h1_first,
+#h1_second {
     font-weight: bold;
     display: flex;
-    // gap: 0.05em; /* minimaler Abstand zwischen Buchstaben */
-  }
-  
-  .letter-pair {
+}
+
+#h1_second {
+    align-self: flex-end;
+}
+
+.letter-pair {
     position: relative;
     display: inline-block;
-    width: auto; /* Erlaubt dynamische Breite, basierend auf Inhalt */
-  }
-  
-  .stack {
+    width: auto;
+}
+
+.stack {
     display: grid;
     place-items: center;
     position: relative;
     width: auto;
     height: auto;
-    grid-template-columns: auto; /* Passt die Breite der Zelle der Breite des Buchstabens an */
-    grid-template-rows: auto;    /* Passt die Höhe der Zelle der Höhe des Buchstabens an */
-  }
-  
-  .stack span {
+    grid-template-columns: auto;
+    /* Passt die Breite der Zelle der Breite des Buchstabens an */
+    grid-template-rows: auto;
+    /* Passt die Höhe der Zelle der Höhe des Buchstabens an */
+}
+
+.stack span {
     grid-area: 1 / 1;
     transition: opacity 0.45s ease, transform 0.45s ease;
-  }
-  
-  /* Normaler Buchstabe */
-  .normal {
+}
+
+.normal {
     opacity: 1;
     z-index: 1;
 
@@ -259,64 +192,163 @@ h1 {
     font-size: 112px;
     margin: 0;
     padding: 12px 0;
-  }
-  
-  /* Transformierter Buchstabe */
-  .transformed {
+}
+
+.transformed {
     opacity: 0;
     z-index: 2;
-    display: none; /* Standardmäßig verstecken */
+    display: none;
 
     color: #f7c518;
     font-size: 112px;
     margin: 0;
     padding: 12px 0;
-  }
-  
-  /* Hover-Effekt: Transformierte Buchstaben werden sichtbar */
-  .letter-pair:hover .normal {
+}
+
+.letter-pair:hover .normal {
     opacity: 0;
-    // transform: translateY(-10%);
-  }
-  
-  .letter-pair:hover .transformed {
+}
+
+.letter-pair:hover .transformed {
     opacity: 1;
-    // transform: translateY(0%);
-    display: block; /* Sichtbar machen beim Hover */
-  }
-  
-
-
-
-  
-
-#h1_second {
-    align-self: flex-end;
-    display: flex;
-    flex-direction: row;
+    display: block;
 }
 
-.letter_to_low {
-    transition: text-transform 2.0s ease;
-    /* Smooth transition */
-}
 
-.letter_to_low:hover {
-    color: #f7c518;
-    text-transform: lowercase;
-    /* Ändert den Text zu Kleinbuchstaben beim Hover */
-}
 
-.letter_to_high {
-    transition: text-transform 2.0s ease;
-    /* Smooth transition */
-}
+// Wortfluss passt aber opacityeffekt passt nicht
 
-.letter_to_high:hover {
-    color: #f7c518;
-    text-transform: uppercase;
-    /* Und hier das Gegenteil */
-}
+// #h1_first,
+// #h1_second {
+//   font-weight: bold;
+//   display: flex;
+// //   flex-wrap: wrap; // falls Wort umbricht
+// }
+
+// #h1_second {
+//   align-self: flex-end;
+// }
+
+// .letter-pair {
+//   display: inline-block;
+//   position: relative;
+// }
+
+// .stack {
+//     display: grid;
+//     place-items: center;
+//     grid-template-columns: auto;
+//     grid-template-rows: auto;
+//     width: auto;
+//     height: auto;
+//   }
+
+//   .stack span {
+//     grid-area: 1 / 1;
+//     transition: opacity 0.45s ease, transform 0.45s ease;
+//   }
+
+//   .normal {
+//     display: block;
+//     color: white;
+//     font-size: 112px;
+//     padding: 12px 0;
+
+//     opacity: 1;
+//   }
+
+//   .transformed {
+//     display: none;
+//     color: #f7c518;
+//     font-size: 112px;
+//     padding: 12px 0;
+
+//     opacity: 0;
+//   }
+
+//   .letter-pair:hover .normal {
+//     display: none;
+
+//     opacity: 0;
+//   }
+
+//   .letter-pair:hover .transformed {
+//     display: block;
+
+//     opacity: 1;
+//   }
+
+
+
+
+
+
+// Wortfluss passt aber opacityeffekt passt nicht
+
+// #h1_first,
+// #h1_second {
+//     display: flex;
+//     flex-wrap: nowrap;
+//     font-weight: bold;
+// }
+
+// #h1_second {
+//     align-self: flex-end;
+// }
+
+// .letter-pair {
+//     display: block;
+//     position: relative;
+//     width: auto;
+// }
+
+// .stack {
+//     display: grid;
+//     place-items: center;
+//     grid-template-columns: auto;
+//     grid-template-rows: auto;
+//     width: auto;
+//     height: auto;
+//     position: relative;
+// }
+
+// .stack .normal,
+// .stack .transformed {
+//     grid-area: 1 / 1;
+//     transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+//     font-size: 112px;
+//     padding: 12px 0;
+//     white-space: nowrap;
+// }
+
+// .normal {
+//     color: white;
+//     opacity: 1;
+//     visibility: visible;
+// }
+
+// .transformed {
+//     color: #f7c518;
+//     opacity: 0;
+//     visibility: hidden;
+//     position: absolute;
+// }
+
+// .letter-pair:hover .normal {
+//     opacity: 0;
+//     visibility: hidden;
+//     position: absolute;
+// }
+
+// .letter-pair:hover .transformed {
+//     opacity: 1;
+//     visibility: visible;
+//     position: relative;
+// }
+
+
+
+
 
 
 
