@@ -7,38 +7,49 @@
 #wrapper_left {
   background-color: rgba(0, 128, 0, 0.1);
   width: 50%;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  >img {
+  >div {
     width: 560px;
     height: 152px;
+    color: white;
 
-    // transform: rotate(-10deg);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Hintergrundbild zentrieren und vollständig anzeigen */
+    background-position: center;
+    background-size: contain; /* Bild wird so angepasst, dass es komplett sichtbar ist */
+    background-repeat: no-repeat; /* Verhindert das Wiederholen des Hintergrunds */
   }
 
-  >img:nth-of-type(1) {
+  >div:nth-of-type(1) {
+    background-image: url("/assets/images/yellow_paper.png");
     transform: rotate(-4deg);
     z-index: 3;
+    padding-bottom: 20px;
   }
 
-  >img:nth-of-type(2) {
+  >div:nth-of-type(2) {
+    background-image: url("/assets/images/blue_paper.png");
     transform: rotate(0);
-
-    margin-top: -48px;
+    margin-top: -68px;
     z-index: 2;
   }
 
-  >img:nth-of-type(3) {
+  >div:nth-of-type(3) {
+    background-image: url("/assets/images/orange_paper.png");
     transform: rotate(+2deg);
-
     margin-top: -36px;
     z-index: 1;
   }
 }
+
 
 #wrapper_right {
   background-color: rgba(255, 166, 0, 0.1);
@@ -72,4 +83,16 @@
   }
 
 
+}
+
+#lets_talk_button {
+  box-shadow: 3px 3px 1px rgb(0, 0, 0);
+  border-color: black;
+  border-width: 2px;
+  color: black;
+
+  &:hover {
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    color: white;
+  }
 }

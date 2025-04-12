@@ -67,22 +67,20 @@ body {
 }
 
 .the_red_button {
+
     border-color: white;
     border-width: 4px;
     border-style: solid;
     color: white;
-    background-color: #F87A55;
-    padding: 10px 20px;
+    padding: 8px 24px;
     font-size: 16px;
     border-radius: 25px;
     position: relative;
     overflow: hidden;
 
-
-
     align-self: flex-end;
   
-    box-shadow: 3px 10px 1px rgb(255, 255, 255);
+    box-shadow: 3px 3px 1px rgb(255, 255, 255);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     
     &:hover {
