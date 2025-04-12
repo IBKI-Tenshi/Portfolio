@@ -3,14 +3,14 @@
   <app-header id="header_component"></app-header>
 
   <div id="central_div">
-    
-    <div id="hello_div">
-      <img class="waving_hand" src="/assets/icons/waving_hand.png" alt="">
 
-      <button id="hello_button">
+    <div #helloDiv id="hello_div">
+      <img #wavingHand class="waving_hand" src="/assets/icons/waving_hand.png" alt="" />
+      <button #helloButton id="hello_button">
         <span>Hello World</span>
       </button>
     </div>
+
 
     <div id="h1_first">
       <span class="letter-pair" *ngFor="let letter of getLetters(this.firstLine_normal, this.firstLine_transformed)">
@@ -21,16 +21,70 @@
       </span>
     </div>
 
+
+
     <div id="h1_second">
       <span class="letter-pair" *ngFor="let letter of getLetters(this.secondLine_normal, this.secondLine_transformed)">
+        <span class="stack">
+          <span class="normal smaler_letter">{{ letter.normal }}</span>
+          <span class="transformed">{{ letter.transformed }}</span>
+        </span>
+      </span>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- <div id="h1_first">
+      <span class="letter-pair" *ngFor="let letter of getLetters(this.firstLine_normal, this.firstLine_transformed)" appHighlight>
         <span class="stack">
           <span class="normal">{{ letter.normal }}</span>
           <span class="transformed">{{ letter.transformed }}</span>
         </span>
       </span>
     </div>
+    
+    <div id="h1_second">
+      <span class="letter-pair" *ngFor="let letter of getLetters(this.secondLine_normal, this.secondLine_transformed)" appHighlight>
+        <span class="stack">
+          <span class="normal">{{ letter.normal }}</span>
+          <span class="transformed">{{ letter.transformed }}</span>
+        </span>
+      </span>
+    </div> -->
 
-    <button id="get_in_touch_button">Get in Touch</button>
+
+
+    <div id="h1_first">
+      <h1 appHighlight>f</h1>
+      <h1 appHighlight>r</h1>
+      <h1 appHighlight>o</h1>
+      <h1 appHighlight>n</h1>
+      <h1 appHighlight>t</h1>
+      <h1 appHighlight>e</h1>
+      <h1 appHighlight>n</h1>
+      <h1 appHighlight>d</h1>
+    </div>
+
+
+
+    <!-- <div id="h1_second">
+      <span class="letter-pair" *ngFor="let letter of getLetters(this.secondLine_normal, this.secondLine_transformed)" appHighlight>
+        <span class="stack">
+          <span class="normal">{{ letter.normal }}</span>
+          <span class="transformed">{{ letter.transformed }}</span>
+        </span>
+      </span>
+    </div> -->
+
+
+    <button mat-fab-button color="primary" class="the_red_button">Get in Touch</button>
+
+
 
     <img id="my_picture" src="/assets/images/Photoframe.png" alt="">
   </div>
