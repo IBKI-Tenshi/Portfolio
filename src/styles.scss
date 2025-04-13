@@ -91,7 +91,14 @@ body {
       /* Der weiße Schatten wird beim Hover entfernt, um den Eindruck des Drückens zu erzeugen */
       box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
     }
-  
+  }
 
+  h2 {
+    font-weight: 700;
+    font-size: 64px;
+    margin: 0;
   }
   
+  .wrapper_padding {
+    padding: 0 64px;
+  }

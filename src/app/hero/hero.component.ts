@@ -40,8 +40,8 @@ export class HeroComponent implements AfterViewInit {
   firstLine_normal: string = 'Frontend';
   firstLine_transformed: string = 'fRONTEND';
 
-  secondLine_normal: string = 'DEVELOPER';
-  secondLine_transformed: string = 'developer';
+  secondLine_normal: string = 'Developer';
+  secondLine_transformed: string = 'dEVELOPER';
 
   getLetters(letters_normal:string, letters_transformed:string): { normal: string; transformed: string }[] {
     return letters_normal.split('').map((letter, i) => ({

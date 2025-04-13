@@ -17,15 +17,24 @@
     height: 152px;
     color: white;
 
-
     display: flex;
     align-items: center;
     justify-content: center;
 
-    /* Hintergrundbild zentrieren und vollständig anzeigen */
     background-position: center;
     background-size: contain; /* Bild wird so angepasst, dass es komplett sichtbar ist */
-    background-repeat: no-repeat; /* Verhindert das Wiederholen des Hintergrunds */
+    background-repeat: no-repeat;
+
+    >img {
+      width: 40px;
+      height: 40px;
+    }
+
+    >span {
+      font-size: 24px;
+      font-weight: 400;
+      padding-left: 16px;
+    }
   }
 
   >div:nth-of-type(1) {
@@ -55,23 +64,29 @@
   background-color: rgba(255, 166, 0, 0.1);
   width: 50%;
 
+
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 #title_div {
   position: relative;
   display: inline-block;
-  padding: 10px 20px;
+  padding: 10px 0px;
+
+  >span {
+    font-size: 20px;
+    font-weight: 500;
+  }
 
   >img {
     position: absolute;
-    top: 70%;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100px;
+    width: 100%;
     height: auto;
 
     clip-path: inset(0 100% 0 0);
@@ -83,6 +98,11 @@
   }
 
 
+}
+
+p{
+  font-size: 20px;
+  font-weight: 400;
 }
 
 #lets_talk_button {
