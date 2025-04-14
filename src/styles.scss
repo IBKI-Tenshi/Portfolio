@@ -111,3 +111,19 @@ body {
   .d_none {
     display: none !important;
   }
+
+  .hovered {
+    transform-origin: left;
+  }
+
+  .waving_icon {
+    //   background-color: aqua;
+    transform: rotate(-180deg);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+    opacity: 0;
+
+    &.visible {
+        transform: rotate(12deg);
+        opacity: 1;
+    }
+}
