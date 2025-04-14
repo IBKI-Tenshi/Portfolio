@@ -24,29 +24,108 @@
             </div>
         </div>
 
-        <div id="pull_to_peel_div">
-            <div>
-                <img src="/assets/images/pull_to_peel/pull_to_peel_arrow.png" alt="">
-                <span>Pull to <br> peel</span>
-            </div>
-            <div>background_2</div>
-            <div>background_3</div>
-            <div>
-                <span>Also, I'm interested</span>
-                <span>in diving into:</span>
-                <div class="skills">
-                    <div class="skill_short">
+
+
+        <!-- <div id="pull_to_peel_div">
+            <div *ngFor="let layer of peelLayers; let i = index" class="peel-layer" [class.hidden]="!visibleLayers[i]"
+                [ngStyle]="{ 'background-image': 'url(' + layer + ')', 'z-index': 10 - i }"
+                (click)="i === 0 && togglePeel()"  (click)="logout()">
+                <ng-container *ngIf="i === 0 && visibleLayers[0]">
+                    <img src="/assets/images/pull_to_peel/pull_to_peel_arrow.png" alt="">
+                    <span>Pull to <br> peel</span>
+                </ng-container>
+
+
+                <ng-container *ngIf="i === 3 && visibleLayers[3]">
+                    <span>Also, I'm interested</span>
+                    <span>in diving into:</span>
+                    <div class="skills">
+                        <div class="skill_short">
+                            <img src="/assets/images/pull_to_peel/React_icon.svg" alt="">
+                            <span>React</span>
+                        </div>
+                        <div class="skill_short">
+                            <img src="/assets/images/pull_to_peel/Vue_js_icon.svg" alt="">
+                            <span>Vue Js</span>
+                        </div>
+                    </div>
+                </ng-container>
+            </div> -->
+
+
+            <div id="pull_to_peel_div">
+                <div *ngFor="let layer of peelLayers; let i = index"
+                     #peelLayerRef
+                     class="peel-layer"
+                     [ngStyle]="{ 'background-image': 'url(' + layer + ')', 'z-index': 10 - i }"
+                     (click)="togglePeel()">
+              
+                  <ng-container *ngIf="i === 0">
+                    <img src="/assets/images/pull_to_peel/pull_to_peel_arrow.png" alt="">
+                    <span>Pull to <br> peel</span>
+                  </ng-container>
+              
+                  <ng-container *ngIf="i === 3">
+                    <span>Also, I'm interested</span>
+                    <span>in diving into:</span>
+                    <div class="skills">
+                      <div class="skill_short">
                         <img src="/assets/images/pull_to_peel/React_icon.svg" alt="">
                         <span>React</span>
-                    </div>
-                    <div class="skill_short">
+                      </div>
+                      <div class="skill_short">
                         <img src="/assets/images/pull_to_peel/Vue_js_icon.svg" alt="">
                         <span>Vue Js</span>
+                      </div>
                     </div>
+                  </ng-container>
                 </div>
-            </div>
+              </div>
+              
 
-        </div>
+              <!-- <div id="pull_to_peel_div">
+                <div
+                  *ngFor="let layer of peelLayers; let i = index"
+                  #peelLayerRef
+                  class="peel-layer"
+                  [ngStyle]="{ 'background-image': 'url(' + layer + ')', 'z-index': 10 - i }"
+                  (click)="i === 0 && togglePeel()"
+                >
+                  <ng-container *ngIf="i === 0">
+                    <img src="/assets/images/pull_to_peel/pull_to_peel_arrow.png" alt="">
+                    <span>Pull to <br> peel</span>
+                  </ng-container>
+              
+                  <ng-container *ngIf="i === 3 && peeled">
+                    <span>Also, I'm interested</span>
+                    <span>in diving into:</span>
+                    <div class="skills">
+                      <div class="skill_short">
+                        <img src="/assets/images/pull_to_peel/React_icon.svg" alt="">
+                        <span>React</span>
+                      </div>
+                      <div class="skill_short">
+                        <img src="/assets/images/pull_to_peel/Vue_js_icon.svg" alt="">
+                        <span>Vue Js</span>
+                      </div>
+                    </div>
+                  </ng-container>
+                </div>
+              </div>
+               -->
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </div>
 </div>

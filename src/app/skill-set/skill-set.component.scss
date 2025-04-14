@@ -1,7 +1,6 @@
 #skill_set_screen {
     height: 100vh;
     // width: auto;
-
     padding: 32px;
 
     background-image: url('/assets/images/skill_set_background.png');
@@ -80,7 +79,6 @@
 .skills {
     display: flex;
     flex-direction: row;
-    // width: 50%;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
@@ -91,16 +89,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
     width: 50px;
 
     flex: 1 0 18%; // Basisbreite ist 18%
-    // max-width: 18%;    // Maximalbreite 18%
 
     >img {
         height: 80px;
         width: 80px;
-
         filter: grayscale(100%);
         transition: filter 0.3s ease, transform 0.1s ease-in-out;
 
@@ -113,10 +108,8 @@
     >span {
         color: white;
         padding-top: 8px;
-
         display: inline-block; // macht Zeilenumbruch und Zentrierung möglich
         text-align: center;
-
     }
 }
 
@@ -125,7 +118,7 @@
     background-color: aqua;
     height: 200px;
     width: 200px;
-    
+
     >div {
         position: absolute;
         top: 0;
@@ -135,7 +128,7 @@
         width: 200px;
         height: 200px;
         color: white;
-        
+
         transform: rotate(+10deg);
 
         display: flex;
@@ -148,28 +141,30 @@
             height: 40px;
         }
     }
+}
 
-    >div:nth-of-type(1) {
-        background-image: url("/assets/images/pull_to_peel/pull_to_peel_1.png");
-        z-index: 4;
+.peel-layer {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: opacity 0.1s ease;
+    cursor: pointer;
 
+    &.hidden {
+        opacity: 0;
+        pointer-events: none;
     }
+}
 
-    >div:nth-of-type(2) {
-        background-image: url("/assets/images/pull_to_peel/pull_to_peel_2.png");
-        z-index: 3;
-    }
-
-    >div:nth-of-type(3) {
-        background-image: url("/assets/images/pull_to_peel/pull_to_peel_3.png");
-        z-index: 2;
-    }
-
-    >div:nth-of-type(4) {
-        background-image: url("/assets/images/pull_to_peel/pull_to_peel_4.png");
-        z-index: 1;
-        // z-index: 5;
-    }
+.after-peel {
+    z-index: 7;
+    pointer-events: none;
 }
 
 .skill_short {
@@ -177,21 +172,14 @@
     flex-direction: column;
     align-items: center;
 
-    width: 50px;
-
-    flex: 1 0 18%; // Basisbreite ist 18%
-    // max-width: 18%;    // Maximalbreite 18%
-
     >img {
-        height: 64px;
-        width: 64px;
+        height: 40px;
+        width: 40px;
+        padding-top: 12px;
     }
 
     >span {
         color: white;
         padding-top: 8px;
-
-        // display: inline-block; // macht Zeilenumbruch und Zentrierung möglich
-        text-align: center;
     }
 }
