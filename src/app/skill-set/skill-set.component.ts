@@ -1,5 +1,6 @@
 import { NgFor } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { FadeAnimationEffectService } from '../shared/services/fade_animation.service';
 
 @Component({
   selector: 'app-skill-set',
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
   templateUrl: './skill-set.component.html',
   styleUrl: './skill-set.component.scss'
 })
-export class SkillSetComponent {
+export class SkillSetComponent implements AfterViewInit {
 
   skills = [
     { name: 'HTML', img: 'assets/images/skills/HTML_icon.png' },
@@ -23,5 +24,14 @@ export class SkillSetComponent {
     { name: 'Material Design', img: 'assets/images/skills/Material_Design_icon.png' },
   ];
   
+
+  @ViewChild('fade_animation_img') fade_animation_img!: ElementRef<HTMLImageElement>;
+
+  constructor(private fadeAnimationEffect: FadeAnimationEffectService) {}
+
+  ngAfterViewInit(): void {
+    const el = this.fade_animation_img.nativeElement;
+    this.fadeAnimationEffect.startFadeAnimationLoop(el);
+  }
 
 }

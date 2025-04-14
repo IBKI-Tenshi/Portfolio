@@ -1,6 +1,6 @@
 #skill_set_screen {
     height: 100vh;
-    width: auto;
+    // width: auto;
 
     padding: 32px;
 
@@ -22,17 +22,17 @@
 
     margin-top: 32px;
 
-    >#whole_title {
+    >.whole_title {
         color: white;
         margin-right: 100px;
+        display: flex;
+        flex-direction: column;
 
         >#big_title {
             position: relative;
             display: inline-block;
 
             >h2 {
-                font-size: 64px;
-                margin: 0;
                 z-index: 2;
                 position: relative;
             }
@@ -45,16 +45,20 @@
                 height: auto;
                 transform: translate(-50%, -50%) scaleX(-1);
                 z-index: 1;
+
+                clip-path: inset(0 100% 100% 0);
+                ;
+                transition: clip-path 0.3s ease-in-out;
+            }
+
+            >.fade_animation {
+                clip-path: inset(0 0 0 0);
             }
         }
 
-        >h3 {
-            font-size: 20px;
+        >span {
             text-align: end;
-
         }
-
-
     }
 
     >#description {
@@ -65,7 +69,15 @@
     }
 }
 
-#skills {
+#central_component_div {
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.skills {
     display: flex;
     flex-direction: row;
     // width: 50%;
@@ -73,38 +85,113 @@
     align-items: center;
     justify-content: center;
     gap: 16px;
+}
 
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    >.skill {
+    width: 50px;
+
+    flex: 1 0 18%; // Basisbreite ist 18%
+    // max-width: 18%;    // Maximalbreite 18%
+
+    >img {
+        height: 80px;
+        width: 80px;
+
+        filter: grayscale(100%);
+        transition: filter 0.3s ease, transform 0.1s ease-in-out;
+
+        &:hover {
+            filter: grayscale(0%);
+            transform: scale(0.75);
+        }
+    }
+
+    >span {
+        color: white;
+        padding-top: 8px;
+
+        display: inline-block; // macht Zeilenumbruch und Zentrierung möglich
+        text-align: center;
+
+    }
+}
+
+#pull_to_peel_div {
+    position: relative;
+    background-color: aqua;
+    height: 200px;
+    width: 200px;
+    
+    >div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        background-position: center;
+        width: 200px;
+        height: 200px;
+        color: white;
+        
+        transform: rotate(+10deg);
+
         display: flex;
-        flex-direction: column;
         align-items: center;
-
-        width: 50px;
-
-        flex: 1 0 18%; // Basisbreite ist 18%
-        // max-width: 18%;    // Maximalbreite 18%
+        justify-content: center;
+        flex-direction: column;
 
         >img {
-            height: 80px;
-            width: 80px;
-
-            filter: grayscale(100%);
-            transition: filter 0.3s ease, transform 0.1s ease-in-out;
-
-            &:hover {
-                filter: grayscale(0%);
-                transform: scale(0.75);
-            }
+            width: 40px;
+            height: 40px;
         }
+    }
 
-        >span {
-            color: white;
-            padding-top: 8px;
+    >div:nth-of-type(1) {
+        background-image: url("/assets/images/pull_to_peel/pull_to_peel_1.png");
+        z-index: 4;
 
-            display: inline-block; // macht Zeilenumbruch und Zentrierung möglich
-            text-align: center;
+    }
 
-        }
+    >div:nth-of-type(2) {
+        background-image: url("/assets/images/pull_to_peel/pull_to_peel_2.png");
+        z-index: 3;
+    }
+
+    >div:nth-of-type(3) {
+        background-image: url("/assets/images/pull_to_peel/pull_to_peel_3.png");
+        z-index: 2;
+    }
+
+    >div:nth-of-type(4) {
+        background-image: url("/assets/images/pull_to_peel/pull_to_peel_4.png");
+        z-index: 1;
+        // z-index: 5;
+    }
+}
+
+.skill_short {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 50px;
+
+    flex: 1 0 18%; // Basisbreite ist 18%
+    // max-width: 18%;    // Maximalbreite 18%
+
+    >img {
+        height: 64px;
+        width: 64px;
+    }
+
+    >span {
+        color: white;
+        padding-top: 8px;
+
+        // display: inline-block; // macht Zeilenumbruch und Zentrierung möglich
+        text-align: center;
     }
 }

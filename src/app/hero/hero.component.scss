@@ -64,78 +64,6 @@ button {
 }
 
 
-
-
-// #hello_button {
-//   font-size: 18px;
-//   padding: 10px 20px;
-//   color: white;
-//   background-color: transparent;
-//   cursor: pointer;
-//   width: 140px;
-//   position: relative;
-//   overflow: hidden;
-//   transform-origin: left;
-//   border-radius: 25px;
-
-//   > span {
-//     position: relative;
-//     z-index: 2;
-//     color: white;
-//   }
-
-//   &::after {
-//     content: "I'M Borna Kitak";
-//     position: absolute;
-//     inset: 0;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     border: 1px solid white;
-//     transform-origin: left;
-//     border-radius: 25px;
-//     background-color: #007bff;
-//     clip-path: inset(0% 50% 0% 50%);
-//     transition: clip-path 0.4s ease-in-out;
-//     z-index: 3;
-//   }
-
-//   &:hover {
-//     animation: widthBounce 0.6s ease-in-out forwards;
-//   }
-
-//   &:hover::after {
-//     clip-path: inset(0% 0% 0% 0%);
-
-//   }
-// }
-
-// @keyframes widthBounce {
-//   0% {
-//     width: 140px;
-//   }
-//   60% {
-//     width: 192px;
-//   }
-//   75% {
-//     width: 186px;
-//   }
-//   85% {
-//     width: 191px;
-//   }
-//   100% {
-//     width: 190px;
-//   }
-// }
-
-
-
-
-
-
-
-
-
 #hello_button {
     font-size: 18px;
     padding: 10px 20px;
@@ -271,5 +199,6 @@ h1 {
     display: flex;
     flex-direction: column;
     align-self: flex-start;
+    padding-left: 80px;
 
 }

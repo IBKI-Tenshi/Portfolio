@@ -1,11 +1,11 @@
 <div id="skill_set_screen">
 
     <div id="title_and_description">
-        <div id="whole_title">
-            <h3>MY Stack</h3>
+        <div class="whole_title">
+            <span class="overline">MY Stack</span>
             <div id="big_title">
                 <h2>Skill set</h2>
-                <img src="/assets/images/skill_set_frame.png" alt="">
+                <img #fade_animation_img src="/assets/images/skill_set_frame.png" alt="">
             </div>
 
         </div>
@@ -14,10 +14,39 @@
         </div>
     </div>
 
-    <div id="skills">
-        <div class="skill" *ngFor="let skill of skills">
-            <img [src]="skill.img" [alt]="skill.name">
-            <span [innerHTML]="skill.name.replace(' ', '<br>')"></span>
+    <div id="central_component_div">
+
+
+        <div class="skills">
+            <div class="skill" *ngFor="let skill of skills">
+                <img [src]="skill.img" [alt]="skill.name">
+                <span [innerHTML]="skill.name.replace(' ', '<br>')"></span>
+            </div>
         </div>
+
+        <div id="pull_to_peel_div">
+            <div>
+                <img src="/assets/images/pull_to_peel/pull_to_peel_arrow.png" alt="">
+                <span>Pull to <br> peel</span>
+            </div>
+            <div>background_2</div>
+            <div>background_3</div>
+            <div>
+                <span>Also, I'm interested</span>
+                <span>in diving into:</span>
+                <div class="skills">
+                    <div class="skill_short">
+                        <img src="/assets/images/pull_to_peel/React_icon.svg" alt="">
+                        <span>React</span>
+                    </div>
+                    <div class="skill_short">
+                        <img src="/assets/images/pull_to_peel/Vue_js_icon.svg" alt="">
+                        <span>Vue Js</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 </div>

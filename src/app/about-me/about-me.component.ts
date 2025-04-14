@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { FadeAnimationEffectService } from '../shared/services/fade_animation.service';
 
 @Component({
   selector: 'app-about-me',
@@ -9,19 +10,15 @@ import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 })
 export class AboutMeComponent implements AfterViewInit {
 
-  @ViewChild('underline_img') underlineImg!: ElementRef<HTMLImageElement>;
+  @ViewChild('fade_animation_img') fade_animation_img!: ElementRef<HTMLImageElement>;
+
+  constructor(private fadeAnimationEffect: FadeAnimationEffectService) {}
 
   ngAfterViewInit(): void {
-    const el = this.underlineImg.nativeElement;
-
-    const toggleEffect = () => {
-      el.classList.add('show_underline');
-      setTimeout(() => {
-        el.classList.remove('show_underline');
-      }, 1000);
-    };
-
-    toggleEffect();
-    setInterval(toggleEffect, 4000);
+    const el = this.fade_animation_img.nativeElement;
+    this.fadeAnimationEffect.startFadeAnimationLoop(el);
   }
+  
 }
+
+
