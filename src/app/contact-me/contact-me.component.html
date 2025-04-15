@@ -1,30 +1,44 @@
-<div id="contact_me_component">
+<div id="contact_me_component" class="dFlex">
 
     <div id="contact_me_div">
-        <div id="infos">
-            <h3>CONTACT ME</h3>
+
+
+        <div id="text_div" class="dFlex">
+            <span class="overline">CONTACT ME</span>
             <h2>Ready to work togehter?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab necessitatibus quis, culpa mollitia odit amet et
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab necessitatibus quis, culpa mollitia odit
+                amet et
                 iure autem, quam ad rem consequatur. Consequatur id odit ipsa laborum architecto ratione tenetur.</p>
-            <img src="" alt="pfeil">
+            <img #fade_animation_img src="/assets/images/contact_me_arrow.png" alt="">
         </div>
+
         <div id="input_infos">
-            <input type="text">
-            <span>Your name goes here</span>
-            <div class="placeholder">___________________</div>
-    
-            <input type="text">
-            <span>Your email</span>
-            <div class="placeholder">___________________</div>
-    
-            <input type="text">
-            <span>how can i help you</span>
-            <div class="placeholder">___________________</div>
-    
+
+            <img src="/assets/images/bk_logo.jpg" alt="">
+
+            <div class="input_div dFlex border_top">
+                <span>Whats yourew name?</span>
+                <input type="text">
+                <span class="border_bottom">Your name goes here</span>
+            </div>
+
+            <div class="input_div dFlex">
+                <input type="text">
+                <span>Your email</span>
+                <span class="border_bottom">Your name goes here</span>
+            </div>
+
+            <div class="input_div dFlex">
+                <span>Whats yourew name?</span>
+                <input type="text">
+                <span class="border_bottom">how can i help you</span>
+            </div>
+
+
             checkbox for privacypolicy
-    
+
             <span>checkbox to agree</span>
-            <button>send</button>
+            <button class="the_red_button">send</button>
         </div>
     </div>
 
@@ -32,4 +46,3 @@
 
     <app-footer class="footer_positioning"></app-footer>
 </div>
-

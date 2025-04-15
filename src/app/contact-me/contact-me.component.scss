@@ -1,6 +1,6 @@
 
 #contact_me_component {
-    width: 100%;
+    // width: 100%;
     height: 100vh;
 
     background-image: url('/assets/images/contact-me_background.png');
@@ -9,9 +9,8 @@
 
     color: white;
     padding-top: 120px;
+    padding: 160px 64px 0 64px;
 
-
-    display: flex;
     flex-direction: column;
 
     >#contact_me_div {
@@ -19,15 +18,60 @@
     }
 }
 
-#infos {
+#text_div {
     width: 50%;
+    flex-direction: column;
+    
+    >img {
+        width: 50%;
+        height: 50px;
+        clip-path: inset(0 100% 0 0);
+        transition: clip-path 0.3s ease-in-out;
+        align-self: flex-end;
+    }
+
+    >.fade_animation {
+        clip-path: inset(0 0 0 0);
+    }
 }
 
 #input_infos {
-    width: 50%;
 
+    padding-top: 96px;
+
+    position: relative;
+    // background-color: aqua;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    // align-items: flex-end;
+
+    >img {
+        position: absolute;
+        right: 5%;
+        top: 0%;
+        width: 120px;
+        height: 120px;
+        transform: rotate(+10deg);
+        align-self: flex-end;
+    }
+
 }
 
+.input_div {
+    flex-direction: column;
+}
+
+.border_bottom {
+    border-bottom: solid 1px white;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+
+}
+
+.border_top {
+    border-top: solid 1px white;
+    padding-top: 12px;
+}
