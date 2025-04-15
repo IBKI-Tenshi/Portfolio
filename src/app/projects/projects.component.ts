@@ -15,7 +15,7 @@ export class ProjectsComponent implements AfterViewInit {
   projects = [
     {
       title: 'Join',
-      description: 'join description',
+      description: 'join description Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos illo voluptatum consequuntur quia eveniet delectusmagnam cum culpa debitis error. Necessitatibus dolorum numquam fugiat quod officia iure? Ab, est nihil.',
       info_details: 'tiefere infos zum projekt',
       image: '/assets/images/project_images/join_image.png',
       project_link: 'link zum projekt',
@@ -35,7 +35,7 @@ export class ProjectsComponent implements AfterViewInit {
     },
     {
       title: 'El Pollo Loco',
-      description: 'El Pollo Loco description',
+      description: 'El Pollo Loco description Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos illo voluptatum consequuntur quia eveniet delectusmagnam cum culpa debitis error. Necessitatibus dolorum numquam fugiat quod officia iure? Ab, est nihil.',
       info_details: 'tiefere infos zum projekt',
       image: '/assets/images/project_images/el_pollo_loco_image.png',
       project_link: 'link zum projekt',
@@ -55,7 +55,7 @@ export class ProjectsComponent implements AfterViewInit {
     },
     {
       title: 'pokedex',
-      description: 'pokedex description',
+      description: 'pokedex description Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos illo voluptatum consequuntur quia eveniet delectusmagnam cum culpa debitis error. Necessitatibus dolorum numquam fugiat quod officia iure? Ab, est nihil.',
       info_details: 'tiefere infos zum projekt',
       image: '/assets/images/project_images/pokedex_image.png',
       project_link: 'link zum projekt',

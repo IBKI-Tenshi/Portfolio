@@ -7,6 +7,9 @@
     background-repeat: no-repeat;
 
     flex-direction: column;
+
+    position: relative;
+
 }
 
 #header_component {
@@ -14,10 +17,12 @@
 }
 
 #central_div {
-    width: 65%;
+    width:65%;
     flex-direction: column;
     position: relative;
-    // padding-top: 100px;
+    
+   padding: 80px 64px 0 64px;
+   padding-bottom: 0;
 
     >#hello_div {
         align-items: flex-end;
@@ -139,7 +144,7 @@ h1 {
     color: white;
     font-size: 112px;
     margin: 0;
-    padding: 12px 0;
+    // padding: 12px 0;
 }
 
 .transformed {
@@ -150,7 +155,7 @@ h1 {
     color: #f7c518;
     font-size: 112px;
     margin: 0;
-    padding: 12px 0;
+    // padding: 12px 0
 }
 
 .letter-pair:hover .normal {
@@ -177,7 +182,7 @@ h1 {
     width: calc(0.75 * 244px);
 
     position: absolute;
-    top: 24px;
+    top: 10%;
     right: 8px;
 
     background-color: white;
@@ -211,9 +216,13 @@ h1 {
 
 .social_icons {
 
+    position: absolute;
+    left: 64px;
+    bottom: 64px;
+
     flex-direction: column;
     align-self: flex-start;
-    padding-left: 80px;
+    // padding-left: 64px;
     gap: 4px;
 
     >img {
