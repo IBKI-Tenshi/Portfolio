@@ -15,15 +15,18 @@ import { RotatingIconDirective } from '../shared/directive/rotating_icon_directi
 
 export class HeroComponent {
 
-  @ViewChild('viewedDiv', { static: true }) viewedDiv!: ElementRef;
-  @ViewChild('rotatingIcon', { static: true }) rotatingIcon!: ElementRef;
-  @ViewChild('viewedButton', { static: true }) viewedButton!: ElementRef;
+  // @ViewChild('viewedDiv', { static: true }) viewedDiv!: ElementRef;
+  // @ViewChild('rotatingIcon', { static: true }) rotatingIcon!: ElementRef;
+  // @ViewChild('viewedButton', { static: true }) viewedButton!: ElementRef;
 
   firstLine_normal: string = 'Frontend';
   firstLine_transformed: string = 'fRONTEND';
-
   secondLine_normal: string = 'Developer';
   secondLine_transformed: string = 'dEVELOPER';
+
+  hovering: boolean = false;
+
+
 
   getLetters(letters_normal:string, letters_transformed:string): { normal: string; transformed: string }[] {
     return letters_normal.split('').map((letter, i) => ({

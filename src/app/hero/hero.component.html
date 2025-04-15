@@ -1,10 +1,10 @@
-<div id="hero_screen">
+<div id="hero_screen" class="dFlex_ac">
 
   <app-header id="header_component"></app-header>
 
-  <div id="central_div">
+  <div id="central_div" class="dFlex">
 
-    <div #viewedDiv id="hello_div">
+    <div #viewedDiv id="hello_div" class="dFlex">
       <img #rotatingIcon class="waving_icon" src="/assets/icons/waving_hand.png" alt="" />
       <button #viewedButton id="hello_button"
               appRotatingIcon
@@ -24,7 +24,7 @@
       </span>
     </div>
 
-    <div id="h1_second">
+    <div id="h1_second" class="dFlex">
       <span class="letter-pair" *ngFor="let letter of getLetters(this.secondLine_normal, this.secondLine_transformed)">
         <span class="stack">
           <span class="normal smaler_letter">{{ letter.normal }}</span>
@@ -35,12 +35,15 @@
 
     <button mat-fab-button color="primary" class="the_red_button">Get in Touch</button>
 
+    <div id="my_picture"  class="dFlex_ac_jc" (mouseenter)="hovering = true" (mouseleave)="hovering = false">
+      <img src="/assets/images/Kitak_Borna_1.JPG" alt="" />
+      <span>{{ hovering ? 'Borna :D' : 'Borna :)' }}</span>
+    </div>
+    
 
-
-    <img id="my_picture" src="/assets/images/Photoframe.png" alt="">
   </div>
 
-  <div class="social_icons">
+  <div class="social_icons dFlex">
     <img src="/assets/icons/linkedin-icon.svg" alt="">
     <img src="/assets/icons/github-icon.svg" alt="">
     <img src="/assets/icons/e.mail-icon.svg" alt="">

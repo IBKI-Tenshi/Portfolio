@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { ProjectDivComponent } from "../project-div/project-div.component";
 import { NgFor } from '@angular/common';
+import { FadeAnimationEffectService } from '../shared/services/fade_animation.service';
 
 @Component({
   selector: 'app-projects',
@@ -9,7 +10,7 @@ import { NgFor } from '@angular/common';
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements AfterViewInit {
 
   projects = [
     {
@@ -74,4 +75,16 @@ export class ProjectsComponent {
     },
 
   ]
+
+  @ViewChild('fade_animation_img') fade_animation_img!: ElementRef<HTMLImageElement>;
+
+  constructor(private fadeAnimationEffect: FadeAnimationEffectService) {}
+
+  ngAfterViewInit(): void {
+    const el = this.fade_animation_img.nativeElement;
+    this.fadeAnimationEffect.startFadeAnimationLoop(el);
+  }
+
+
+
 }

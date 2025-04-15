@@ -8,7 +8,7 @@
 
 
     <div id="title">
-        <div id="overline_div">
+        <div id="overline_div" class="dFlex_ac_jc">
             <img #fade_animation_img src="/assets/images/blue_arrow.png" alt="">
             <span class="overline">IN THEIR WORDS:</span>
         </div>
@@ -16,15 +16,8 @@
     </div>
 
 
-
-
-
-
-
     <div id="thoughts">
         <app-thoughts class="hover_effect" *ngFor="let thought of thoughts" [thought]="thought"></app-thoughts>
     </div>
-
-    <!-- <img src="/assets/images/thoughts_hover.png" alt=""> -->
 
 </div>
