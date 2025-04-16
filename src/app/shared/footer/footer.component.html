@@ -1,9 +1,27 @@
 <footer>
     <img class="logo" src="/assets/images/bk_logo.jpg" alt="logo">
-    <span>copieright Borna Kitak 2025</span>
+    <span>© Borna Kitak 2025</span>
     <div id="footer_links">
-        <a href="#">Legale Notice</a>
-        <a href="#">Github</a>
+        <!-- <a href="#">Legale Notice</a> -->
+
+        <a class="nav-link">
+            Legale Notice
+            <img class="hover_left_to_right" src="/assets/images/header_img/contact_frame.png" alt="">
+        </a>
+
+
+        <div #viewedDiv class="link_div dFlex">
+            <img #rotatingIcon class="waving_icon" src="/assets/icons/footer_github-icon.svg" alt="" />
+            <a #viewedButton class="footer_link dFlex_ac_jc"
+                    appRotatingIcon
+                    [viewedDiv]="viewedDiv"
+                    [rotatingIcon]="rotatingIcon">
+              <!-- <span>GitHub</span> -->
+              GitHub
+            </a>
+          </div>
+
+        <a href="#">GitHub</a>
         <a href="#">LinkedIn</a>
         <a href="#">Email</a>
     </div>

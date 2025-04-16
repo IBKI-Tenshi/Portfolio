@@ -2,21 +2,89 @@ footer {
     color: white;
     background-color: rgba(255, 166, 0, 0.349);
     margin-top: 64px;
-    padding: 24px;
+    padding: 24px 0;
     gap: 32px;
 
     display: flex;
     flex-direction: column;
 
-    
-
     >#footer_links {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
 
         >a {
             text-decoration: none;
             color: white;
         }
+    }
+}
+
+
+.nav-link {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+
+    >img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: auto;
+        transition: clip-path 0.5s ease-in-out;
+    }
+
+    &:hover {
+        >img {
+            clip-path: inset(0 0 0 0);
+            /* Bild wird sichtbar beim Hover */
+        }
+    }
+}
+
+.hover_left_to_right {
+    clip-path: inset(0 100% 0 0);
+}
+
+// classes for rotating icon
+.link_div {
+    flex-direction: column;
+    background-color: rgba(255, 166, 0, 0.419);
+    width: 140px;
+
+    >img {
+        height: 32px;
+        width: 32px;
+        // padding-left: 0;
+    }
+
+    &.hovered {
+
+        >img {
+
+        }
+    }
+}
+
+
+
+.footer_link {
+    font-size: 18px;
+    padding: 10px 20px;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+
+    border: 1px solid white;
+    border-radius: 25px;
+    transition: background-color 0.5s ease;
+
+    &:hover {
+        background-color: #007bff;
     }
 }

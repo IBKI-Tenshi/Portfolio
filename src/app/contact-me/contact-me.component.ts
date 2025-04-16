@@ -21,5 +21,5 @@ export class ContactMeComponent implements AfterViewInit {
     this.fadeAnimationEffect.startFadeAnimationLoop(el);
   }
 
-
+  
 }
