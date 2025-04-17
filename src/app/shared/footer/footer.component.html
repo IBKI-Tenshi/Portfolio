@@ -1,7 +1,7 @@
 <footer>
     <img class="logo" src="/assets/images/bk_logo.jpg" alt="logo">
     <span>© Borna Kitak 2025</span>
-    <div id="footer_links">
+    <div id="footer_links" class="dFlex">
         <!-- <a href="#">Legale Notice</a> -->
 
         <a class="nav-link">
@@ -9,20 +9,27 @@
             <img class="hover_left_to_right" src="/assets/images/header_img/contact_frame.png" alt="">
         </a>
 
+        <div class="link_div dFlex" appRotatingIcon>
+            <div class="icon_wrapper">
+                <img class="waving_icon" src="/assets/icons/footer_github-icon.svg" alt="" />
+            </div>
+            <a class="footer_link dFlex_ac_jc">GitHub</a>
+        </div>
 
-        <div #viewedDiv class="link_div dFlex">
-            <img #rotatingIcon class="waving_icon" src="/assets/icons/footer_github-icon.svg" alt="" />
-            <a #viewedButton class="footer_link dFlex_ac_jc"
-                    appRotatingIcon
-                    [viewedDiv]="viewedDiv"
-                    [rotatingIcon]="rotatingIcon">
-              <!-- <span>GitHub</span> -->
-              GitHub
-            </a>
-          </div>
+        <div class="link_div dFlex" appRotatingIcon>
+            <div class="icon_wrapper">
+                <img class="waving_icon" src="/assets/icons/footer_linkedin-icon.svg" alt="" />
+            </div>
+            <a class="footer_link dFlex_ac_jc">LinkedIn</a>
+        </div>
 
-        <a href="#">GitHub</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">Email</a>
+        <div class="link_div dFlex" appRotatingIcon>
+            <div class="icon_wrapper">
+                <img class="waving_icon" src="/assets/icons/footer_e.mail-icon.svg" alt="" />
+            </div>
+            <a class="footer_link dFlex_ac_jc">Email</a>
+        </div>
+
+
     </div>
 </footer>

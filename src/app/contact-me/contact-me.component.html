@@ -1,7 +1,6 @@
 <div id="contact_me_component" class="dFlex">
 
-    <div id="contact_me_div">
-
+    <div id="contact_me_div" class="dFlex">
 
         <div id="text_div" class="dFlex">
             <span class="overline">CONTACT ME</span>
@@ -12,31 +11,44 @@
             <img #fade_animation_img src="/assets/images/contact_me_arrow.png" alt="">
         </div>
 
+
+
         <div id="input_infos">
+
 
             <img src="/assets/images/bk_logo.jpg" alt="">
 
-            <div class="input_div dFlex">
-                <span>Whats youre name?</span>
-                <input type="text" placeholder="Your name goes here">
-            </div>
+            <form action="" class="dFlex">
 
-            <div class="input_div dFlex">
-                <span>Whats youre email?</span>
-                <input type="text" placeholder="youremail@email.com">
-            </div>
+                <div class="input_div dFlex">
+                    <label for="name">Whats youre name?</label>
+                    <input type="text" id="name" placeholder="Your name goes here">
+                </div>
 
-            <div class="input_div dFlex">
-                <span>How can i help you?</span>
-                <input type="text" placeholder="Hello Borna, i am interesstetd in...">
-            </div>
+                <div class="input_div dFlex">
+                    <label for="email">Whats youre email?</label>
+                    <input type="email" id="email" placeholder="youremail@email.com">
+                </div>
 
-            
-            checkbox for privacypolicy
+                <div class="input_div dFlex">
+                    <label for="message">How can i help you?</label>
+                    <textarea id="message" placeholder="Hello Borna, I am interested in..."></textarea>
+                </div>
 
-            <span>checkbox to agree</span>
-            <button class="the_red_button">send</button>
+
+                <div class="checkbox_div dFlex_ac">
+                    <input type="checkbox" id="privacy" />
+                    <label for="privacy">I agree to the <a href="/privacy-policy" target="_blank">privacy
+                            policy</a>.</label>
+                </div>
+
+                <button type="submit" class="the_red_button">Send</button>
+
+            </form>
+
+
         </div>
+
     </div>
 
     <div class="spaceholder"></div>

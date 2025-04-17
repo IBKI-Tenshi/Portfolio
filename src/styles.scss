@@ -1,61 +1,60 @@
-
 body {
-    margin: 0;
-    padding: 0;
-    // overflow-x: hidden; // damit header keine scrollbar entstehen lässt
-    width: 100;
+  margin: 0;
+  padding: 0;
+  // overflow-x: hidden; // damit header keine scrollbar entstehen lässt
+  width: 100;
 
-    font-family: 'Bricolage_Grotesque', sans-serif;
+  font-family: 'Bricolage_Grotesque', sans-serif;
 }
 
 // Main Font
 @font-face {
-    font-family: 'Bricolage_Grotesque';
-    src: url('assets/fonts/bricolage-grotesque-v8-latin/bricolage-grotesque-v8-latin-200.woff2');
-    font-weight: 200;
-    font-style: normal;
+  font-family: 'Bricolage_Grotesque';
+  src: url('assets/fonts/bricolage-grotesque-v8-latin/bricolage-grotesque-v8-latin-200.woff2');
+  font-weight: 200;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Bricolage_Grotesque';
-    src: url('assets/fonts/bricolage-grotesque-v8-latin/bricolage-grotesque-v8-latin-300.woff2');
-    font-weight: 300;
-    font-style: normal;
+  font-family: 'Bricolage_Grotesque';
+  src: url('assets/fonts/bricolage-grotesque-v8-latin/bricolage-grotesque-v8-latin-300.woff2');
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Bricolage_Grotesque';
-    src: url('assets/fonts/bricolage-grotesque-v8-latin/bricolage-grotesque-v8-latin-regular.woff2');
-    font-weight: 400;
-    font-style: normal;
+  font-family: 'Bricolage_Grotesque';
+  src: url('assets/fonts/bricolage-grotesque-v8-latin/bricolage-grotesque-v8-latin-regular.woff2');
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Bricolage_Grotesque';
-    src: url('assets/fonts/bricolage-grotesque-v8-latin/bricolage-grotesque-v8-latin-500.woff2');
-    font-weight: 500;
-    font-style: normal;
+  font-family: 'Bricolage_Grotesque';
+  src: url('assets/fonts/bricolage-grotesque-v8-latin/bricolage-grotesque-v8-latin-500.woff2');
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Bricolage_Grotesque';
-    src: url('assets/fonts/bricolage-grotesque-v8-latin/bricolage-grotesque-v8-latin-600.woff2');
-    font-weight: 600;
-    font-style: normal;
+  font-family: 'Bricolage_Grotesque';
+  src: url('assets/fonts/bricolage-grotesque-v8-latin/bricolage-grotesque-v8-latin-600.woff2');
+  font-weight: 600;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Bricolage_Grotesque';
-    src: url('assets/fonts/bricolage-grotesque-v8-latin/bricolage-grotesque-v8-latin-700.woff2');
-    font-weight: 700;
-    font-style: normal;
+  font-family: 'Bricolage_Grotesque';
+  src: url('assets/fonts/bricolage-grotesque-v8-latin/bricolage-grotesque-v8-latin-700.woff2');
+  font-weight: 700;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Bricolage_Grotesque';
-    src: url('assets/fonts/bricolage-grotesque-v8-latin/bricolage-grotesque-v8-latin-800.woff2');
-    font-weight: 800;
-    font-style: normal;
+  font-family: 'Bricolage_Grotesque';
+  src: url('assets/fonts/bricolage-grotesque-v8-latin/bricolage-grotesque-v8-latin-800.woff2');
+  font-weight: 800;
+  font-style: normal;
 }
 
 // Photo Font
@@ -81,77 +80,83 @@ body {
 }
 
 .logo {
-    height: 40px;
-    width: 40px;
+  height: 40px;
+  width: 40px;
 }
 
 .spaceholder {
-    flex: 1;
+  flex: 1;
+  width: 100px;
 }
 
 .the_red_button {
+  min-width: 140px;
+  border-color: white;
+  border-width: 2px;
+  border-style: solid;
+  color: white;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 8px 24px;
+  font-size: 16px;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
 
-    border-color: white;
-    border-width: 4px;
-    border-style: solid;
-    color: white;
-    background-color: rgba(255, 255, 255, 0);
-    padding: 8px 24px;
-    font-size: 16px;
-    border-radius: 25px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
+  align-self: flex-end;
 
-    align-self: flex-end;
-  
-    box-shadow: 3px 3px 1px rgb(255, 255, 255);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    
-    &:hover {
-      background-color: #F87A55;
-      
-      transform: translate(4px, 10px); /* Verschiebung nach unten rechts */
-      
-      /* Der weiße Schatten wird beim Hover entfernt, um den Eindruck des Drückens zu erzeugen */
-      box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
-    }
+  box-shadow: 3px 3px 1px rgb(255, 255, 255);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    background-color: #F87A55;
+
+    transform: translate(4px, 10px);
+    /* Verschiebung nach unten rechts */
+
+    /* Der weiße Schatten wird beim Hover entfernt, um den Eindruck des Drückens zu erzeugen */
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
   }
-
-  .overline {
-    font-weight: 500;
-    font-size: 20px;
-  }
-
-  h2 {
-    font-weight: 700;
-    font-size: 64px;
-    margin: 0;
-  }
-  
-  .wrapper_padding {
-    padding: 0 64px;
-  }
-
-  .d_none {
-    display: none !important;
-  }
-
-  .hovered {
-    transform-origin: left;
-  }
-
-  .waving_icon {
-    //   background-color: aqua;
-    transform: rotate(-180deg);
-    transition: opacity 0.45s ease, transform 0.45s ease;
-    opacity: 0;
-
-    &.visible {
-        transform: rotate(12deg);
-        opacity: 1;
-    }
 }
+
+.overline {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 64px;
+  margin: 0;
+}
+
+.wrapper_padding {
+  padding: 0 64px;
+}
+
+.d_none {
+  display: none !important;
+}
+
+.hovered {
+  transform-origin: left;
+}
+
+
+
+
+.waving_icon {
+  transform: rotate(-180deg);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+  opacity: 0;
+
+  &.visible {
+    transform: rotate(12deg);
+    opacity: 1;
+  }
+}
+
+
 
 .dFlex {
   display: flex;

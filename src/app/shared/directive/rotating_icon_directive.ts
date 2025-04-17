@@ -1,32 +1,38 @@
-import { Directive, ElementRef, Renderer2, HostListener, Input } from '@angular/core';
+
+
+import { Directive, ElementRef, Renderer2, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appRotatingIcon]',
   standalone: true
 })
 export class RotatingIconDirective {
-  @Input() viewedDiv!: HTMLElement;
-  @Input() rotatingIcon!: HTMLElement;
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   @HostListener('mouseenter')
   onMouseEnter() {
-    if (this.viewedDiv) {
-      this.renderer.addClass(this.viewedDiv, 'hovered');
-    }
-    if (this.rotatingIcon) {
-      this.renderer.addClass(this.rotatingIcon, 'visible');
+    const hostElement = this.el.nativeElement as HTMLElement;
+
+    // Add hovered to the main container
+    this.renderer.addClass(hostElement, 'hovered');
+
+    // searching the img with class 'waving_icon'
+    const icon = hostElement.querySelector('.waving_icon') as HTMLElement;
+    if (icon) {
+      this.renderer.addClass(icon, 'visible');
     }
   }
 
   @HostListener('mouseleave')
   onMouseLeave() {
-    if (this.viewedDiv) {
-      this.renderer.removeClass(this.viewedDiv, 'hovered');
-    }
-    if (this.rotatingIcon) {
-      this.renderer.removeClass(this.rotatingIcon, 'visible');
+    const hostElement = this.el.nativeElement as HTMLElement;
+
+    this.renderer.removeClass(hostElement, 'hovered');
+
+    const icon = hostElement.querySelector('.waving_icon') as HTMLElement;
+    if (icon) {
+      this.renderer.removeClass(icon, 'visible');
     }
   }
 }

@@ -4,16 +4,12 @@
 
   <div id="central_div" class="dFlex">
 
-    <div #viewedDiv id="hello_div" class="dFlex">
-      <img #rotatingIcon class="waving_icon" src="/assets/icons/waving_hand.png" alt="" />
-      <button #viewedButton id="hello_button"
-              appRotatingIcon
-              [viewedDiv]="viewedDiv"
-              [rotatingIcon]="rotatingIcon">
+    <div id="hello_div" class="dFlex" appRotatingIcon>
+      <img class="waving_icon" src="/assets/icons/waving_hand.png" alt="" />
+      <button id="hello_button">
         <span>Hello World</span>
       </button>
     </div>
-
 
     <div id="h1_first">
       <span class="letter-pair" *ngFor="let letter of getLetters(this.firstLine_normal, this.firstLine_transformed)">

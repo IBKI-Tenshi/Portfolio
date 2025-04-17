@@ -1,15 +1,15 @@
 footer {
     color: white;
-    background-color: rgba(255, 166, 0, 0.349);
-    margin-top: 64px;
+    // background-color: rgba(255, 166, 0, 0.349);
+    // margin-top: 24px;
     padding: 24px 0;
-    gap: 32px;
+    gap: 8px;
 
     display: flex;
     flex-direction: column;
 
     >#footer_links {
-        display: flex;
+        align-items: flex-end;
         justify-content: space-between;
 
         >a {
@@ -52,26 +52,34 @@ footer {
 }
 
 // classes for rotating icon
+
 .link_div {
     flex-direction: column;
-    background-color: rgba(255, 166, 0, 0.419);
+    // background-color: rgba(255, 166, 0, 0.419);
     width: 140px;
 
-    >img {
-        height: 32px;
-        width: 32px;
-        // padding-left: 0;
+    .icon_wrapper {
+        margin-left: 40%;
+        transition: margin 0.4s ease;
+
+        >img {
+            height: 24px;
+            width: 24px;
+        }
     }
 
     &.hovered {
-
-        >img {
-
+        .icon_wrapper {
+            margin-left: 80%;
         }
     }
 }
 
+// adjustet rotation of origin .visible class
+.visible {
+    transform: rotate(2deg);
 
+}
 
 .footer_link {
     font-size: 18px;
