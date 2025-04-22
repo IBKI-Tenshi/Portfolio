@@ -39,9 +39,11 @@
                       formControlName="message"
                       placeholder="Hello Borna, I am interested in..."
                       #autoTextarea
+                      maxlength="1000"
                       (input)="autoResize(autoTextarea)">
             </textarea>
   
+            <!-- fehlermeldungen -->
             <div class="error" *ngIf="message?.errors?.['minlength'] && message?.touched">
               Please write at least 10 characters.
             </div>
