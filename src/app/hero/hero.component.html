@@ -1,4 +1,4 @@
-<div id="hero_screen" class="dFlex_ac">
+<div id="hero_component" class="dFlex_ac">
 
   <app-header id="header_component"></app-header>
 
@@ -6,7 +6,7 @@
 
     <div id="hello_div" class="dFlex" appRotatingIcon>
       <img class="waving_icon" src="/assets/icons/waving_hand.png" alt="" />
-      <button id="hello_button">
+      <button id="hello_button" class="button_styling event_target">
         <span>Hello World</span>
       </button>
     </div>
@@ -29,22 +29,29 @@
       </span>
     </div>
 
-    <button mat-fab-button color="primary" class="the_red_button">Get in Touch</button>
+    <a id="get_in_touch_button" class="the_red_button button_styling" href="#contact_me_component">Get in Touch</a>
 
-    <div id="my_picture"  class="dFlex_ac_jc" (mouseenter)="hovering = true" (mouseleave)="hovering = false">
+    <div id="my_picture" class="dFlex_ac_jc" (mouseenter)="hovering = true" (mouseleave)="hovering = false">
       <img src="/assets/images/Kitak_Borna_1.JPG" alt="" />
       <span>{{ hovering ? 'Borna :D' : 'Borna :)' }}</span>
     </div>
-    
+
 
   </div>
 
   <div class="social_icons dFlex">
-    <img src="/assets/icons/linkedin-icon.svg" alt="">
-    <img src="/assets/icons/github-icon.svg" alt="">
-    <img src="/assets/icons/e.mail-icon.svg" alt="">
+    <a href="#" target="_blank" rel="noopener noreferrer">
+      <img src="/assets/icons/linkedin-icon.svg" alt="">
+    </a>
+    <a href="https://github.com/IBKI-Tenshi" target="_blank" rel="noopener noreferrer">
+      <img src="/assets/icons/github-icon.svg" alt="">
+    </a>
+    <a href="#contact_me_component">
+      <img src="/assets/icons/e.mail-icon.svg" alt="">
+    </a>
+
+
+
   </div>
 
 </div>
-
- 

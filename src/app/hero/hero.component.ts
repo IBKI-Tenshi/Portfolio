@@ -2,13 +2,12 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { HeaderComponent } from '../shared/header/header.component';
 import { CommonModule, NgClass } from '@angular/common';
-import { MatButtonModule } from '@angular/material/button';
 import { RotatingIconDirective } from '../shared/directive/rotating_icon_directive';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [HeaderComponent, CommonModule, MatButtonModule, RotatingIconDirective],
+  imports: [HeaderComponent, CommonModule, RotatingIconDirective],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss'
 })

@@ -1,4 +1,4 @@
-#hero_screen {
+#hero_component {
     height: 100vh; // am ende muss es 100vh haben
     // width: 100%;
 
@@ -17,12 +17,12 @@
 }
 
 #central_div {
-    width:65%;
+    width: 65%;
     flex-direction: column;
     position: relative;
-    
-   padding: 80px 64px 0 64px;
-   padding-bottom: 0;
+
+    padding: 80px 64px 0 64px;
+    padding-bottom: 0;
 
     >#hello_div {
         align-items: flex-end;
@@ -37,14 +37,15 @@
     }
 }
 
-
-button {
-    font-size: 20px;
+.button_styling {
+    font-size: 18px;
+    font-weight: 500;
     padding: 10px 20px;
     white-space: nowrap;
     /* Verhindert Zeilenumbrüche */
     cursor: pointer;
-
+    text-decoration: none;
+    text-align: center;
     border: 1px solid white;
     border-radius: 25px;
     background-color: rgba(255, 255, 255, 0);
@@ -79,7 +80,7 @@ button {
         align-items: center;
         justify-content: center;
 
-        
+
         border: 1px solid white;
         transform-origin: left;
         border-radius: 25px;
@@ -206,10 +207,10 @@ h1 {
         font-family: 'Kalam', sans-serif;
     }
 
-    
+
     &:hover {
         >img {
-            filter: grayscale(0%); 
+            filter: grayscale(0%);
         }
     }
 }
@@ -225,12 +226,14 @@ h1 {
     // padding-left: 64px;
     gap: 4px;
 
-    >img {
-        border-radius: 50%;
-        transition: background-color 0.5s ease;
+    >a {
+        >img {
+            border-radius: 50%;
+            transition: background-color 0.5s ease;
 
-        &:hover {
-            background-color: #3355FF;
+            &:hover {
+                background-color: #3355FF;
+            }
         }
     }
 }
