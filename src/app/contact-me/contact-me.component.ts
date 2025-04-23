@@ -14,13 +14,14 @@ import { NgIf } from '@angular/common';
 export class ContactMeComponent implements AfterViewInit, OnInit {
 
   @ViewChild('fade_animation_img') fade_animation_img!: ElementRef<HTMLImageElement>;
+  @ViewChild('confirmationBox') confirmationBox!: ElementRef<HTMLDivElement>;
 
   contactForm!: FormGroup;
 
   constructor(
     private fadeAnimationEffect: FadeAnimationEffectService,
     private formBuilder: FormBuilder
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.contactForm = this.formBuilder.group({
@@ -81,8 +82,27 @@ export class ContactMeComponent implements AfterViewInit, OnInit {
     if (this.contactForm.valid) {
       console.log('Form data:', this.contactForm.value);
       // code um nachricht zu versenden
-    } else {
-      this.contactForm.markAllAsTouched(); // Trigger für Fehleranzeigen
+      this.resetForm();
+      this.showConfirmedMessage();
+    } else { // zeigt alle fehlenden infos. nur angewendet wenn button nicht disabled
+      this.contactForm.markAllAsTouched();
     }
+  }
+
+  resetForm() {
+    this.contactForm.reset({
+      name: '',
+      email: '',
+      message: '',
+      privacy: false
+    });
+  }
+
+  showConfirmedMessage() {
+    let confirmationBox = this.confirmationBox.nativeElement;
+    confirmationBox.classList.remove('d_none');
+    setTimeout(() => {
+      confirmationBox.classList.add('d_none');
+    }, 4000)
   }
 }

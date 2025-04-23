@@ -12,6 +12,7 @@
     >#contact_me_div {
         justify-content: space-between;
         margin-top: 64px;
+        position: relative;
     }
 }
 
@@ -178,3 +179,24 @@ textarea::placeholder {
 
 // checkbox end
 
+
+#message_confirmation{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 240px;
+    background-color: rgb(52, 52, 52);
+    font-size: 24px;
+    font-weight: 700;
+
+    flex-direction: column;
+    gap: 24px;
+    padding: 16px 24px;
+    border-radius: 20px;
+
+    border-color: white;
+    border-width: 3px;
+    border-style: solid;
+}
