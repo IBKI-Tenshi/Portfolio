@@ -17,11 +17,11 @@
 }
 
 #central_div {
-    width: 65%;
+    width: 55%;
     flex-direction: column;
     position: relative;
 
-    padding: 80px 64px 0 64px;
+    padding: 64px 64px 0 64px;
     padding-bottom: 0;
 
     >#hello_div {
@@ -36,22 +36,6 @@
         }
     }
 }
-
-.button_styling {
-    font-size: 18px;
-    font-weight: 500;
-    padding: 10px 20px;
-    white-space: nowrap;
-    /* Verhindert Zeilenumbrüche */
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
-    border: 1px solid white;
-    border-radius: 25px;
-    background-color: rgba(255, 255, 255, 0);
-    color: white;
-}
-
 
 #hello_button {
     font-size: 18px;
@@ -216,10 +200,9 @@ h1 {
 }
 
 .social_icons {
-
     position: absolute;
     left: 64px;
-    bottom: 64px;
+    bottom: 80px;
 
     flex-direction: column;
     align-self: flex-start;

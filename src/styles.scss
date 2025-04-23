@@ -94,8 +94,21 @@ body {
   width: 100px;
 }
 
+.button_styling {
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;   /* Verhindert Zeilenumbrüche */
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+}
+
 .the_red_button {
-  min-width: 140px;
+  min-width: 120px;
   border-color: white;
   border-width: 2px;
   border-style: solid;
@@ -103,10 +116,14 @@ body {
   background-color: rgba(255, 255, 255, 0);
   padding: 8px 24px;
   font-size: 18px;
+  font-weight: 500;
   border-radius: 25px;
   position: relative;
   overflow: hidden;
   cursor: pointer;
+
+  text-decoration: none;
+  text-align: center;
 
   align-self: flex-end;
 

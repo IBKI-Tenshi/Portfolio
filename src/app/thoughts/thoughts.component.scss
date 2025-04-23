@@ -1,9 +1,9 @@
 
 .thought {
     position: relative;
-    width: 400px;
+    width: 480px;
     height: 300px;
-    padding: 8px;
+    padding: 32px;
     border-radius: 20px;
     cursor: pointer;
     display: flex;
@@ -46,19 +46,21 @@
   
     > .comment {
       height: 200px;
-      width: 400px;
-      text-align: center;
+      width: 100%;
+      // text-align: center;
     }
   
     > .colleague_info {
+      width: 100%;
       display: flex;
-      flex-direction: row;
+      // flex-direction: row;
       justify-content: space-between;
-      padding: 32px;
+      // padding: 32px;
   
       > .name_and_title {
         display: flex;
         flex-direction: column;
+        width: 100%;
       }
     }
   }

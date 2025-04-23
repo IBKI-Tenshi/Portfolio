@@ -11,6 +11,7 @@ import { NgIf } from '@angular/common';
   templateUrl: './contact-me.component.html',
   styleUrls: ['./contact-me.component.scss']
 })
+
 export class ContactMeComponent implements AfterViewInit, OnInit {
 
   @ViewChild('fade_animation_img') fade_animation_img!: ElementRef<HTMLImageElement>;
@@ -53,8 +54,8 @@ export class ContactMeComponent implements AfterViewInit, OnInit {
   }
 
   ngAfterViewInit(): void {
-    const el = this.fade_animation_img.nativeElement;
-    this.fadeAnimationEffect.startFadeAnimationLoop(el);
+    const fade_icon = this.fade_animation_img.nativeElement;
+    this.fadeAnimationEffect.startFadeAnimationLoop(fade_icon);
   }
 
   get name() {
@@ -85,8 +86,12 @@ export class ContactMeComponent implements AfterViewInit, OnInit {
       this.resetForm();
       this.showConfirmedMessage();
     } else { // zeigt alle fehlenden infos. nur angewendet wenn button nicht disabled
-      this.contactForm.markAllAsTouched();
+      this.markFormAsTouched();
     }
+  }
+
+  markFormAsTouched(){
+    this.contactForm.markAllAsTouched();
   }
 
   resetForm() {
@@ -106,3 +111,4 @@ export class ContactMeComponent implements AfterViewInit, OnInit {
     }, 4000)
   }
 }
+

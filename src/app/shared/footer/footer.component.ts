@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RotatingIconDirective } from '../directive/rotating_icon_directive';
+import { FormGroup } from '@angular/forms';
 
 
 @Component({
@@ -11,4 +12,9 @@ import { RotatingIconDirective } from '../directive/rotating_icon_directive';
 })
 export class FooterComponent {
 
+  @Input() form!: FormGroup; // um auf die daten der elternkomponente zugreifen zu können
+
+  markFormAsTouched(){
+    this.form.markAllAsTouched();
+  }
 }
