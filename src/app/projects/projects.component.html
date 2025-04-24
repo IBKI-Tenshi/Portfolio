@@ -12,7 +12,25 @@
       Highlight your approach to creating responsive, user-friendly projects with efficient code.</p>
   </div>
 
-  <app-project-div *ngFor="let project of projects; let i = index" [project]="project" [class.highlighted]="i === 0">
-  </app-project-div>
+  <!-- Liste der Projekte -->
+  <app-project-div *ngFor="let project of projects; let i = index" 
+  [project]="project" 
+  [class.highlighted]="i === 0"
+  (click)="openDetails(project, i)">
+  <!-- code drunter wenn es nur über den button geöffnet werden soll - anpassung auch in project-div- html und ts -->
+  <!-- (openDetailsEvent)="openDetails(project, i)"> -->
+</app-project-div>
 
 </div>
+
+<!-- Project-Details Overlay -->
+<app-project-details
+  *ngIf="isDetailsOpen"
+  [project]="selectedProject"
+  [isOpen]="isDetailsOpen"
+  [currentIndex]="selectedIndex"
+  [projects]="projects"
+  (closeDetails)="closeDetails()"
+  (changeProject)="changeProject($event)">
+</app-project-details>
+

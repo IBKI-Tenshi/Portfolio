@@ -1,12 +1,13 @@
 import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { ProjectDivComponent } from "../project-div/project-div.component";
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { FadeAnimationEffectService } from '../shared/services/fade_animation.service';
+import { ProjectDetailsComponent } from '../project-details/project-details.component';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [ProjectDivComponent, NgFor],
+  imports: [ProjectDivComponent, ProjectDetailsComponent, NgFor, NgIf],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
@@ -76,6 +77,10 @@ export class ProjectsComponent implements AfterViewInit {
 
   ]
 
+  selectedProject: any = null;
+  isDetailsOpen: boolean = false;
+  selectedIndex: number = 0;
+
   @ViewChild('fade_animation_img') fade_animation_img!: ElementRef<HTMLImageElement>;
 
   constructor(private fadeAnimationEffect: FadeAnimationEffectService) {}
@@ -85,6 +90,19 @@ export class ProjectsComponent implements AfterViewInit {
     this.fadeAnimationEffect.startFadeAnimationLoop(el);
   }
 
+  openDetails(project: any, index: number) {
+    this.selectedProject = project;
+    this.selectedIndex = index;
+    this.isDetailsOpen = true;
+  }
 
+  closeDetails() {
+    this.isDetailsOpen = false;
+  }
+
+  changeProject(index: number) {
+    this.selectedIndex = index;
+    this.selectedProject = this.projects[index];
+  }
 
 }

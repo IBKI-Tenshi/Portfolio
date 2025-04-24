@@ -1,0 +1,98 @@
+/* Grundlegendes Overlay-Styling */
+.project-details-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    z-index: 1000;
+    /* Damit es über allen anderen Inhalten angezeigt wird */
+
+    background-color: black;
+    background-image: url('/assets/images/project_info_background.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.project-details-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    padding: 64px;
+    max-width: 800px;
+
+    position: relative;
+}
+
+/* Styling für den Close-Button */
+.close-button {
+
+    background-color: red;
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.close-button:hover {
+    background-color: darkred;
+}
+
+/* Styling für den Titel des Projekts */
+.project-details-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Styling für die Projektbeschreibung */
+.project-details-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Styling für die Projektlinks */
+.project-links {
+    margin-bottom: 20px;
+}
+
+.project-links a {
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+.project-links a:hover {
+    color: #0056b3;
+}
+
+/* Styling für die Navigation Buttons */
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navigation-buttons button:hover {
+    background-color: #0056b3;
+}
