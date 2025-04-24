@@ -13,13 +13,13 @@ export class ProjectDetailsComponent {
   @Input() project: any; // Eingabe des aktuellen Projekts
   @Input() isOpen: boolean = false; // Zustand, ob das Modal geöffnet ist
   @Input() currentIndex: number = 0; // Der aktuelle Index des Projekts
+  @Input() projects: any[] = []; // Eingabe der Projektliste
+  
+  @Output() changeProject = new EventEmitter<number>(); // EventEmitter zum Ändern des Projekts
   @Output() closeDetails = new EventEmitter<void>(); // EventEmitter zum Schließen des Modals
 
-  @Input() projects: any[] = []; // Eingabe der Projektliste
-  @Output() changeProject = new EventEmitter<number>(); // EventEmitter zum Ändern des Projekts
-
-  closeModal() {
-    this.closeDetails.emit(); // Schließt das Modal
+  closeOverlay() {
+    this.closeDetails.emit(); // Schließt das overlay
   }
 
   previousProject() {
@@ -31,4 +31,5 @@ export class ProjectDetailsComponent {
     const nextIndex = (this.currentIndex + 1) % this.projects.length;
     this.changeProject.emit(nextIndex); // Gibt den Index des nächsten Projekts zurück
   }
+
 }
