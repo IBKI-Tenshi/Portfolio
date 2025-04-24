@@ -22,7 +22,7 @@ export class ProjectsComponent implements AfterViewInit {
       project_link: 'link zum projekt',
       github_link: 'link zu gitgub',
       duration: 'benötigte wochen',
-      used_Skills: [
+      used_skills: [
         {
           skill_image: 'link zum image',
           skill_name: 'HTML'
@@ -78,7 +78,8 @@ export class ProjectsComponent implements AfterViewInit {
   ]
 
   selectedProject: any = null;
-  isDetailsOpen: boolean = false;
+  // isDetailsOpen: boolean = false;
+  isDetailsOpen: boolean = true;
   selectedIndex: number = 0;
 
   @ViewChild('fade_animation_img') fade_animation_img!: ElementRef<HTMLImageElement>;

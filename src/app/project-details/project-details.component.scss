@@ -15,6 +15,10 @@
     background-repeat: no-repeat;
 }
 
+// button{
+//     font-family: 'Bricolage_Grotesque', sans-serif;
+// }
+
 .project-details-content {
     padding: 20px;
     border-radius: 8px;
@@ -26,6 +30,7 @@
 
 .info_div {
     width: 50%;
+    flex-direction: column;
 }
 
 .image_and_links_div {
@@ -92,14 +97,14 @@
 }
 
 .navigation-buttons button {
-    padding: 10px 20px;
-    font-size: 16px;
+    // padding: 10px 20px;
+    font-size: 18px;
     background-color: transparent;
     color: white;
     border: none;
-    border-radius: 10px;
+    // border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    // transition: background-color 0.3s;
 }
 
 .navigation-buttons button:hover {

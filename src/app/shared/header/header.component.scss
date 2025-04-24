@@ -6,22 +6,25 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 24px;
+    padding: 12px 64px;
 
     // width: 100vw; // body hat overflow-x: hidden; damit keine scrollbar entsteht
 
-    >img {
-        width: auto;
-        height: 50px;
-        background-color: white;
-
-    }
+    
 }
 
-a {
-    padding: 16px;
-    color: white;
+#header_logo {
+    width: auto;
+    height: 50px;
+    background-color: white;
+    // margin: 16px;
+
 }
+
+// a {
+//     padding: 16px;
+//     color: white;
+// }
 
 .nav-link {
     position: relative;
