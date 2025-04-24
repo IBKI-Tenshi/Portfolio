@@ -1,29 +1,35 @@
 <div *ngIf="isOpen" class="project-details-overlay dFlex">
 
-    <app-header></app-header>
+  <app-header></app-header>
 
-    <div class="project-details-content dFlex">
+  <div class="project-details-content dFlex">
 
-        <div class="info_div">
-            <button (click)="closeModal()" class="close-button">X</button>
-  
-            <h2>{{ project.title }}</h2>
-            <p>{{ project.description }}</p>
-        </div>
-        <div class="image_and_links_div">
-            <div class="project-links">
-                <a [href]="project.liveLink" target="_blank">Live Demo</a>
-                <a [href]="project.githubLink" target="_blank">GitHub</a>
-              </div>
-          
-              <div class="navigation-buttons">
-                <button (click)="previousProject()">&#8592; Previous</button>
-                <button (click)="nextProject()">Next &#8594;</button>
-              </div>
-        </div>
+    <div class="info_div">
+      <button (click)="closeModal()" class="close-button">X</button>
 
-  
 
+      <h2>{{ project.title }}</h2>
+      <p>{{ project.description }}</p>
     </div>
+
+
+
+    <div class="image_and_links_div dFlex">
+      <img src="{{ project.image }}" alt="">
+      <div class="project-links">
+        <a [href]="project.githubLink" class="the_red_button button_yling" target="_blank">GitHub</a>
+        <a [href]="project.liveLink" class="the_red_button button_yling" target="_blank">Live Test</a>
+      </div>
+
+      <div class="spaceholder"></div>
+
+      <div class="navigation-buttons">
+        <button (click)="previousProject()">&#8592; Previous</button>
+        <button (click)="nextProject()">Next &#8594;</button>
+      </div>
+    </div>
+
+
+
   </div>
-  
+</div>

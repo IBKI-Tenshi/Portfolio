@@ -1,5 +1,8 @@
 html {
   scroll-behavior: smooth;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 body {
@@ -9,7 +12,6 @@ body {
   width: 100;
 
   font-family: 'Bricolage_Grotesque', sans-serif;
-
 }
 
 // Main Font
@@ -205,3 +207,4 @@ h2 {
   display: flex;
   justify-content: center;
 }
+
