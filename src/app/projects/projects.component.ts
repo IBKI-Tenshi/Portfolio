@@ -24,12 +24,16 @@ export class ProjectsComponent implements AfterViewInit {
       duration: 'benötigte wochen',
       used_skills: [
         {
-          skill_image: 'link zum image',
+          skill_image: 'assets/images/skills/HTML_icon.png',
           skill_name: 'HTML'
         },
         {
-          skill_image: 'link zum image',
+          skill_image: 'assets/images/skills/CSS_icon.png',
           skill_name: 'CSS'
+        },
+        {
+          skill_image: 'assets/images/skills/JS_icon.png',
+          skill_name: 'JS'
         }
       ],
       highlighted: true
@@ -39,17 +43,21 @@ export class ProjectsComponent implements AfterViewInit {
       description: 'El Pollo Loco description Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos illo voluptatum consequuntur quia eveniet delectusmagnam cum culpa debitis error. Necessitatibus dolorum numquam fugiat quod officia iure? Ab, est nihil.',
       info_details: 'tiefere infos zum projekt',
       image: '/assets/images/project_images/el_pollo_loco_image.png',
-      project_link: 'link zum projekt',
-      github_link: 'link zu gitgub',
+      project_link: 'https://borna-kitak.developerakademie.net/el_pollo_loco/',
+      github_link: 'https://github.com/IBKI-Tenshi/El_pollo_loco',
       duration: 'benötigte wochen',
-      used_Skills: [
+      used_skills: [
         {
-          skill_image: 'link zum image',
+          skill_image: 'assets/images/skills/HTML_icon.png',
           skill_name: 'HTML'
         },
         {
-          skill_image: 'link zum image',
+          skill_image: 'assets/images/skills/CSS_icon.png',
           skill_name: 'CSS'
+        },
+        {
+          skill_image: 'assets/images/skills/JS_icon.png',
+          skill_name: 'JS'
         }
       ],
       highlighted: false
@@ -59,17 +67,21 @@ export class ProjectsComponent implements AfterViewInit {
       description: 'pokedex description Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos illo voluptatum consequuntur quia eveniet delectusmagnam cum culpa debitis error. Necessitatibus dolorum numquam fugiat quod officia iure? Ab, est nihil.',
       info_details: 'tiefere infos zum projekt',
       image: '/assets/images/project_images/pokedex_image.png',
-      project_link: 'link zum projekt',
-      github_link: 'link zu gitgub',
+      project_link: 'https://borna-kitak.developerakademie.net/pokedex/',
+      github_link: 'https://github.com/IBKI-Tenshi/Pokedex',
       duration: 'benötigte wochen',
-      used_Skills: [
+      used_skills: [
         {
-          skill_image: 'link zum image',
+          skill_image: 'assets/images/skills/HTML_icon.png',
           skill_name: 'HTML'
         },
         {
-          skill_image: 'link zum image',
+          skill_image: 'assets/images/skills/CSS_icon.png',
           skill_name: 'CSS'
+        },
+        {
+          skill_image: 'assets/images/skills/JS_icon.png',
+          skill_name: 'JS'
         }
       ],
       highlighted: false
@@ -78,8 +90,8 @@ export class ProjectsComponent implements AfterViewInit {
   ]
 
   selectedProject: any = null;
-  // isDetailsOpen: boolean = false;
-  isDetailsOpen: boolean = true;
+  isDetailsOpen: boolean = false;
+  // isDetailsOpen: boolean = true;
   selectedIndex: number = 0;
 
   @ViewChild('fade_animation_img') fade_animation_img!: ElementRef<HTMLImageElement>;

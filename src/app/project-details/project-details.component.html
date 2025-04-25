@@ -1,43 +1,74 @@
 <div *ngIf="isOpen" class="project-details-overlay dFlex">
-  
+
   <app-header (closeOverlayClickedFromHeader)="closeOverlay()"></app-header>
 
 
   <div class="project-details-content dFlex">
 
     <div class="info_div dFlex">
-      <button (click)="closeOverlay()" class="close-button">X</button>
+      <button class="dFlex_ac close-button" (click)="closeOverlay()">
+        <img class="switch_project_arrow" src="/assets/images/back_arrow.png" alt="">
+        Go Back
+      </button>
 
 
-      <h2>{{ project.title }}</h2>
 
-      <span>Description</span>
+
+      <div id="title_div">
+        <h2>{{ project.title }}</h2>
+        <img #fade_animation_img src="/assets/images/about_me_underline.png" alt="">
+      </div>
+
+      <h3>Description</h3>
       <p>{{ project.description }}</p>
 
-      <span>Implementation Details</span>
+      <h3>Implementation Details</h3>
       <p>{{ project.info_details }}</p>
 
-      <span>duration</span>
+      <h3>duration</h3>
       <span>{{ project.duration }}</span>
 
-      <span>angewendete skills</span>
-      <span>{{ project.used_skills }}</span>
+      <h3>angewendete skills</h3>
+      <!-- <img src="{{ project.used_skills[0].skill_image }}" alt="">
+      <span>{{ project.used_skills[0].skill_name }}</span> -->
+
+      <div class="needed_skills_div dFlex">
+
+        <div class="needed_skill dFlex_ac" *ngFor="let skill of project.used_skills">
+          <img [src]="skill.skill_image" alt="">
+          <span>{{ skill.skill_name }}</span>
+        </div>
+
+      </div>
+
+
+
+
 
     </div>
 
 
     <div class="image_and_links_div dFlex">
+
       <img src="{{ project.image }}" alt="">
+
       <div class="project-links dFlex">
-        <a [href]="project.githubLink" class="the_red_button button_yling" target="_blank">GitHub</a>
-        <a [href]="project.liveLink" class="the_red_button button_yling" target="_blank">Live Test</a>
+        <a [href]="project.github_link" class="the_red_button button_yling" target="_blank">GitHub</a>
+        <a [href]="project.project_link" class="the_red_button button_yling" target="_blank">Live Test</a>
       </div>
 
       <div class="spaceholder"></div>
 
       <div class="navigation-buttons dFlex">
-        <button (click)="previousProject()">Previous Project</button>
-        <button (click)="nextProject()">Next Project</button>
+        <button class="dFlex_ac" (click)="previousProject()">
+          <img class="switch_project_arrow" src="/assets/images/last_project_arrow.png" alt="">
+          Previous Project
+
+        </button>
+        <button class="dFlex_ac" (click)="nextProject()">
+          Next Project
+          <img class="switch_project_arrow" src="/assets/images/next_project_arrow.png" alt="">
+        </button>
       </div>
     </div>
 

@@ -24,17 +24,71 @@
     border-radius: 8px;
     height: 100%;
     padding: 64px;
+    padding-top: 0;
+    padding-bottom: 32px;
     position: relative;
     
 }
 
 .info_div {
-    width: 50%;
+    width: 45%;
     flex-direction: column;
+
 }
 
+#title_div {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 16px;
+    width: fit-content;
+
+    >img {
+      position: absolute;
+      top: 95%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: auto;
+  
+      clip-path: inset(0 100% 100% 0);
+      transition: clip-path 0.3s ease-in-out;
+    }
+  
+    >.fade_animation {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  .needed_skills_div {
+    flex-direction: row;
+    gap: 16px;
+
+    >.needed_skill{
+        gap: 4px;
+
+        >img{
+            width: 24px;
+            height: 24px;
+        }
+
+
+    }
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 .image_and_links_div {
-    width: 50%;
+    width: 60%;
     flex-direction: column;
     // background-color: rgba(0, 255, 255, 0.249);
     align-items: flex-end;
@@ -50,35 +104,18 @@
 
 /* Styling für den Close-Button */
 .close-button {
-
-    background-color: red;
-    color: white;
-    border: none;
-    font-size: 20px;
-    padding: 5px 10px;
+    width: fit-content;
     cursor: pointer;
-    border-radius: 50%;
-    transition: background-color 0.3s;
+    background-color: transparent;
+    border: none;
+    font-weight: 700;
+    font-size: 18px;
 }
 
 .close-button:hover {
-    background-color: darkred;
+    color: #F87A55;
 }
 
-/* Styling für den Titel des Projekts */
-.project-details-content h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-/* Styling für die Projektbeschreibung */
-.project-details-content p {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #555;
-    margin-bottom: 20px;
-}
 
 /* Styling für die Projektlinks */
 .project-links {
@@ -111,3 +148,19 @@
     color: #f7c518;
 }
 
+.switch_project_arrow{
+    width: 24px;
+    height: 24px;
+    padding: 12px;
+}
+
+
+h3{
+    font-weight: 700;
+    font-size: 24px;
+    margin: 16px 0;
+}
+
+p{
+    margin: 0;
+}
