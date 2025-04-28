@@ -14,9 +14,9 @@ export class CommentsAboutMeComponent implements AfterViewInit {
 
   thoughts = [
     {
-      name: 'aaa',
+      name: 'Marco Lenschau',
       title: 'Frontend Developer',
-      comment: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet facere esse dignissimos accusamus quidem iusto vitae ex blanditiis labore debitis dolor, impedit fugit libero autem vero voluptatem doloribus doloremnumquam!',
+      comment: '„Eine wertvolle Bereicherung für jedes Team – auch in schwierigen Situationen behält er stets einen klaren Kopf und liefert durchdachte Lösungsansätze.“',
       profileLink: 'link',
       backgroundimage: '/assets/images/thoughts_background_1.png'
     },

@@ -20,13 +20,18 @@
     width: 50%;
     flex-direction: column;
 
+    >p{
+        font-weight: 400;
+        font-size: 18px;
+    }
+
     >img {
         width: 280px;
         height: 40px;
         clip-path: inset(0 100% 0 0);
         transition: clip-path 0.3s ease-in-out;
         align-self: flex-end;
-        padding-top: 80px;
+        padding-top: 24x;
     }
 
     >.fade_animation {

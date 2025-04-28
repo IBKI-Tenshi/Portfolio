@@ -1,5 +1,3 @@
-
-
 <div id="projects_component">
   <div id="title_div" class="dFlex">
     <span class="overline">MY Craft</span>
@@ -8,29 +6,24 @@
       <img #fade_animation_img src="/assets/images/projects_underline.png" alt="">
 
     </div>
-    <p>Encourage people to take a look and interact with your projects.
-      Highlight your approach to creating responsive, user-friendly projects with efficient code.</p>
+    <p>
+      Schau dir gerne meine Projekte an und interagiere mit ihnen! <br>Bei der Entwicklung lege ich besonderen Wert auf
+      benutzerfreundliche, responsive Lösungen, die auf effizienten Code setzen. Jedes Projekt spiegelt meinen Ansatz
+      wider, nicht nur funktionale, sondern auch gut strukturierte und leicht verständliche Anwendungen zu schaffen.
+    </p>
   </div>
 
   <!-- Liste der Projekte -->
-  <app-project-div *ngFor="let project of projects; let i = index" 
-  [project]="project" 
-  [class.highlighted]="i === 0"
-  (click)="openDetails(project, i)">
-  <!-- code drunter wenn es nur über den button geöffnet werden soll - anpassung auch in project-div- html und ts -->
-  <!-- (openDetailsEvent)="openDetails(project, i)"> -->
-</app-project-div>
+  <app-project-div *ngFor="let project of projects; let i = index" [project]="project" [class.highlighted]="i === 0"
+    (click)="openDetails(project, i)">
+    <!-- code drunter wenn es nur über den button geöffnet werden soll - anpassung auch in project-div- html und ts -->
+    <!-- (openDetailsEvent)="openDetails(project, i)"> -->
+  </app-project-div>
 
 </div>
 
 <!-- Project-Details Overlay -->
-<app-project-details
-  *ngIf="isDetailsOpen"
-  [project]="selectedProject"
-  [isOpen]="isDetailsOpen"
-  [currentIndex]="selectedIndex"
-  [projects]="projects"
-  (closeDetails)="closeDetails()"
+<app-project-details *ngIf="isDetailsOpen" [project]="selectedProject" [isOpen]="isDetailsOpen"
+  [currentIndex]="selectedIndex" [projects]="projects" (closeDetails)="closeDetails()"
   (changeProject)="changeProject($event)">
 </app-project-details>
-
