@@ -9,7 +9,7 @@ body {
   margin: 0;
   padding: 0;
   // overflow-x: hidden; // damit header keine scrollbar entstehen lässt
-  width: 100;
+  width: 100%;
 
   font-family: 'Bricolage_Grotesque', sans-serif;
 }
@@ -208,3 +208,14 @@ h2 {
   justify-content: center;
 }
 
+
+
+
+@media (max-width: 450px) {
+  body {
+    width: 100vw;
+  }
+  .wrapper_padding {
+    padding: 0 24px;
+  }
+}

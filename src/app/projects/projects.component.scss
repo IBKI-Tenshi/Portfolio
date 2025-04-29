@@ -74,3 +74,91 @@
 //       grid-column: 1 !important;
 //     }
 //   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 450px) {
+    #projects_component {
+        display: flex;
+        flex-direction: column;
+    
+        grid-template-columns: repeat(2, minmax(0, 1fr)); // jede spalte nimmt maximal die hälfte an breite an
+        max-width: 100%;
+        gap: 64px;
+        padding: 24px;
+    
+        // Titelbereich (immer links oben)
+        >#title_div {
+            grid-column: 1;
+            grid-row: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-top: 64px;
+        }
+    
+        // Die Titelzeile mit dem Underline-Image
+        #title {
+            width: 50%;
+            position: relative;
+            display: inline-block;
+            padding: 10px 0px;
+    
+    
+            >img {
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                height: auto;
+    
+                clip-path: inset(0 100% 0 0);
+                transition: clip-path 0.3s ease-in-out;
+            }
+    
+            >.fade_animation {
+                clip-path: inset(0 0 0 0);
+            }
+        }
+    
+        p {
+            padding-top: 32px;
+            font-weight: 400;
+            font-size: 18px;
+        }
+    
+        // Platzierung der einzelnen Projekt-Komponenten
+        app-project-div {
+    
+            // Erstes Projekt direkt neben dem Titel platzieren
+            &:nth-of-type(1) {
+                grid-column: 2;
+                grid-row: 1;
+            }
+    
+            // Alle weiteren Projekte im Grid-Flow (2 Spalten)
+            &:nth-of-type(n+2) {
+                grid-column: span 1;
+            }
+        }
+    }
+}

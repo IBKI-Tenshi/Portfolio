@@ -62,7 +62,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        
+
         border: 1px solid white;
         transform-origin: left;
         border-radius: 25px;
@@ -88,7 +88,7 @@ h1 {
     padding: 12px 0;
 }
 
-
+//  --  main headline  --
 // opacityeffekt passt aber Wortfluss passt nicht
 #h1_first,
 #h1_second {
@@ -126,6 +126,7 @@ h1 {
 
     color: white;
     font-size: 112px;
+    font-weight: 700;
     margin: 0;
     // padding: 12px 0;
 }
@@ -137,6 +138,7 @@ h1 {
 
     color: #f7c518;
     font-size: 112px;
+    font-weight: 700;
     margin: 0;
     // padding: 12px 0
 }
@@ -214,6 +216,142 @@ h1 {
 
             &:hover {
                 background-color: #3355FF;
+            }
+        }
+    }
+}
+
+// --  Media Queries  --
+
+@media (max-width: 1200px) {
+    #central_div {
+        width: 70%;
+    }
+}
+
+@media (max-width: 930px) {
+    #central_div {
+        width: 80%;
+        padding: 32px 32px 0 32px;
+    }
+
+    #my_picture {
+        height: 230px;
+        width: calc(0.75 * 230px);
+        top: 8%;
+        right: 4px;
+
+        >img {
+            height: 160px;
+            width: calc(0.75 * 160px);
+        }
+    }
+}
+
+@media (max-width: 835px) {
+
+    //  --  main headline  --
+    .normal {
+        font-size: 80px;
+    }
+
+    .transformed {
+        font-size: 96px;
+    }
+
+    #my_picture {
+        height: 230px;
+        width: calc(0.75 * 230px);
+
+        >img {
+            height: 160px;
+            width: calc(0.75 * 160px);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Mobile
+
+// main headline
+@media (max-width: 450px) {
+
+    #central_div {
+        height: 100%;
+        padding: 8px 24px 0 24px;
+        gap: 24px;
+    }
+
+
+    .normal {
+        font-size: 64px;
+    }
+
+    .transformed {
+        font-size: 64px;
+    }
+
+    #my_picture {
+        height: 260px;
+        width: calc(0.75 * 260px);
+        top: auto;
+        bottom: 20%;
+        left: 50%;
+        transform: translateX(-50%) rotate(7deg);
+
+        >img {
+            height: 200px;
+            width: calc(0.75 * 200px);
+            padding: 8px;
+
+            filter: grayscale(0%);
+        }
+
+        >span {
+            padding: 0px;
+        }
+
+
+        &:hover {
+            >img {
+                filter: grayscale(0%);
+            }
+        }
+    }
+
+    .social_icons {
+        position: absolute;
+        left: 64px;
+        bottom: 80px;
+
+        flex-direction: column;
+        align-self: flex-start;
+        // padding-left: 64px;
+        gap: 4px;
+
+        display: none;
+
+        >a {
+            >img {
+                border-radius: 50%;
+                transition: background-color 0.5s ease;
+
+                &:hover {
+                    background-color: #3355FF;
+                }
             }
         }
     }

@@ -1,5 +1,5 @@
 
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { HeaderComponent } from '../shared/header/header.component';
 import { CommonModule, NgClass } from '@angular/common';
 import { RotatingIconDirective } from '../shared/directive/rotating_icon_directive';
@@ -12,7 +12,7 @@ import { RotatingIconDirective } from '../shared/directive/rotating_icon_directi
   styleUrl: './hero.component.scss'
 })
 
-export class HeroComponent {
+export class HeroComponent implements  OnInit {
 
   // @ViewChild('viewedDiv', { static: true }) viewedDiv!: ElementRef;
   // @ViewChild('rotatingIcon', { static: true }) rotatingIcon!: ElementRef;
@@ -27,12 +27,33 @@ export class HeroComponent {
 
 
 
-  getLetters(letters_normal:string, letters_transformed:string): { normal: string; transformed: string }[] {
+  getLetters(letters_normal: string, letters_transformed: string): { normal: string; transformed: string }[] {
     return letters_normal.split('').map((letter, i) => ({
       normal: letter,
       transformed: letters_transformed[i]
     }));
   }
+
+  ngOnInit() {
+    if (window.innerWidth <= 450) {
+      this.hovering = true;
+    }
+  }
+
+  // onMouseEnter() {
+  //   // Nur aktivieren, wenn es KEIN Handy ist
+  //   if (window.innerWidth > 450) {
+  //     this.hovering = true;
+  //   }
+  // }
+
+  // onMouseLeave() {
+  //   // Nur deaktivieren, wenn es KEIN Handy ist
+  //   if (window.innerWidth > 450) {
+  //     this.hovering = false;
+  //   }
+  // }
+
 
 
 }

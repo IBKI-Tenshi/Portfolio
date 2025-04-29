@@ -20,7 +20,7 @@
     width: 50%;
     flex-direction: column;
 
-    >p{
+    >p {
         font-weight: 400;
         font-size: 18px;
     }
@@ -31,7 +31,7 @@
         clip-path: inset(0 100% 0 0);
         transition: clip-path 0.3s ease-in-out;
         align-self: flex-end;
-        padding-top: 24x;
+        padding-top: 24px;
     }
 
     >.fade_animation {
@@ -122,15 +122,15 @@ textarea::placeholder {
     color: #e74c3c;
     font-size: 0.9rem;
     margin-top: 4px;
-  }
-  
-  // text area
-  .char-count {
+}
+
+// text area
+.char-count {
     font-size: 12px;
     color: white;
     margin-top: 4px;
-  }
-  
+}
+
 //   .warning {
 //     color: rgb(248, 122, 85);
 //     font-weight: bold;
@@ -186,7 +186,7 @@ textarea::placeholder {
 // checkbox end
 
 
-#message_confirmation{
+#message_confirmation {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -205,4 +205,75 @@ textarea::placeholder {
     border-color: white;
     border-width: 3px;
     border-style: solid;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 450px) {
+
+    #contact_me_component {
+        padding-top: 120px;
+        padding: 24px 24px 0 24px;
+
+        >#contact_me_div {
+            padding-top: 128px;
+            flex-direction: column;
+        }
+    }
+
+    #text_div {
+        width: 100%;
+
+        >img {
+            width: 153px;
+            height: 24px;
+
+        
+            position: absolute;
+            left: 10%;
+            bottom: 0;
+
+        }
+
+        >.fade_animation {
+            clip-path: inset(0 0 0 0);
+        }
+    }
+
+    // ab hier rechter part
+
+    #input_infos {
+        padding-top: 16px;
+        position: static;
+        width: 100%;
+
+        >img {
+            position: absolute;
+            right: 5%;
+            top: 0%;
+            width: 120px;
+            height: 120px;
+            transform: rotate(+10deg);
+            align-self: flex-end;
+            background-color: white;
+        }
+    }
 }
