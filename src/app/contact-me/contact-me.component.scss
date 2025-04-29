@@ -5,13 +5,13 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     color: white;
-    padding-top: 120px;
     padding: 64px 64px 0 64px;
+    padding-top: 120px;
     flex-direction: column;
 
     >#contact_me_div {
         justify-content: space-between;
-        margin-top: 64px;
+        // padding-top: 64px;
         position: relative;
     }
 }
@@ -230,11 +230,12 @@ textarea::placeholder {
 @media (max-width: 450px) {
 
     #contact_me_component {
-        padding-top: 120px;
-        padding: 24px 24px 0 24px;
+        padding-top: 140px;
+        padding: 24px;
+        background-size: cover;
 
         >#contact_me_div {
-            padding-top: 128px;
+            padding-top: 200px;
             flex-direction: column;
         }
     }
@@ -245,16 +246,11 @@ textarea::placeholder {
         >img {
             width: 153px;
             height: 24px;
-
-        
+            clip-path: inset(0 0 0 0);
             position: absolute;
             left: 10%;
             bottom: 0;
 
-        }
-
-        >.fade_animation {
-            clip-path: inset(0 0 0 0);
         }
     }
 
@@ -268,7 +264,7 @@ textarea::placeholder {
         >img {
             position: absolute;
             right: 5%;
-            top: 0%;
+            top: 7%;
             width: 120px;
             height: 120px;
             transform: rotate(+10deg);

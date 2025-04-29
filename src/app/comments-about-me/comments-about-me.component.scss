@@ -6,7 +6,7 @@
         width: 100%;
         align-items: flex-end;
         flex-direction: column;
-        
+
         >#overline_div {
 
             >img {
@@ -25,10 +25,8 @@
 
 #thoughts {
     width: 100%;
-    display: flex;
     flex-direction: row;
     gap: 32px;
-    justify-content: center;
     margin-top: 64px;
 
     >img {
@@ -79,22 +77,10 @@
     #comments_about_me_component {
         margin-bottom: 40px;
         padding: 24px;
-    
+
         >#title {
-            width: 100%;
-            align-items: flex-end;
-            flex-direction: column;
-            
             >#overline_div {
-    
                 >img {
-                    width: 100px;
-                    height: 36px;
-                    clip-path: inset(0 0 0 100%);
-                    transition: clip-path 0.3s ease-in-out;
-                }
-    
-                >.fade_animation {
                     clip-path: inset(0 0 0 0);
                 }
             }
@@ -103,41 +89,25 @@
 
 
     #thoughts {
-        width: 100%;
-        display: flex;
         flex-direction: column;
         gap: 0px;
-        justify-content: center;
         margin-top: 24px;
-    
-        >img {
-            width: 400px;
-            height: 300px;
-        }
-    
+
         >app-thoughts:nth-of-type(1) {
-            transform: rotate(-7deg);
             margin-right: 0;
-            z-index: 3;
         }
-    
+
         >app-thoughts:nth-of-type(2) {
-            // transform: rotate(0);
-    
-            z-index: 2;
         }
-    
+
         >app-thoughts:nth-of-type(3) {
-            transform: rotate(+7deg);
-    
             margin-left: 0;
-            z-index: 1;
         }
-    
+
         >.hover_effect {
             &:hover {
                 z-index: 5;
             }
         }
     }
-  }
+}

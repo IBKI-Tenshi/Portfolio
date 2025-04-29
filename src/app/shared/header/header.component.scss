@@ -1,12 +1,12 @@
 
 
 #header {
-    // background-color: rgba(255, 255, 255, 0.223);
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 12px 64px;
+    width: 100%;
 
     // width: 100vw; // body hat overflow-x: hidden; damit keine scrollbar entsteht
 
@@ -78,5 +78,7 @@
 
 
 @media (max-width: 450px) {
-    
+    #header {
+        display: none;
+    }
 }

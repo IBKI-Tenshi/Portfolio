@@ -120,7 +120,9 @@ p {
 
   #about_me_component {
     height: auto;
+    // width: 100%;
     flex-direction: column-reverse;
+    padding: 24px;
   }
 
   #wrapper_right {
@@ -128,62 +130,41 @@ p {
   
     flex-direction: column;
     align-items: flex-start;
+
+    >p{
+      width: auto;
+    }
   }
 
   #lets_talk_button {
-    box-shadow: 3px 3px 1px rgb(0, 0, 0);
-    border-color: black;
-    border-width: 2px;
-    color: black;
-    text-decoration: none;
     align-items: flex-end;
   }
 
   #wrapper_left {
     width: 100%;
-    flex-direction: column;
   
     >div {
       width: 343px;
       height: 128px;
       color: white;
   
-      background-position: center;
-      background-size: contain;
-      /* Bild wird so angepasst, dass es komplett sichtbar ist */
-      background-repeat: no-repeat;
-  
-      >img {
-        width: 40px;
-        height: 40px;
-      }
-  
       >span {
-        font-size: 24px;
-        font-weight: 400;
-        padding-left: 16px;
+        font-size: 16px;
       }
     }
   
     >div:nth-of-type(1) {
-      background-image: url("/assets/images/yellow_paper.png");
-      transform: rotate(-4deg);
-      z-index: 3;
-      padding-bottom: 20px;
+      padding-bottom: 16px;
     }
   
     >div:nth-of-type(2) {
-      background-image: url("/assets/images/blue_paper.png");
-      transform: rotate(0);
-      margin-top: -68px;
-      z-index: 2;
+      margin-top: -75px;
+
     }
   
     >div:nth-of-type(3) {
-      background-image: url("/assets/images/orange_paper.png");
-      transform: rotate(+2deg);
-      margin-top: -36px;
-      z-index: 1;
+      margin-top: -56px;
+      padding-bottom: 12px;
     }
   }
 }

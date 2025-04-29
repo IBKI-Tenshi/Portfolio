@@ -1,14 +1,26 @@
 footer {
     color: white;
-    // background-color: rgba(255, 166, 0, 0.349);
     // margin-top: 24px;
-    padding: 24px 0;
+    padding-top: 24px;
+    padding-bottom: 64px;
     gap: 8px;
 
     display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.wrapper_infos {
     flex-direction: column;
 
-    >#footer_links {
+    >.name_and_legal_notize{
+        flex-direction: column;
+    }
+}
+
+    #footer_links {
+        width: 70%;
         align-items: flex-end;
         justify-content: space-between;
 
@@ -17,7 +29,7 @@ footer {
             color: white;
         }
     }
-}
+
 
 
 .nav-link {
@@ -96,4 +108,17 @@ footer {
     &:hover {
         background-color: #007bff;
     }
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 450px) {
+    
 }
