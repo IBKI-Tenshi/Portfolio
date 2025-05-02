@@ -1,84 +1,17 @@
-
 .thought {
-    position: relative;
-    width: 480px;
-    height: 300px;
-    padding: 32px;
-    border-radius: 20px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-  
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  
-    transition: background-image 0.3s ease-in-out;
-  
-    &::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: url('/assets/images/thoughts_hover.png');
-      background-size: cover;
-      background-position: center;
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-      border-radius: 20px;
-      pointer-events: none;
-      z-index: 1;
-    }
-  
-    &.hovered::after {
-      opacity: 0.7
-    }
-  
-    > * {
-      position: relative;
-      z-index: 2;
-    }
-  
-    &:hover {
-      span {
-        color: white;
-      }
-    }
-  
-    > .comment {
-      height: 200px;
-      width: 100%;
-      // text-align: center;
-    }
-  
-    > .colleague_info {
-      width: 100%;
-      display: flex;
-      // flex-direction: row;
-      justify-content: space-between;
-      // padding: 32px;
-  
-      > .name_and_title {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-      }
-    }
-  }
-  
-// _____________________________________________
-
-
-
-
-
-  @media (max-width: 450px) {
-    
-.thought {
-  width: 85%;
-  height: 343px;
-  padding: 16px;
+  position: relative;
+  width: 480px;
+  height: 300px;
+  padding: 32px;
+  border-radius: 20px;
   cursor: pointer;
+  display: flex;
   flex-direction: column;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   transition: background-image 0.3s ease-in-out;
 
   &::after {
@@ -99,7 +32,7 @@
     opacity: 0.7
   }
 
-  > * {
+  >* {
     position: relative;
     z-index: 2;
   }
@@ -110,24 +43,104 @@
     }
   }
 
-  > .comment {
+  >.comment {
     height: 200px;
     width: 100%;
     // text-align: center;
   }
 
-  > .colleague_info {
+  >.colleague_info {
     width: 100%;
     display: flex;
     // flex-direction: row;
     justify-content: space-between;
     // padding: 32px;
 
-    > .name_and_title {
+    >.name_and_title {
       display: flex;
       flex-direction: column;
       width: 100%;
     }
   }
 }
+
+// _____________________________________________
+
+@media (max-width: 1380px) {
+  .thought {
+    width: 400px;
+    height: 250px;
+    padding: 32px;
   }
+}
+
+@media (max-width: 1140px) {
+  .thought {
+    width: 320px;
+    height: 200px;
+    padding: 32px;
+  }
+}
+
+
+
+@media (max-width: 450px) {
+
+  .thought {
+    width: 85%;
+    height: 343px;
+    padding: 16px;
+    cursor: pointer;
+    flex-direction: column;
+    transition: background-image 0.3s ease-in-out;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('/assets/images/thoughts_hover.png');
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      border-radius: 20px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    &.hovered::after {
+      opacity: 0.7
+    }
+
+    >* {
+      position: relative;
+      z-index: 2;
+    }
+
+    &:hover {
+      span {
+        color: white;
+      }
+    }
+
+    >.comment {
+      height: 200px;
+      width: 100%;
+      // text-align: center;
+    }
+
+    >.colleague_info {
+      width: 100%;
+      display: flex;
+      // flex-direction: row;
+      justify-content: space-between;
+      // padding: 32px;
+
+      >.name_and_title {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+  }
+}

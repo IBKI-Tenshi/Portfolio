@@ -104,10 +104,49 @@ p {
 
 
 
+@media (max-width: 1300px) {
+  #about_me_component {
+    height: 100%;
+    padding-bottom: 24px;
+  }
+}
 
 
+@media (max-width: 1140px) {
+  #wrapper_left {
+    width: 50%;
 
+    >div {
+      width: 480px;
+      height: 136px;
+      color: white;
 
+      background-position: center;
+      background-size: contain;
+      /* Bild wird so angepasst, dass es komplett sichtbar ist */
+      background-repeat: no-repeat;
+
+      >img {
+        width: 40px;
+        height: 40px;
+      }
+
+      >span {
+        font-size: 24px;
+        font-weight: 400;
+        padding-left: 16px;
+      }
+    }
+
+    #wrapper_right {
+      width: 50%;
+    }
+  }
+
+  .wrapper_padding {
+    padding: 0 24px;
+  }
+}
 
 
 
@@ -127,11 +166,11 @@ p {
 
   #wrapper_right {
     width: 100%;
-  
+
     flex-direction: column;
     align-items: flex-start;
 
-    >p{
+    >p {
       width: auto;
     }
   }
@@ -142,26 +181,26 @@ p {
 
   #wrapper_left {
     width: 100%;
-  
+
     >div {
       width: 343px;
       height: 128px;
       color: white;
-  
+
       >span {
         font-size: 16px;
       }
     }
-  
+
     >div:nth-of-type(1) {
       padding-bottom: 16px;
     }
-  
+
     >div:nth-of-type(2) {
       margin-top: -75px;
 
     }
-  
+
     >div:nth-of-type(3) {
       margin-top: -56px;
       padding-bottom: 12px;
