@@ -119,34 +119,20 @@ p {
     >div {
       width: 480px;
       height: 136px;
-      color: white;
-
-      background-position: center;
-      background-size: contain;
-      /* Bild wird so angepasst, dass es komplett sichtbar ist */
-      background-repeat: no-repeat;
-
-      >img {
-        width: 40px;
-        height: 40px;
-      }
-
-      >span {
-        font-size: 24px;
-        font-weight: 400;
-        padding-left: 16px;
-      }
-    }
-
-    #wrapper_right {
-      width: 50%;
     }
   }
+
+  #wrapper_right {
+    width: 50%;
+  }
+
 
   .wrapper_padding {
     padding: 0 24px;
   }
 }
+
+
 
 
 

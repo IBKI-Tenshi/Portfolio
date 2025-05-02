@@ -72,9 +72,16 @@
 
 
 
-@media (max-width: 450px) {
+
+@media (max-width: 850px) {
 
     #comments_about_me_component {
+
+        display: flex;
+
+        flex-direction: column;
+
+
         margin-bottom: 40px;
         padding: 24px;
 
@@ -90,6 +97,7 @@
 
     #thoughts {
         flex-direction: column;
+        align-items: center;
         gap: 0px;
         margin-top: 24px;
 
@@ -97,8 +105,7 @@
             margin-right: 0;
         }
 
-        >app-thoughts:nth-of-type(2) {
-        }
+        >app-thoughts:nth-of-type(2) {}
 
         >app-thoughts:nth-of-type(3) {
             margin-left: 0;
