@@ -1,28 +1,45 @@
-
-
 <div id="header">
 
     <a href="#hero_component" (click)="emitCloseOverlay()">
         <img id="header_logo" src="/assets/images/bk_logo_2.png" alt="">
     </a>
-    
 
-    <a class="nav-link" href="#about_me_component" (click)="emitCloseOverlay()">
-        About me
-        <img class="hover_top_to_bottom" src="/assets/images/header_img/about_me_frame.png" alt="">
-    </a>
-    <a class="nav-link" href="#skill_set_component" (click)="emitCloseOverlay()">
-        Skills
-        <img class="hover_left_to_right" src="/assets/images/header_img/skills_frame.png" alt="">
-    </a>
-    <a class="nav-link" href="#projects_component" (click)="emitCloseOverlay()">
-        Projects
-        <img class="hover_left_to_right" src="/assets/images/header_img/projects_frame.png" alt="">
-    </a>
-    <a class="nav-link" href="#contact_me_component" (click)="emitCloseOverlay()">
-        Contact
-        <img class="hover_left_to_right" src="/assets/images/header_img/contact_frame.png" alt="">
-    </a>
 
-    <span class="nav-link">sprache</span>
+
+    <button id="burger_btn" (click)="toggleMenu()">☰</button>
+
+    <nav id="nav_container" [class.open]="isMenuOpen">
+        <a class="nav-link" href="#about_me_component" (click)="emitCloseOverlay()">
+            About me
+            <img class="hover_top_to_bottom" src="/assets/images/header_img/about_me_frame.png" alt="">
+        </a>
+        <a class="nav-link" href="#skill_set_component" (click)="emitCloseOverlay()">
+            Skills
+            <img class="hover_left_to_right" src="/assets/images/header_img/skills_frame.png" alt="">
+        </a>
+        <a class="nav-link" href="#projects_component" (click)="emitCloseOverlay()">
+            Projects
+            <img class="hover_left_to_right" src="/assets/images/header_img/projects_frame.png" alt="">
+        </a>
+        <a class="nav-link" href="#contact_me_component" (click)="emitCloseOverlay()">
+            Contact
+            <img class="hover_left_to_right" src="/assets/images/header_img/contact_frame.png" alt="">
+        </a>
+
+        <span class="nav-link">sprache</span>
+
+        <div class="social_icons_mobile dFlex">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/icons/linkedin-icon.svg" alt="">
+            </a>
+            <a href="https://github.com/IBKI-Tenshi" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/icons/github-icon.svg" alt="">
+            </a>
+            <a href="#contact_me_component">
+                <img src="/assets/icons/e.mail-icon.svg" alt="">
+            </a>
+        </div>
+
+
+    </nav>
 </div>

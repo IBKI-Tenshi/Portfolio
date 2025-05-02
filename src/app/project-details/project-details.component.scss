@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     flex-direction: column;
     z-index: 1000;
     /* Damit es über allen anderen Inhalten angezeigt wird */
@@ -78,19 +78,13 @@
 
 
 
-
-
-
-
-
-
-
-
+// ----------------------------------------------------------
 
 .image_and_links_div {
     width: 60%;
     flex-direction: column;
     // background-color: rgba(0, 255, 255, 0.249);
+    // align-items: center;
     align-items: flex-end;
 
     >img {
@@ -163,4 +157,74 @@ h3{
 
 p{
     margin: 0;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 450px) {
+    .project-details-overlay {
+        background-image: url('/assets/images/project_info_background_mobile.png');
+        background-size: auto 125%;
+
+    }
+
+    .overlay_header_mobile{
+        display: none;
+    }
+
+
+
+    .project-details-content {
+        flex-direction: column;
+        padding: 24px;
+
+        align-items: center;
+
+    }
+
+    .info_div {
+        // width: auto;
+        // box-sizing: border-box;
+        width: 100%;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+
+
+
+
+
+
+// -----------------------------
+
+
+.image_and_links_div {
+    width: 100%;
+    padding-top: 24px;
+
+    align-items: center;
+    justify-content: center;
+
+    >img {
+        width: 90%;
+        height: auto;
+        border-radius: 20px;
+    }
+}
+
+
+
 }

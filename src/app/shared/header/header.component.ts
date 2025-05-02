@@ -13,4 +13,25 @@ export class HeaderComponent {
   emitCloseOverlay() {
     this.closeOverlayClickedFromHeader.emit();
   }
+
+
+
+
+
+
+
+
+
+
+  isMenuOpen = false;
+
+toggleMenu() {
+  this.isMenuOpen = !this.isMenuOpen;
+}
+
+emitCloseOverlay_navbar() {
+  this.isMenuOpen = false;
+  // Weitere Logik...
+}
+
 }

@@ -1,11 +1,13 @@
 <div *ngIf="isOpen" class="project-details-overlay dFlex">
 
-  <app-header (closeOverlayClickedFromHeader)="closeOverlay()"></app-header>
+  <app-header class="overlay_header_mobile" (closeOverlayClickedFromHeader)="closeOverlay()"></app-header>
 
 
   <div class="project-details-content dFlex">
 
     <div class="info_div dFlex">
+
+      
       <button class="dFlex_ac close-button" (click)="closeOverlay()">
         <img class="switch_project_arrow" src="/assets/images/back_arrow.png" alt="">
         Go Back
@@ -40,10 +42,6 @@
         </div>
 
       </div>
-
-
-
-
 
     </div>
 

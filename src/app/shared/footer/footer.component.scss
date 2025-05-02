@@ -120,5 +120,33 @@ footer {
 
 
 @media (max-width: 450px) {
+
+    footer {
+        flex-direction: column;
+        padding-bottom: 32px;
+        margin-top: 24px;
+    }
     
+    .wrapper_infos {
+        flex-direction: row;
+        justify-content: space-between;
+    
+        >.name_and_legal_notize{
+            flex-direction: column;
+        }
+    }
+
+    #footer_links {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+
+    .link_div {
+        width: 100px;
+    }
+
+    .footer_link {
+        border: transparent;
+    }
 }

@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 12px 64px;
-    width: 100%;
+    // width: 100%;
 
     // width: 100vw; // body hat overflow-x: hidden; damit keine scrollbar entsteht
 
@@ -79,6 +79,97 @@
 
 @media (max-width: 450px) {
     #header {
-        display: none;
+        // display: none;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#burger_btn {
+    display: none;
+    font-size: 30px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+  #nav_container {
+    display: flex;
+    gap: 32px;
+    width: 100%;
+    justify-content: space-around;
+  
+    @media (max-width: 768px) {
+      position: absolute;
+      top: 80px;
+      left: 0;
+    //   width: 100%;
+      background-color: rgba(255, 255, 255, 0);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      padding-top: 64px;
+      padding-bottom: 24px;
+      display: none;
+      z-index: 1000;
+
+
+
+      background-image: url('/assets/images/nav_bar_menu_background.png');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+  
+    &.open {
+      display: flex;
+    }
+  }
+
+
+
+  
+  @media (max-width: 768px) {
+    #header {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    #burger_btn {
+      display: block;
+    }
+  
+    .nav-link > img {
+      display: none; // Optional, wenn Hover-Frames mobil nicht gebraucht werden
+    }
+
+    .social_icons_mobile{
+        display: flex;
+        justify-content: center;
+        padding-top: 24px;
+        padding-bottom: 64px;
+        gap: 24px;
+        width: 100%;
+        
+        >img{
+            height: 40px;
+            width: 40px;
+        }
+    }
+  }
+  
