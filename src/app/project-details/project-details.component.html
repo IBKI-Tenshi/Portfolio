@@ -48,14 +48,14 @@
 
     <div class="image_and_links_div dFlex">
 
-      <img src="{{ project.image }}" alt="">
+      <img src="{{ project.image_details }}" alt="">
 
       <div class="project-links dFlex">
         <a [href]="project.github_link" class="the_red_button button_yling" target="_blank">GitHub</a>
         <a [href]="project.project_link" class="the_red_button button_yling" target="_blank">Live Test</a>
       </div>
 
-      <div class="spaceholder"></div>
+      <!-- <div class="spaceholder"></div> -->
 
       <div class="navigation-buttons dFlex">
         <button class="dFlex_ac" (click)="previousProject()">

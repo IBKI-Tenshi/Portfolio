@@ -185,7 +185,7 @@ textarea::placeholder {
 
 // checkbox end
 
-.send_button{
+.send_button {
     width: 140px;
 }
 
@@ -234,7 +234,7 @@ textarea::placeholder {
 @media (max-width: 450px) {
 
     #contact_me_component {
-        padding-top: 140px;
+        padding-top: 100px;
         padding: 24px;
         background-size: cover;
 
@@ -269,11 +269,19 @@ textarea::placeholder {
             position: absolute;
             right: 5%;
             top: 7%;
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             transform: rotate(+10deg);
             align-self: flex-end;
             background-color: white;
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    #text_div {
+        >img {
+            width: 120px;
         }
     }
 }
