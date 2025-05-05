@@ -58,6 +58,8 @@ export class ContactMeComponent implements AfterViewInit, OnInit {
     this.fadeAnimationEffect.startFadeAnimationLoop(fade_icon);
   }
 
+  
+
   get name() {
     return this.contactForm.get('name');
   }
