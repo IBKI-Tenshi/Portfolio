@@ -3,20 +3,7 @@
 
 #input_infos {
     padding-top: 96px;
-    position: relative;
-    width: 40%;
-    background-color: black;
 
-    >img {
-        position: absolute;
-        right: 5%;
-        top: 0%;
-        width: 120px;
-        height: 120px;
-        transform: rotate(+10deg);
-        align-self: flex-end;
-        background-color: white;
-    }
 }
 
 form {

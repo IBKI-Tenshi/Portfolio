@@ -23,70 +23,9 @@
     <div id="input_infos">
       <img src="/assets/images/bk_logo_2.png" alt="">
 
-      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="dFlex">
 
-        <!-- Name -->
-        <div class="input_div dFlex">
-          <label for="name">What's your name?</label>
-          <input type="text" id="name" formControlName="name" placeholder="Your name goes here" />
-          <!-- fehlermeldung -->
-          <div class="error" *ngIf="name?.invalid && name?.touched">
-            Please enter a valid name (Letters, "-" and spaces only).
-          </div>
-        </div>
 
-        <!-- Email -->
-        <div class="input_div dFlex">
-          <label for="email">What's your email?</label>
-          <input type="email" id="email" formControlName="email" placeholder="youremail@email.com" />
-          <!-- fehlermeldung -->
-          <div class="error" *ngIf="email?.invalid && email?.touched">
-            Please enter a valid email address.
-          </div>
-        </div>
-
-        <!-- Message -->
-        <div class="input_div dFlex">
-          <label for="message">How can I help you?</label>
-          <textarea id="message" formControlName="message" placeholder="Hello Borna, I am interested in..."
-            #autoTextarea maxlength="1000" (input)="autoResize(autoTextarea)">
-            </textarea>
-
-          <!-- fehlermeldungen -->
-          <div class="error" *ngIf="message?.invalid && email?.touched">
-            Please enter a valid message.
-          </div>
-
-          <div class="error" *ngIf="message?.errors?.['minlength'] && message?.touched">
-            Please write at least 10 characters.
-          </div>
-
-          <div class="error" *ngIf="message?.errors?.['pattern'] && message?.touched">
-            Message can't be only spaces.
-          </div>
-
-          <div class="char-count" *ngIf="message?.value?.length">
-            {{ message?.value.length }}/1000 characters
-            <span *ngIf="message?.value.length == 1000" class="error">
-              Your message is too long. Max 1000 characters.
-            </span>
-          </div>
-        </div>
-
-        <!-- Datenschutz -->
-        <div class="checkbox_div dFlex_ac">
-          <input type="checkbox" id="privacy" formControlName="privacy" />
-          <label for="privacy">
-            I agree to the <a href="/privacy-policy" target="_blank">privacy policy</a>.
-          </label>
-        </div>
-
-        <!-- Senden-Button -->
-        <button type="submit" class="the_red_button send_button" [disabled]="contactForm.invalid">
-          Send
-        </button>
-
-      </form>
+      <app-contactform></app-contactform>
     </div>
 
     <!-- overlay for message_confirmation -->

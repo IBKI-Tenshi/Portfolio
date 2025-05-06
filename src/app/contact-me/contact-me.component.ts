@@ -3,11 +3,12 @@ import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angula
 import { FooterComponent } from '../shared/footer/footer.component';
 import { FadeAnimationEffectService } from '../shared/services/fade_animation.service';
 import { NgIf } from '@angular/common';
+import { ContactformComponent } from "../contactform/contactform.component";
 
 @Component({
   selector: 'app-contact-me',
   standalone: true,
-  imports: [FooterComponent, ReactiveFormsModule, NgIf],
+  imports: [FooterComponent, ReactiveFormsModule, NgIf, ContactformComponent],
   templateUrl: './contact-me.component.html',
   styleUrls: ['./contact-me.component.scss']
 })
