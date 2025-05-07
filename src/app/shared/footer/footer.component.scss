@@ -40,6 +40,7 @@ footer {
     font-size: 20px;
     font-weight: 700;
     color: white;
+    cursor: pointer;
 
     >img {
         position: absolute;
@@ -119,7 +120,7 @@ footer {
 
 
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
 
     footer {
         flex-direction: column;

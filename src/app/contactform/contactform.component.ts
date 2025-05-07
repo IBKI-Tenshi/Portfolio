@@ -2,15 +2,19 @@ import { Component, ViewChild, ElementRef, inject } from '@angular/core';
 import { NgForm, FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { NgIf } from '@angular/common';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule, NgIf],
+  imports: [FormsModule, NgIf, RouterModule],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss'
 })
 export class ContactformComponent {
+
+  constructor(private router: Router) {} 
+  
   @ViewChild('confirmationBox') confirmationBox!: ElementRef<HTMLDivElement>;
 
   http = inject(HttpClient);
