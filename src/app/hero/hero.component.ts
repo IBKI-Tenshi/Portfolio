@@ -12,7 +12,7 @@ import { RotatingIconDirective } from '../shared/directive/rotating_icon_directi
   styleUrl: './hero.component.scss'
 })
 
-export class MyComponent implements OnInit, OnDestroy {
+export class HeroComponent implements OnInit, OnDestroy {
 
 
   // @ViewChild('viewedDiv', { static: true }) viewedDiv!: ElementRef;
