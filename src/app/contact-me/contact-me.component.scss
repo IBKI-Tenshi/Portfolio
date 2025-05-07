@@ -42,10 +42,18 @@
 
 // ab hier rechter part
 
+.width100{
+    width: 100%;
+}
+
 #input_infos {
     padding-top: 96px;
     position: relative;
     width: 40%;
+
+
+    display: flex;
+    align-items: center;
 
     >img {
         position: absolute;

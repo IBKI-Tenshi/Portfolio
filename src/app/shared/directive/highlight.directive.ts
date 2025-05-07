@@ -1,3 +1,12 @@
+
+
+
+
+
+// datei wahrscheinlivh nicht benötigt
+
+
+
 import { Directive, ElementRef, Renderer2, HostListener } from '@angular/core';
 
 @Directive({
