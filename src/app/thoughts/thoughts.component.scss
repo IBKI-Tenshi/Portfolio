@@ -82,16 +82,6 @@
   }
 }
 
-// @media (max-width: 850px) {
-//   .thought {
-//     width: 320px;
-//     height: 200px;
-//     padding: 32px;
-//   }
-// }
-
-
-
 @media (max-width: 450px) {
 
   .thought {
@@ -134,15 +124,12 @@
     >.comment {
       height: 200px;
       width: 100%;
-      // text-align: center;
     }
 
     >.colleague_info {
       width: 100%;
       display: flex;
-      // flex-direction: row;
       justify-content: space-between;
-      // padding: 32px;
 
       >.name_and_title {
         display: flex;

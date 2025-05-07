@@ -1,21 +1,13 @@
-<!-- <div *ngIf="isOpen" class="project-details-overlay dFlex"> -->
 <div class="project-details-overlay dFlex">
-
   <app-header class="overlay_header_mobile" (closeOverlayClickedFromHeader)="closeOverlay()"></app-header>
 
-
   <div class="project-details-content dFlex">
-
     <div class="info_div dFlex">
 
-      
       <button class="dFlex_ac close-button" (click)="closeOverlay()">
         <img class="switch_project_arrow" src="/assets/images/back_arrow.png" alt="">
         Go Back
       </button>
-
-
-
 
       <div id="title_div">
         <h2>{{ project.title }}</h2>
@@ -32,23 +24,16 @@
       <span>{{ project.duration }}</span>
 
       <h3>angewendete skills</h3>
-      <!-- <img src="{{ project.used_skills[0].skill_image }}" alt="">
-      <span>{{ project.used_skills[0].skill_name }}</span> -->
 
       <div class="needed_skills_div dFlex">
-
         <div class="needed_skill dFlex_ac" *ngFor="let skill of project.used_skills">
           <img [src]="skill.skill_image" alt="">
           <span>{{ skill.skill_name }}</span>
         </div>
-
       </div>
-
     </div>
 
-
     <div class="image_and_links_div dFlex">
-
       <img src="{{ project.image_details }}" alt="">
 
       <div class="project-links dFlex">
@@ -56,13 +41,10 @@
         <a [href]="project.project_link" class="the_red_button button_yling" target="_blank">Live Test</a>
       </div>
 
-      <!-- <div class="spaceholder"></div> -->
-
       <div class="navigation-buttons dFlex">
         <button class="dFlex_ac" (click)="previousProject()">
           <img class="switch_project_arrow" src="/assets/images/last_project_arrow.png" alt="">
           Previous Project
-
         </button>
         <button class="dFlex_ac" (click)="nextProject()">
           Next Project
@@ -70,8 +52,5 @@
         </button>
       </div>
     </div>
-
-
-
   </div>
-</div> 
+</div>

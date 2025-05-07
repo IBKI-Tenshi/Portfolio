@@ -8,7 +8,6 @@
         flex-direction: column;
 
         >#overline_div {
-
             >img {
                 width: 100px;
                 height: 36px;
@@ -41,14 +40,11 @@
     }
 
     >app-thoughts:nth-of-type(2) {
-        // transform: rotate(0);
-
         z-index: 2;
     }
 
     >app-thoughts:nth-of-type(3) {
         transform: rotate(+7deg);
-
         margin-left: -200px;
         z-index: 1;
     }
@@ -60,28 +56,13 @@
     }
 }
 
-
-
-
-
-
 // _____________________________________________________
 
 
-
-
-
-
-
 @media (max-width: 850px) {
-
     #comments_about_me_component {
-
         display: flex;
-
         flex-direction: column;
-
-
         margin-bottom: 40px;
         padding: 24px;
 
@@ -93,7 +74,6 @@
             }
         }
     }
-
 
     #thoughts {
         flex-direction: column;

@@ -4,7 +4,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 
-
 export class FadeAnimationEffectService {
 
     animationtime:number = 3000;

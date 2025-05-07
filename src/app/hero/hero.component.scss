@@ -86,7 +86,6 @@ h1 {
 }
 
 //  --  main headline  --
-// opacityeffekt passt aber Wortfluss passt nicht
 #h1_first,
 #h1_second {
     font-weight: bold;
@@ -120,24 +119,21 @@ h1 {
 .normal {
     opacity: 1;
     z-index: 1;
-
     color: white;
     font-size: 112px;
     font-weight: 700;
     margin: 0;
-    // padding: 12px 0;
+
 }
 
 .transformed {
     opacity: 0;
     z-index: 2;
     display: none;
-
     color: #f7c518;
     font-size: 112px;
     font-weight: 700;
     margin: 0;
-    // padding: 12px 0
 }
 
 .letter-pair:hover .normal {
@@ -162,22 +158,17 @@ h1 {
     // width: 203px;
     height: 244px;
     width: calc(0.75 * 244px);
-
     position: absolute;
     top: 10%;
     right: 8px;
-
     background-color: white;
-
     flex-direction: column;
-
     transform: rotate(+7deg);
 
     >img {
         height: 170px;
         width: calc(0.75 * 170px);
         padding: 8px;
-
         filter: grayscale(100%);
     }
 
@@ -193,10 +184,6 @@ h1 {
         >img {
             filter: grayscale(0%);
         }
-
-        // >span{
-        //     content: 'Borna :D';
-        // }
     }
 }
 
@@ -204,10 +191,8 @@ h1 {
     position: absolute;
     left: 64px;
     bottom: 80px;
-
     flex-direction: column;
     align-self: flex-start;
-    // padding-left: 64px;
     gap: 4px;
 
     >a {
@@ -285,7 +270,6 @@ h1 {
         gap: 24px;
     }
 
-
     .normal {
         font-size: 64px;
     }
@@ -299,8 +283,6 @@ h1 {
         display: flex;
         height: 260px;
         width: calc(0.75 * 260px);
-        // top: auto;
-        // bottom: 20%;
         left: 50%;
         margin-bottom: 72px;
         transform: translateX(-50%) rotate(7deg);
@@ -309,14 +291,12 @@ h1 {
             height: 200px;
             width: calc(0.75 * 200px);
             padding: 8px;
-
             filter: grayscale(0%);
         }
 
         >span {
             padding: 0px;
         }
-
 
         &:hover {
             >img {
@@ -329,17 +309,10 @@ h1 {
         position: absolute;
         left: 64px;
         bottom: 80px;
-
         flex-direction: column;
         align-self: flex-start;
-        // padding-left: 64px;
         gap: 4px;
-
-
-
         display: none;
-
-        
 
         >a {
             >img {
@@ -358,19 +331,19 @@ h1 {
     #hero_component {
         height: 100%;
     }
-    
-h1 {
-    color: white;
-    font-size: 100px;
-    margin: 0;
-    padding: 12px 0;
-}
 
-.normal {
-    font-size: 56px;
-}
+    h1 {
+        color: white;
+        font-size: 100px;
+        margin: 0;
+        padding: 12px 0;
+    }
 
-.transformed {
-    font-size: 56px;
-}
+    .normal {
+        font-size: 56px;
+    }
+
+    .transformed {
+        font-size: 56px;
+    }
 }

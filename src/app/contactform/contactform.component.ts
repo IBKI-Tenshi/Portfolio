@@ -27,6 +27,7 @@ export class ContactformComponent {
   };
 
   mailTest = false;
+  // mailTest = true;
 
   post = {
     endPoint: 'https://www.borna-kitak.de/sendMail.php',
@@ -40,11 +41,7 @@ export class ContactformComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    console.log('onSubmit wurde aufgerufen');
-
     if (ngForm.submitted && ngForm.valid && !this.mailTest) {
-      console.log('Formular gültig & MailTest deaktiviert – Mail wird gesendet');
-
       this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
         .subscribe({
           next: (response) => {

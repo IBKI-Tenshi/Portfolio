@@ -12,7 +12,6 @@
     width: 560px;
     height: 152px;
     color: white;
-
     background-position: center;
     background-size: contain;
     /* Bild wird so angepasst, dass es komplett sichtbar ist */
@@ -55,7 +54,6 @@
 
 #wrapper_right {
   width: 50%;
-
   flex-direction: column;
   align-items: flex-start;
 }
@@ -72,7 +70,6 @@
     transform: translate(-50%, -50%);
     width: 100%;
     height: auto;
-
     clip-path: inset(0 100% 100% 0);
     transition: clip-path 0.3s ease-in-out;
   }
@@ -126,23 +123,15 @@ p {
     width: 50%;
   }
 
-
   .wrapper_padding {
     padding: 0 24px;
   }
 }
 
-
-
-
-
-
-
 // Mobile
 
 // main headline
 @media (max-width: 450px) {
-
   #about_me_component {
     height: 100%;
     flex-direction: column-reverse;
@@ -153,7 +142,6 @@ p {
 
   #wrapper_right {
     width: auto;
-
     flex-direction: column;
     align-items: flex-start;
 
@@ -183,7 +171,6 @@ p {
 
     >div:nth-of-type(2) {
       margin-top: -75px;
-
     }
 
     >div:nth-of-type(3) {

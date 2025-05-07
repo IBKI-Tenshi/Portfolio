@@ -1,5 +1,4 @@
 #contact_me_component {
-    // width: 100%;
     height: 100%;
     background-image: url('/assets/images/contact-me_background.png');
     background-size: 100% 100%;
@@ -11,7 +10,6 @@
 
     >#contact_me_div {
         justify-content: space-between;
-        // padding-top: 64px;
         position: relative;
     }
 }
@@ -39,10 +37,9 @@
     }
 }
 
-
 // ab hier rechter part
 
-.width100{
+.width100 {
     width: 100%;
 }
 
@@ -50,8 +47,6 @@
     padding-top: 96px;
     position: relative;
     width: 40%;
-
-
     display: flex;
     align-items: center;
 
@@ -67,180 +62,11 @@
     }
 }
 
-form {
-    width: 100%;
-    flex-direction: column;
-}
-
-.input_div {
-    flex-direction: column;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    border-bottom: solid 1px #f7c518;
-    border-top: solid 1px #3355ff00;
-    color: white;
-
-    >label {
-        font-weight: 500;
-        font-size: 24px;
-        padding: 4px;
-    }
-
-    &:hover {
-        color: #F87A55;
-        border-bottom: solid 1px #3355ff;
-        border-top: solid 1px #3355ff;
-    }
-}
-
-input,
-textarea {
-    font-size: 16px;
-    font-weight: 400;
-    color: white;
-
-    background-color: transparent;
-    border: none;
-    outline: none;
-}
-
-textarea {
-    height: 20px;
-    min-height: 20px;
-    max-height: 320px;
-    min-width: 100%;
-    max-width: 100%;
-
-    resize: none; // scrollbar und textfeldgrößenregler ist ausgeblendet
-}
-
-input::placeholder {
-    font-family: 'Bricolage_Grotesque', sans-serif;
-    color: rgb(255, 255, 255);
-}
-
-textarea::placeholder {
-    font-family: 'Bricolage_Grotesque', sans-serif;
-    color: rgb(255, 255, 255);
-}
 
 
-// wrong input
-.error {
-    color: #e74c3c;
-    font-size: 0.9rem;
-    margin-top: 4px;
-}
-
-// text area
-.char-count {
-    font-size: 12px;
-    color: white;
-    margin-top: 4px;
-}
-
-//   .warning {
-//     color: rgb(248, 122, 85);
-//     font-weight: bold;
-//   }
-
-
-
-
-
-// checkbox start
-.checkbox_div {
-    cursor: pointer;
-    padding: 12px 0;
-    gap: 8px;
-}
-
-.checkbox_div input[type="checkbox"] {
-    appearance: none;
-    width: 24px;
-    height: 24px;
-    border: 2px solid rgb(51, 85, 255);
-    position: relative;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    background-color: transparent;
-
-    &:hover {
-        background-color: rgba(51, 85, 255, 0.5);
-    }
-
-    &:checked {
-        background-color: transparent;
-        background-image: url('/assets/images/checked_box.png');
-        background-size: 16px 16px;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
-    &:checked:hover {
-        background-color: rgba(51, 85, 255, 0.5);
-    }
-}
-
-.checkbox_div a {
-    color: rgb(51, 85, 255);
-    transition: color 0.3s;
-
-    &:hover {
-        color: rgb(247, 197, 24);
-    }
-}
-
-// checkbox end
-
-.send_button {
-    width: 140px;
-}
-
-
-#message_confirmation {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    height: 240px;
-    background-color: rgb(52, 52, 52);
-    font-size: 24px;
-    font-weight: 700;
-
-    flex-direction: column;
-    gap: 24px;
-    padding: 16px 24px;
-    border-radius: 20px;
-
-    border-color: white;
-    border-width: 3px;
-    border-style: solid;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//________________________________________________
 
 @media (max-width: 450px) {
-
     #contact_me_component {
         padding-top: 100px;
         padding: 24px;

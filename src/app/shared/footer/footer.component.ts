@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { RotatingIconDirective } from '../directive/rotating_icon_directive';
 import { FormGroup } from '@angular/forms';
-import { Router, RouterModule } from '@angular/router'; 
+import { Router, RouterModule } from '@angular/router';
 
 
 @Component({
@@ -14,18 +14,11 @@ import { Router, RouterModule } from '@angular/router';
 })
 export class FooterComponent {
 
-    constructor(private router: Router) {} 
+  constructor(private router: Router) { }
 
   @Input() form!: FormGroup; // um auf die daten der elternkomponente zugreifen zu können
 
-  markFormAsTouched(){
+  markFormAsTouched() {
     this.form.markAllAsTouched();
   }
-
-
-
-  // openLegaleNotice(){
-  //   this.router.navigate(['/impressum']);
-  //   console.log('test');
-  // }
 }

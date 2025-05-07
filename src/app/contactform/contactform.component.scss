@@ -1,9 +1,6 @@
 
-// ab hier rechter part
-
 #form_div {
     padding-top: 96px;
-
 }
 
 form {
@@ -37,7 +34,6 @@ textarea {
     font-size: 16px;
     font-weight: 400;
     color: white;
-
     background-color: transparent;
     border: none;
     outline: none;
@@ -49,7 +45,6 @@ textarea {
     max-height: 320px;
     min-width: 100%;
     max-width: 100%;
-
     resize: none; // scrollbar und textfeldgrößenregler ist ausgeblendet
 }
 
@@ -77,15 +72,6 @@ textarea::placeholder {
     color: white;
     margin-top: 4px;
 }
-
-//   .warning {
-//     color: rgb(248, 122, 85);
-//     font-weight: bold;
-//   }
-
-
-
-
 
 // checkbox start
 .checkbox_div {
@@ -130,13 +116,11 @@ textarea::placeholder {
         color: rgb(247, 197, 24);
     }
 }
-
 // checkbox end
 
 .send_button {
     width: 140px;
 }
-
 
 #message_confirmation {
     position: absolute;
@@ -148,12 +132,10 @@ textarea::placeholder {
     background-color: rgb(52, 52, 52);
     font-size: 24px;
     font-weight: 700;
-
     flex-direction: column;
     gap: 24px;
     padding: 16px 24px;
     border-radius: 20px;
-
     border-color: white;
     border-width: 3px;
     border-style: solid;

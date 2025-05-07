@@ -31,7 +31,6 @@
             transform: translate(-50%, -50%);
             width: 100%;
             height: auto;
-
             clip-path: inset(0 100% 0 0);
             transition: clip-path 0.3s ease-in-out;
         }
@@ -63,31 +62,7 @@
     }
 }
 
-//   // Responsive: bei kleinerer Bildschirmbreite auf 1 Spalte wechseln
-//   @media (max-width: 768px) {
-//     #projects_component {
-//       grid-template-columns: 1fr;
-//     }
-
-//     #projects_component > #title,
-//     #projects_component app-project-div {
-//       grid-column: 1 !important;
-//     }
-//   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//_____________________________________________________
 
 @media (max-width: 850px) {
     #projects_component {
@@ -110,7 +85,6 @@
             display: inline-block;
             padding: 10px 0px;
 
-
             >img {
                 position: absolute;
                 top: 100%;
@@ -118,7 +92,6 @@
                 transform: translate(-50%, -50%);
                 width: 100%;
                 height: auto;
-
                 clip-path: inset(0 0 0 0);
                 transition: clip-path 0.3s ease-in-out;
             }

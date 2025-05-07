@@ -8,18 +8,11 @@
     height: 100vh;
     flex-direction: column;
     z-index: 1000;
-    /* Damit es über allen anderen Inhalten angezeigt wird */
-
     background-color: black;
     background-image: url('/assets/images/project_info_background.png');
     background-size: 125% auto;
-    // background-size: 100% 100%;
     background-repeat: no-repeat;
 }
-
-// button{
-//     font-family: 'Bricolage_Grotesque', sans-serif;
-// }
 
 .project-details-content {
     padding: 20px;
@@ -29,13 +22,11 @@
     padding-top: 0;
     padding-bottom: 64px;
     position: relative;
-
 }
 
 .info_div {
     width: 55%;
     flex-direction: column;
-
 }
 
 #title_div {
@@ -51,7 +42,6 @@
         transform: translate(-50%, -50%);
         width: 100%;
         height: auto;
-
         clip-path: inset(0 100% 100% 0);
         transition: clip-path 0.3s ease-in-out;
     }
@@ -72,13 +62,8 @@
             width: 24px;
             height: 24px;
         }
-
-
     }
-
 }
-
-
 
 // ----------------------------------------------------------
 
@@ -99,8 +84,6 @@
         border-width: 2px;
     }
 }
-
-
 
 /* Styling für den Close-Button */
 .close-button {
@@ -123,8 +106,6 @@
     margin-top: 40px;
     gap: 16px;
 }
-
-
 
 /* Styling für die Navigation Buttons */
 .navigation-buttons {
@@ -154,7 +135,6 @@
     padding: 12px;
 }
 
-
 h3 {
     font-weight: 700;
     font-size: 24px;
@@ -166,19 +146,14 @@ p {
     font-size: 18px;
 }
 
-
 .spaceholder {
     display: none;
 }
-
-
 
 @media (max-width: 1300px) {
     .image_and_links_div {
         width: 45%;
         flex-direction: column;
-        // background-color: rgba(0, 255, 255, 0.249);
-        // align-items: center;
         align-items: flex-end;
 
         >img {
@@ -201,9 +176,7 @@ p {
     .info_div {
         width: 50%;
         flex-direction: column;
-    
     }
-
 
     .image_and_links_div {
         width: 50%;
@@ -229,9 +202,7 @@ p {
     .info_div {
         width: 50%;
         flex-direction: column;
-    
     }
-
 
     .image_and_links_div {
         width: 50%;
@@ -260,21 +231,17 @@ p {
         background-image: url('/assets/images/project_info_background_mobile.png');
         background-size: auto 125%;
         height: 100%;
-
     }
 
     .overlay_header_mobile {
         display: none;
     }
 
-
-
     .project-details-content {
         flex-direction: column;
         padding: 24px;
         height: 100%;
         align-items: center;
-
     }
 
     .info_div {
@@ -287,14 +254,11 @@ p {
         font-size: 20px;
     }
 
-
     // -----------------------------
-
 
     .image_and_links_div {
         width: 100%;
         padding: 32px 0;
-
         align-items: center;
         justify-content: center;
 
@@ -305,18 +269,12 @@ p {
         }
     }
 
-
-
 }
 
 @media (max-width: 600px) {
     .project-details-overlay {
         background-size: auto 145%;
     }
-
-    // .project-details-content {
-    //     padding-bottom: 64px;
-    // }
 }
 
 

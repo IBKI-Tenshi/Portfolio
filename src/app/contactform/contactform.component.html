@@ -1,95 +1,68 @@
 <!-- <div id="form_div"> -->
-    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="dFlex">
-      
-      <!-- Name -->
-      <div class="input_div dFlex">
-        <label for="name">What's your name?</label>
-        <input
-          [(ngModel)]="contactData.name"
-          type="text"
-          id="name"
-          name="name"
-          required
-          pattern="^[A-Za-zÄÖÜäöüß\s-]{2,20}$"
-          #name="ngModel"
-          placeholder="Your name goes here"
-        />
-        <div class="error" *ngIf="name.invalid && name.touched">
-          Please enter a valid name (letters, "-" and spaces only).
-        </div>
-      </div>
-  
-      <!-- Email -->
-      <div class="input_div dFlex">
-        <label for="email">What's your email?</label>
-        <input
-          [(ngModel)]="contactData.email"
-          type="email"
-          id="email"
-          name="email"
-          required
-          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-          #email="ngModel"
-          placeholder="youremail@email.com"
-        />
-        <div class="error" *ngIf="email.invalid && email.touched">
-          Please enter a valid email address.
-        </div>
-      </div>
-  
-      <!-- Message -->
-      <div class="input_div dFlex">
-        <label for="message">How can I help you?</label>
-        <textarea
-          #autoTextarea
-          [(ngModel)]="contactData.message"
-          id="message"
-          name="message"
-          required
-          minlength="10"
-          maxlength="1000"
-          pattern="[\s\S]*\S[\s\S]*"
-          #message="ngModel"
-          (input)="autoResize(autoTextarea)"
-          placeholder="Hello Borna, I am interested in..."
-        ></textarea>
-  
-        <div class="error" *ngIf="message.invalid && message.touched">
-          Please enter a valid message.
-        </div>
-        <div class="error" *ngIf="message.errors?.['minlength'] && message.touched">
-          Please write at least 10 characters.
-        </div>
-        <div class="error" *ngIf="message.errors?.['pattern'] && message.touched">
-          Message can't be only spaces.
-        </div>
-        <div class="char-count" *ngIf="message.value?.length">
-          {{ message.value.length }}/1000 characters
-          <span *ngIf="message.value.length == 1000" class="error">
-            Your message is too long. Max 1000 characters.
-          </span>
-        </div>
-      </div>
-  
-      <!-- Datenschutz -->
-      <div class="checkbox_div dFlex_ac">
-        <input type="checkbox" id="privacy" required #privacy="ngModel" name="privacy" [(ngModel)]="contactData.privacy" />
-        <label for="privacy">
-          I agree to the <a routerLink="/privacyPolicy">privacy policy</a>.
-        </label>
-      </div>
-  
-      <!-- Senden-Button -->
-      <button type="submit" class="the_red_button send_button" [disabled]="!contactForm.valid">
-        Send
-      </button>
-    </form>
-  
-    <!-- overlay for message_confirmation -->
-    <div id="message_confirmation" class="dFlex_ac_jc d_none" #confirmationBox>
-      <span>Thank you very much for your message.</span>
-      <span>I will get back to you as soon as possible.</span>
-      <span>Have a nice day :D</span>
+<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="dFlex">
+
+  <!-- Name -->
+  <div class="input_div dFlex">
+    <label for="name">What's your name?</label>
+    <input [(ngModel)]="contactData.name" type="text" id="name" name="name" required
+      pattern="^[A-Za-zÄÖÜäöüß\s-]{2,20}$" #name="ngModel" placeholder="Your name goes here" />
+    <div class="error" *ngIf="name.invalid && name.touched">
+      Please enter a valid name (letters, "-" and spaces only).
     </div>
-  <!-- </div> -->
-  
+  </div>
+
+  <!-- Email -->
+  <div class="input_div dFlex">
+    <label for="email">What's your email?</label>
+    <input [(ngModel)]="contactData.email" type="email" id="email" name="email" required
+      pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #email="ngModel" placeholder="youremail@email.com" />
+    <div class="error" *ngIf="email.invalid && email.touched">
+      Please enter a valid email address.
+    </div>
+  </div>
+
+  <!-- Message -->
+  <div class="input_div dFlex">
+    <label for="message">How can I help you?</label>
+    <textarea #autoTextarea [(ngModel)]="contactData.message" id="message" name="message" required minlength="10"
+      maxlength="1000" pattern="[\s\S]*\S[\s\S]*" #message="ngModel" (input)="autoResize(autoTextarea)"
+      placeholder="Hello Borna, I am interested in..."></textarea>
+
+    <div class="error" *ngIf="message.invalid && message.touched">
+      Please enter a valid message.
+    </div>
+    <div class="error" *ngIf="message.errors?.['minlength'] && message.touched">
+      Please write at least 10 characters.
+    </div>
+    <div class="error" *ngIf="message.errors?.['pattern'] && message.touched">
+      Message can't be only spaces.
+    </div>
+    <div class="char-count" *ngIf="message.value?.length">
+      {{ message.value.length }}/1000 characters
+      <span *ngIf="message.value.length == 1000" class="error">
+        Your message is too long. Max 1000 characters.
+      </span>
+    </div>
+  </div>
+
+  <!-- Datenschutz -->
+  <div class="checkbox_div dFlex_ac">
+    <input type="checkbox" id="privacy" required #privacy="ngModel" name="privacy" [(ngModel)]="contactData.privacy" />
+    <label for="privacy">
+      I agree to the <a routerLink="/privacyPolicy">privacy policy</a>.
+    </label>
+  </div>
+
+  <!-- Senden-Button -->
+  <button type="submit" class="the_red_button send_button" [disabled]="!contactForm.valid">
+    Send
+  </button>
+</form>
+
+<!-- overlay for message_confirmation -->
+<div id="message_confirmation" class="dFlex_ac_jc d_none" #confirmationBox>
+  <span>Thank you very much for your message.</span>
+  <span>I will get back to you as soon as possible.</span>
+  <span>Have a nice day :D</span>
+</div>
+<!-- </div> -->
