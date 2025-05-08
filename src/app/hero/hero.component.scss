@@ -234,6 +234,42 @@ h1 {
     }
 }
 
+
+// tablets
+
+@media screen and (min-width: 720px) and (max-width: 1028px) and (orientation: portrait) {
+    #central_div {
+        padding-top: 92px;
+    }
+
+    #my_picture {
+        height: 280px;
+        width: calc(0.75 * 280px);
+        top: 8%;
+        right: 4px;
+
+        >img {
+            height: 200px;
+            width: calc(0.75 * 200px);
+        }
+    }
+
+    .social_icons {
+        bottom: 120px;
+    
+        >a {
+            >img {
+                width: 64px;
+                height: 64px;
+            }
+        }
+    }
+
+    
+}
+
+
+
 @media (max-width: 835px) {
 
     //  --  main headline  --
@@ -248,6 +284,7 @@ h1 {
     #my_picture {
         height: 230px;
         width: calc(0.75 * 230px);
+        // position: relative;
 
         >img {
             height: 160px;
@@ -318,10 +355,6 @@ h1 {
             >img {
                 border-radius: 50%;
                 transition: background-color 0.5s ease;
-
-                &:hover {
-                    background-color: #3355FF;
-                }
             }
         }
     }

@@ -1,12 +1,13 @@
 
 
-<div id="project_div">
+<div id="project_div" class="dFlex">
   <div class="img_div">
-    <img src="{{ project.image }}" alt="XXXXXXXXXXXXXX">
+    <img class="projekt_img" src="{{ project.image }}" alt="XXXXXXXXXXXXXX">
     <button class="the_red_button">zum projekt</button>
-    <!-- code drunter wenn es nur über den button geöffnet werden soll - anpassung auch in ts und project-div- ts -->
-    <!-- <button class="the_red_button" (click)="openDetails()">zum projekt</button> -->
+
   </div>
+
+  <img *ngIf="project.highlighted" class="featured_sticker" src="/assets/images/featured_project_sticker.png" alt="">
 
     <div id="title_and_description">
         <h3>{{ project.title }}</h3>

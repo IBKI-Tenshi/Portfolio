@@ -9,7 +9,8 @@ export const PROJECTS = [
       info_details: 'tiefere infos zum projekt',
       image: '/assets/images/project_images/join_image_laptop.png',
       image_details: '/assets/images/project_images/join_image.png',
-      project_link: 'https://borna-kitak.developerakademie.net/Join/Join-main/index.html',
+      // project_link: 'https://borna-kitak.developerakademie.net/Join/Join-main/index.html',
+      project_link: 'https://projekte.borna-kitak.de/Join-main/',
       github_link: 'https://github.com/IBKI-Tenshi/Join',
       duration: 'benötigte wochen',
       used_skills: [
@@ -38,7 +39,8 @@ export const PROJECTS = [
       info_details: 'tiefere infos zum projekt',
       image: '/assets/images/project_images/el_pollo_loco_image_laptop.png',
       image_details: '/assets/images/project_images/el_pollo_loco_image.png',
-      project_link: 'https://borna-kitak.developerakademie.net/el_pollo_loco/',
+      // project_link: 'https://borna-kitak.developerakademie.net/el_pollo_loco/',
+      project_link: 'https://projekte.borna-kitak.de/el_pollo_loco/',
       github_link: 'https://github.com/IBKI-Tenshi/El_pollo_loco',
       duration: 'benötigte wochen',
       used_skills: [
@@ -63,7 +65,7 @@ export const PROJECTS = [
       info_details: 'tiefere infos zum projekt',
       image: '/assets/images/project_images/pokedex_image_laptop.png',
       image_details: '/assets/images/project_images/pokedex_image.png',
-      project_link: 'https://borna-kitak.developerakademie.net/pokedex/',
+      project_link: 'https://projekte.borna-kitak.de/pokedex/',
       github_link: 'https://github.com/IBKI-Tenshi/Pokedex',
       duration: 'benötigte wochen',
       used_skills: [
