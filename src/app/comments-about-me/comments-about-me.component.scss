@@ -98,3 +98,17 @@
         }
     }
 }
+
+// big monitor
+@media(min-width: 1920px) {
+    .big_monitor_positioning {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    #comments_about_me_component {
+        width: 1400px;
+    }
+}

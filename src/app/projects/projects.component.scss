@@ -119,3 +119,16 @@
         }
     }
 }
+
+// big monitor
+@media(min-width: 1920px) {
+    .big_screen_position {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #projects_component {
+        width: 1400px;
+    }
+}

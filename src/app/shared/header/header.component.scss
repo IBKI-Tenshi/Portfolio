@@ -1,54 +1,46 @@
-
-
 #header {
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 64px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 64px;
 }
 
 #header_logo {
-    width: auto;
-    height: 50px;
-    background-color: white;
-    // margin: 16px;
-
+  width: auto;
+  height: 50px;
+  background-color: white;
 }
 
-// a {
-//     padding: 16px;
-//     color: white;
-// }
-
 .nav-link {
-    position: relative;
-    display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
 
+  >img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: auto;
+
+    transition: clip-path 0.5s ease-in-out;
+    /* "Vorhang"-Effekt animieren */
+
+  }
+
+  &:hover {
     >img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100px;
-        height: auto;
-
-        transition: clip-path 0.5s ease-in-out; /* "Vorhang"-Effekt animieren */
-
+      clip-path: inset(0 0 0 0);
+      /* Bild wird sichtbar beim Hover */
     }
-
-    &:hover {
-        >img {
-            clip-path: inset(0 0 0 0);
-            /* Bild wird sichtbar beim Hover */
-        }
-    }
+  }
 }
 
 
@@ -57,14 +49,14 @@
 // clip-path: inset(0 0 100% 0); /* oben nach unten */
 // clip-path: inset(0 0 0 100%); /* rechts nach links */
 .hover_top_to_bottom {
-    clip-path: inset(0 0 100% 0);
+  clip-path: inset(0 0 100% 0);
 }
 
 .hover_left_to_right {
-    clip-path: inset(0 100% 0 0);
+  clip-path: inset(0 100% 0 0);
 }
 
-.social_icons_mobile{
+.social_icons_mobile {
   display: none;
 }
 
@@ -75,10 +67,10 @@
 
 
 
-@media (max-width: 450px) {
-    #header {
-        // display: none;
-    }
+@media (max-width: 1920px) {
+  #header {
+    padding: 12px 0;
+  }
 }
 
 
@@ -97,78 +89,77 @@
 
 
 #burger_btn {
-    display: none;
-    font-size: 30px;
-    background: none;
-    color: white;
-    border: none;
-    cursor: pointer;
-    z-index: 1001;
-  }
-  
-  #nav_container {
-    display: flex;
-    gap: 32px;
-    width: 100%;
-    justify-content: space-around;
-  
-    @media (max-width: 768px) {
-      position: absolute;
-      top: 80px;
-      left: 0;
-    //   width: 100%;
-      background-color: rgba(255, 255, 255, 0);
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 32px;
-      padding-top: 64px;
-      padding-bottom: 24px;
-      display: none;
-      z-index: 1000;
+  display: none;
+  font-size: 30px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
 
+#nav_container {
+  display: flex;
+  gap: 32px;
+  width: 100%;
+  justify-content: space-around;
 
-
-      background-image: url('/assets/images/nav_bar_menu_background.png');
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-    }
-  
-    &.open {
-      display: flex;
-    }
-  }
-
-
-
-  
   @media (max-width: 768px) {
-    #header {
-      flex-wrap: wrap;
-      justify-content: space-between;
-      padding: 12px 24px;
-    }
-  
-    #burger_btn {
-      display: block;
-    }
-  
-    .nav-link > img {
-      display: none; // Optional, wenn Hover-Frames mobil nicht gebraucht werden
-    }
+    position: absolute;
+    top: 80px;
+    left: 0;
+    //   width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding-top: 64px;
+    padding-bottom: 24px;
+    display: none;
+    z-index: 1000;
 
-    .social_icons_mobile{
-        display: flex;
-        justify-content: center;
-        padding-top: 24px;
-        padding-bottom: 64px;
-        gap: 24px;
-        width: 100%;
-        
-        >img{
-            height: 40px;
-            width: 40px;
-        }
+
+
+    background-image: url('/assets/images/nav_bar_menu_background.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  &.open {
+    display: flex;
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+  #header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 12px 24px;
+  }
+
+  #burger_btn {
+    display: block;
+  }
+
+  .nav-link>img {
+    display: none; // Optional, wenn Hover-Frames mobil nicht gebraucht werden
+  }
+
+  .social_icons_mobile {
+    display: flex;
+    justify-content: center;
+    padding-top: 24px;
+    padding-bottom: 64px;
+    gap: 24px;
+    width: 100%;
+
+    >img {
+      height: 40px;
+      width: 40px;
     }
   }
-  
+}

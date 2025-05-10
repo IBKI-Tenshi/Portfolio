@@ -71,15 +71,7 @@
     >#title_and_description {}
 }
 
-
-
-
-
-
-
-
-
-
+//_____________________________________________
 
 @media (max-width: 1150px) {
     #project_div {
@@ -106,6 +98,12 @@
                 object-fit: cover;
                 transition: transform 0.3s ease-in-out;
             }
+        }
+
+        >.featured_sticker {
+            top: 16%;
+            width: 120px;
+            height: 120px;
         }
     }
 }

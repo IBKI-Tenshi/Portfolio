@@ -1,13 +1,7 @@
-/* Grundlegendes Overlay-Styling */
-.project-details-overlay {
-    position: fixed;
-    overflow-y: auto;
-    top: 0;
-    left: 0;
+.project-details-screen {
     width: 100%;
     height: 100vh;
     flex-direction: column;
-    z-index: 1000;
     background-color: black;
     background-image: url('/assets/images/project_info_background.png');
     background-size: 125% auto;
@@ -227,13 +221,13 @@ p {
 
 
 @media (max-width: 850px) {
-    .project-details-overlay {
+    .project-details-screen {
         background-image: url('/assets/images/project_info_background_mobile.png');
         background-size: auto 125%;
         height: 100%;
     }
 
-    .overlay_header_mobile {
+    .header_mobile {
         display: none;
     }
 
@@ -272,18 +266,34 @@ p {
 }
 
 @media (max-width: 600px) {
-    .project-details-overlay {
+    .project-details-screen {
         background-size: auto 145%;
     }
 }
 
 
 @media (max-width: 400px) {
-    .project-details-overlay {
+    .project-details-screen {
         background-size: auto 145%;
     }
 
     .project-details-content {
         padding-bottom: 64px;
+    }
+}
+
+// big monitor
+@media(min-width: 1920px) {
+    .project-details-screen {
+        align-items: center;
+    }
+
+    #header {
+        width: 1400px;
+        
+    }
+
+    .project-details-content{
+        width: 1300px;
     }
 }

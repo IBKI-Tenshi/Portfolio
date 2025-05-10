@@ -152,8 +152,6 @@ h1 {
 //     }
 // }
 
-
-
 #my_picture {
     // width: 203px;
     height: 244px;
@@ -256,7 +254,7 @@ h1 {
 
     .social_icons {
         bottom: 120px;
-    
+
         >a {
             >img {
                 width: 64px;
@@ -265,7 +263,7 @@ h1 {
         }
     }
 
-    
+
 }
 
 
@@ -378,5 +376,43 @@ h1 {
 
     .transformed {
         font-size: 56px;
+    }
+}
+
+// big monitor
+
+@media (min-width: 1920px) {
+    #header_component {
+        width: 1400px;
+    }
+
+    #central_div {
+        width: 1000px;
+    }
+
+    .big_screen_div {
+        width: 1200px;
+        // position: relative;
+        margin-top: 100px;
+    }
+
+    .social_icons {
+        position: relative;
+        // left: 64px;
+        bottom: 0;
+        flex-direction: column;
+        align-self: flex-start;
+        gap: 4px;
+
+        >a {
+            >img {
+                border-radius: 50%;
+                transition: background-color 0.5s ease;
+
+                &:hover {
+                    background-color: #3355FF;
+                }
+            }
+        }
     }
 }
