@@ -1,7 +1,8 @@
 import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
-import { ThoughtsComponent } from "../thoughts/thoughts.component";
+import { ThoughtsComponent } from '../thoughts/thoughts.component';
 import { NgFor } from '@angular/common';
 import { FadeAnimationEffectService } from '../shared/services/fade_animation.service';
+import { LanguageService } from '../shared/services/language.service';
 
 @Component({
   selector: 'app-comments-about-me',
@@ -11,38 +12,69 @@ import { FadeAnimationEffectService } from '../shared/services/fade_animation.se
   styleUrl: './comments-about-me.component.scss'
 })
 export class CommentsAboutMeComponent implements AfterViewInit {
-
-  thoughts = [
-    {
-      name: 'Marco Lenschau',
-      title: 'Frontend Developer',
-      comment: '„Eine wertvolle Bereicherung für jedes Team – auch in schwierigen Situationen behält er stets einen klaren Kopf und liefert durchdachte Lösungsansätze.“',
-      profileLink: 'link',
-      backgroundimage: '/assets/images/thoughts_background_1.png'
-    },
-    {
-      name: 'bbb',
-      title: 'Frontend Developer',
-      comment: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet facere esse dignissimos accusamus quidem iusto vitae ex blanditiis labore debitis dolor, impedit fugit libero autem vero voluptatem doloribus doloremnumquam!',
-      profileLink: 'link',
-      backgroundimage: '/assets/images/thoughts_background_2.png'
-    },
-    {
-      name: 'ccc',
-      title: 'Frontend Developer',
-      comment: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet facere esse dignissimos accusamus quidem iusto vitae ex blanditiis labore debitis dolor, impedit fugit libero autem vero voluptatem doloribus doloremnumquam!',
-      profileLink: 'link',
-      backgroundimage: '/assets/images/thoughts_background_1.png'
-    },
-  ]
-
   @ViewChild('fade_animation_img') fade_animation_img!: ElementRef<HTMLImageElement>;
 
-  constructor(private fadeAnimationEffect: FadeAnimationEffectService) { }
+  currentLang = 'en';
+
+  constructor(
+    private fadeAnimationEffect: FadeAnimationEffectService,
+    private languageService: LanguageService
+  ) {
+    this.languageService.currentLang$.subscribe(lang => {
+      this.currentLang = lang;
+    });
+  }
 
   ngAfterViewInit(): void {
     const el = this.fade_animation_img.nativeElement;
     this.fadeAnimationEffect.startFadeAnimationLoop(el);
   }
 
+  getText(key: string): string {
+    return this.translations[this.currentLang][key];
+  }
+
+  translations: any = {
+    en: {
+      overline: 'IN THEIR WORDS:',
+      title: "Colleagues' Thoughts"
+    },
+    de: {
+      overline: 'IN IHREN WORTEN:',
+      title: 'Gedanken von Kollegen'
+    }
+  };
+
+  thoughts = [
+    {
+      name: 'Marco Lenschau',
+      title: 'Frontend Developer',
+      comment: {
+        en: '“A valuable addition to any team – even in difficult situations, he keeps a clear head and provides thoughtful solutions.”',
+        de: '„Eine wertvolle Bereicherung für jedes Team – auch in schwierigen Situationen behält er stets einen klaren Kopf und liefert durchdachte Lösungsansätze.“'
+      },
+      profileLink: 'link',
+      backgroundimage: '/assets/images/thoughts_background_1.png'
+    },
+    {
+      name: 'bbb',
+      title: 'Frontend Developer',
+      comment: {
+        en: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet facere esse...',
+        de: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet facere esse...'
+      },
+      profileLink: 'link',
+      backgroundimage: '/assets/images/thoughts_background_2.png'
+    },
+    {
+      name: 'ccc',
+      title: 'Frontend Developer',
+      comment: {
+        en: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet facere esse...',
+        de: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet facere esse...'
+      },
+      profileLink: 'link',
+      backgroundimage: '/assets/images/thoughts_background_1.png'
+    },
+  ];
 }

@@ -1,16 +1,13 @@
-
-
 <div id="project_div" class="dFlex">
   <div class="img_div">
-    <img class="projekt_img" src="{{ project.image }}" alt="XXXXXXXXXXXXXX">
+    <img class="projekt_img" [src]="project.image" alt="Projektbild">
     <button class="the_red_button">zum projekt</button>
-
   </div>
 
-  <img *ngIf="project.highlighted" class="featured_sticker" src="/assets/images/featured_project_sticker.png" alt="">
+  <img *ngIf="project.highlighted" class="featured_sticker" src="/assets/images/featured_project_sticker.png" alt="Featured project">
 
-    <div id="title_and_description">
-        <h3>{{ project.title }}</h3>
-        <p>{{ project.description }}</p>
-    </div>
+  <div id="title_and_description">
+    <h3>{{ project.title[currentLang] }}</h3>
+    <p>{{ project.description[currentLang] }}</p>
+  </div>
 </div>

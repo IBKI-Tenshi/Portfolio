@@ -1,5 +1,6 @@
 import { NgIf } from '@angular/common';
-import { Component, Input, EventEmitter, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { LanguageService } from '../shared/services/language.service'; // Pfad ggf. anpassen
 
 @Component({
   selector: 'app-project-div',
@@ -11,4 +12,12 @@ import { Component, Input, EventEmitter, Output } from '@angular/core';
 export class ProjectDivComponent {
 
   @Input() project: any;
+
+  currentLang: 'en' | 'de' = 'en';
+
+  constructor(private languageService: LanguageService) {
+    this.languageService.currentLang$.subscribe(lang => {
+      this.currentLang = lang as 'en' | 'de';
+    });
+  }
 }

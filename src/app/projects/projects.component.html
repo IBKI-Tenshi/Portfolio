@@ -2,17 +2,13 @@
 <div class="big_screen_position">
 <div id="projects_component">
   <div id="title_div" class="dFlex">
-    <span class="overline">MY Craft</span>
+      <span class="overline">{{ getText('overline') }}</span>
     <div id="title">
-      <h2>Projects</h2>
+        <h2>{{ getText('title') }}</h2>
       <img #fade_animation_img src="/assets/images/projects_underline.png" alt="">
 
     </div>
-    <p>
-      Schau dir gerne meine Projekte an und interagiere mit ihnen! <br>Bei der Entwicklung lege ich besonderen Wert auf
-      benutzerfreundliche, responsive Lösungen, die auf effizienten Code setzen. Jedes Projekt spiegelt meinen Ansatz
-      wider, nicht nur funktionale, sondern auch gut strukturierte und leicht verständliche Anwendungen zu schaffen.
-    </p>
+      <p>{{ getText('description') }}</p>
   </div>
 
   <!-- Liste der Projekte -->

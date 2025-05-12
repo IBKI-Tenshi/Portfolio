@@ -1,10 +1,10 @@
-
 import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NgIf, NgFor } from '@angular/common';
 import { HeaderComponent } from "../shared/header/header.component";
 import { FadeAnimationEffectService } from '../shared/services/fade_animation.service';
 import { PROJECTS } from '../projects/projects_data';
+import { LanguageService } from '../shared/services/language.service';
 
 @Component({
   selector: 'app-project-details',
@@ -17,13 +17,44 @@ export class ProjectDetailsComponent implements AfterViewInit {
   project: any;
   currentIndex: number = 0;
   projects = PROJECTS;
+  currentLang: 'en' | 'de' = 'en';
 
   @ViewChild('fade_animation_img') fade_animation_img!: ElementRef<HTMLImageElement>;
 
+  translations: any = {
+    en: {
+      goBack: 'Go Back',
+      description: 'Description',
+      implementationDetails: 'Implementation Details',
+      duration: 'Duration',
+      usedSkills: 'Used Skills',
+      github: 'GitHub',
+      liveTest: 'Live Test',
+      previousProject: 'Previous Project',
+      nextProject: 'Next Project'
+    },
+    de: {
+      goBack: 'Zurück',
+      description: 'Beschreibung',
+      implementationDetails: 'Details zur Umsetzung',
+      duration: 'Dauer',
+      usedSkills: 'Angewendete Skills',
+      github: 'GitHub',
+      liveTest: 'Live-Demo',
+      previousProject: 'Vorheriges Projekt',
+      nextProject: 'Nächstes Projekt'
+    }
+  };
+
   constructor(
     private route: ActivatedRoute,
-    private fadeAnimationEffect: FadeAnimationEffectService
-  ) {}
+    private fadeAnimationEffect: FadeAnimationEffectService,
+    private languageService: LanguageService
+  ) {
+    this.languageService.currentLang$.subscribe(lang => {
+      this.currentLang = lang as 'en' | 'de';
+    });
+  }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -32,7 +63,7 @@ export class ProjectDetailsComponent implements AfterViewInit {
         this.currentIndex = index;
         this.project = this.projects[index];
       }
-    })
+    });
   }
 
   ngAfterViewInit(): void {
@@ -40,8 +71,12 @@ export class ProjectDetailsComponent implements AfterViewInit {
     this.fadeAnimationEffect.startFadeAnimationLoop(el);
   }
 
+  getText(key: string): string {
+    return this.translations[this.currentLang][key];
+  }
+
   closeOverlay() {
-    window.history.back(); // oder Router.navigate(['projects'])
+    window.history.back();
   }
 
   previousProject() {
@@ -56,4 +91,3 @@ export class ProjectDetailsComponent implements AfterViewInit {
     this.project = this.projects[nextIndex];
   }
 }
-;

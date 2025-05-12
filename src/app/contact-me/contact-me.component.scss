@@ -90,8 +90,6 @@
         }
     }
 
-    // ab hier rechter part
-
     #input_infos {
         padding-top: 16px;
         position: static;
@@ -115,5 +113,21 @@
         >img {
             width: 120px;
         }
+    }
+}
+
+// big monitor
+@media (min-width: 1920px) {
+    #contact_me_component {
+        width: 100%;
+        align-items: center;
+
+        >#contact_me_div {
+            width: 1400px;
+        }
+    }
+
+    .footer {
+        width: 1400px;
     }
 }

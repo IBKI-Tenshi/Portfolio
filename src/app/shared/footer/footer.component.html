@@ -3,13 +3,14 @@
         <a href="#hero_component">
             <img class="logo" src="/assets/images/bk_logo_2.png" alt="logo">
         </a>
-    
+
         <div class="name_and_legal_notize dFlex_jc">
             <span>© Borna Kitak 2025</span>
             <a class="nav-link" routerLink="/impressum">
-                Legale Notice
+                {{ getText('legalNotice') }} <!-- Der Text wird durch die getText-Methode dynamisch geladen -->
                 <img class="hover_left_to_right" src="/assets/images/header_img/contact_frame.png" alt="">
             </a>
+
         </div>
     </div>
 
@@ -26,8 +27,8 @@
             <div class="icon_wrapper">
                 <img class="waving_icon" src="/assets/icons/footer_linkedin-icon.svg" alt="" />
             </div>
-            <a class="footer_link dFlex_ac_jc event_target" href="https://www.linkedin.com/in/borna-kitak-138bb2363/" target="_blank"
-                rel="noopener noreferrer">LinkedIn</a>
+            <a class="footer_link dFlex_ac_jc event_target" href="https://www.linkedin.com/in/borna-kitak-138bb2363/"
+                target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
 
         <div class="link_div dFlex" appRotatingIcon>

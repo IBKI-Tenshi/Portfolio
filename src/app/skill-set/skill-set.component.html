@@ -1,24 +1,18 @@
 <div id="skill_set_component" class="dFlex_ac">
-
   <div id="title_and_description" class="dFlex_ac">
     <div class="whole_title dFlex">
-      <span class="overline">MY Stack</span>
+      <span class="overline">{{ getText('overline') }}</span>
       <div id="big_title">
-        <h2>Skill set</h2>
+        <h2>{{ getText('title') }}</h2>
         <img #fade_animation_img src="/assets/images/skill_set_frame.png" alt="">
       </div>
-
     </div>
     <div id="description" class="dFlex_ac_jc">
-      <p>
-        Ich habe Erfahrung mit modernen Frontend-Technologien und lerne gern Neues dazu – flexibel, motiviert und offen
-        für alles, was kommt.
-      </p>
+      <p>{{ getText('description') }}</p>
     </div>
   </div>
 
   <div id="central_component_div" class="dFlex">
-
     <div class="skills dFlex_ac_jc">
       <div class="skill dFlex_ac" *ngFor="let skill of skills">
         <img [src]="skill.img" [alt]="skill.name">
@@ -28,30 +22,28 @@
 
     <div id="pull_to_peel_div">
       <div *ngFor="let layer of peelLayers; let i = index" #peelLayerRef class="peel-layer"
-        [ngStyle]="{ 'background-image': 'url(' + layer + ')', 'z-index': 10 - i }" (click)="togglePeel()">
+           [ngStyle]="{ 'background-image': 'url(' + layer + ')', 'z-index': 10 - i }" (click)="togglePeel()">
 
         <ng-container *ngIf="i === 0">
           <img src="/assets/images/pull_to_peel/pull_to_peel_arrow.png" alt="">
-          <span id="sticker_font">Pull to peel</span>
+          <span id="sticker_font">{{ getText('pull_to_peel') }}</span>
         </ng-container>
 
         <ng-container *ngIf="i === 3">
-          <span>Also, I'm interested</span>
-          <span>in diving into:</span>
+          <span>{{ getText('interested_line1') }}</span>
+          <span>{{ getText('interested_line2') }}</span>
           <div class="skills dFlex_ac_jc">
             <div class="skill_short">
               <img src="/assets/images/pull_to_peel/React_icon.svg" alt="">
-              <span>React</span>
+              <span>{{ getText('react') }}</span>
             </div>
             <div class="skill_short">
               <img src="/assets/images/pull_to_peel/Vue_js_icon.svg" alt="">
-              <span>Vue Js</span>
+              <span>{{ getText('vue') }}</span>
             </div>
           </div>
         </ng-container>
       </div>
     </div>
-
   </div>
-
 </div>

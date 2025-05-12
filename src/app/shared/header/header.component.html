@@ -8,23 +8,26 @@
 
     <nav id="nav_container" [class.open]="isMenuOpen">
         <a class="nav-link" href="#about_me_component" (click)="emitCloseOverlay()">
-            About me
+            {{ getNavLink(1) }}
             <img class="hover_top_to_bottom" src="/assets/images/header_img/about_me_frame.png" alt="">
         </a>
         <a class="nav-link" href="#skill_set_component" (click)="emitCloseOverlay()">
-            Skills
+           {{ getNavLink(2) }}
             <img class="hover_left_to_right" src="/assets/images/header_img/skills_frame.png" alt="">
         </a>
         <a class="nav-link" href="#projects_component" (click)="emitCloseOverlay()">
-            Projects
+           {{ getNavLink(3) }}
             <img class="hover_left_to_right" src="/assets/images/header_img/projects_frame.png" alt="">
         </a>
         <a class="nav-link" href="#contact_me_component" (click)="emitCloseOverlay()">
-            Contact
+            {{ getNavLink(4) }}
             <img class="hover_left_to_right" src="/assets/images/header_img/contact_frame.png" alt="">
         </a>
 
-        <span class="nav-link">sprache</span>
+        <span class="nav-link">
+<button (click)="switchLanguage('de')">Deutsch</button>
+<button (click)="switchLanguage('en')">English</button>
+        </span>
 
         <div class="social_icons_mobile dFlex">
             <a href="https://www.linkedin.com/in/borna-kitak-138bb2363/" target="_blank" rel="noopener noreferrer">
