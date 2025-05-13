@@ -59,7 +59,6 @@ export class ContactMeComponent implements AfterViewInit {
     this.fadeAnimationEffect.startFadeAnimationLoop(fade_icon);
   }
 
-  // Die Methode getText wird nicht geändert, da sie schon korrekt funktioniert
   getText(key: string): string {
     return this.translations[this.currentLang]?.[key] || key;
   }

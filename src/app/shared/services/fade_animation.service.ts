@@ -14,7 +14,7 @@ export class FadeAnimationEffectService {
       el.classList.add('fade_animation');
       setTimeout(() => {
         el.classList.remove('fade_animation');
-      }, this.animationtime); // Dauer deiner Animation
+      }, this.animationtime); // Dauer der Animation
     }
   
     startFadeAnimationLoop(el: HTMLElement, interval: number = this.animationtime * 2) {

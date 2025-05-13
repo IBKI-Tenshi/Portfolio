@@ -45,14 +45,13 @@ export class ProjectsComponent implements AfterViewInit {
         this.languageService.currentLang$.subscribe(lang => {
       this.currentLang = lang;
     });
-   }  // Router injizieren
+   }
 
   ngAfterViewInit(): void {
     const el = this.fade_animation_img.nativeElement;
     this.fadeAnimationEffect.startFadeAnimationLoop(el);
   }
 
-  // openDetails-Funktion geändert, um zu einer neuen Seite zu navigieren
   openDetails(project: any, index: number) {
     this.selectedProject = project;
     this.selectedIndex = index;

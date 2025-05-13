@@ -13,7 +13,7 @@ import { LanguageService } from '../services/language.service'; // Import des La
 })
 export class FooterComponent {
 
-  currentLang = 'en'; // Standardmäßig Englisch
+  currentLang = 'en';
 
   constructor(private router: Router, private languageService: LanguageService) {
     this.languageService.currentLang$.subscribe(lang => {
@@ -21,11 +21,11 @@ export class FooterComponent {
     });
   }
 
-  @Input() form!: FormGroup;
+  // @Input() form!: FormGroup;
 
-  markFormAsTouched() {
-    this.form.markAllAsTouched();
-  }
+  // markFormAsTouched() {
+  //   this.form.markAllAsTouched();
+  // }
 
   getText(key: string): string {
     const translations:any = {

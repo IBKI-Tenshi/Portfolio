@@ -57,11 +57,11 @@ export class CommentsAboutMeComponent implements AfterViewInit {
       backgroundimage: '/assets/images/thoughts_background_1.png'
     },
     {
-      name: 'bbb',
+      name: 'Peter Pfautsch',
       title: 'Frontend Developer',
       comment: {
-        en: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet facere esse...',
-        de: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet facere esse...'
+        en: '"Borna really enriched our group with his expertise and his friendly, easygoing manner – always helpful and fully engaged."',
+        de: '"Borna hat unsere Gruppe mit seinem Fachwissen und seiner freundlichen, lockeren Art echt bereichert – immer hilfsbereit und voll dabei."'
       },
       profileLink: 'link',
       backgroundimage: '/assets/images/thoughts_background_2.png'
