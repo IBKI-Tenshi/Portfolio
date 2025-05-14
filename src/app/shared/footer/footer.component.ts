@@ -21,12 +21,6 @@ export class FooterComponent {
     });
   }
 
-  // @Input() form!: FormGroup;
-
-  // markFormAsTouched() {
-  //   this.form.markAllAsTouched();
-  // }
-
   getText(key: string): string {
     const translations:any = {
       en: {

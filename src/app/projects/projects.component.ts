@@ -55,7 +55,7 @@ export class ProjectsComponent implements AfterViewInit {
   openDetails(project: any, index: number) {
     this.selectedProject = project;
     this.selectedIndex = index;
-    this.router.navigate(['/project', index]);  // Navigieren zu einer Detail-Seite mit Index
+    this.router.navigate(['/project', index]);
   }
 
 

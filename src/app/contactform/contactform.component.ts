@@ -20,6 +20,8 @@ export class ContactformComponent {
   @ViewChild('confirmationBox') confirmationBox!: ElementRef<HTMLDivElement>;
 
   http = inject(HttpClient);
+  
+  currentLang = 'en';
 
   contactData = {
     name: "",
@@ -80,8 +82,6 @@ export class ContactformComponent {
     }
   };
 
-  currentLang = 'en';
-
   ngOnInit() {
     this.languageService.currentLang$.subscribe(lang => {
       this.currentLang = lang;
@@ -114,7 +114,6 @@ export class ContactformComponent {
       ngForm.resetForm();
     }
   }
-
 
   autoResize(textarea: HTMLTextAreaElement) {
     textarea.style.height = 'auto';

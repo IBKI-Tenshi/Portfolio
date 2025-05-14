@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
-import { NgClass, NgStyle } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { LanguageService } from '../shared/services/language.service';
 
 @Component({
   selector: 'app-thoughts',
   standalone: true,
-  imports: [NgStyle, NgClass],
+  imports: [NgClass],
   templateUrl: './thoughts.component.html',
   styleUrl: './thoughts.component.scss'
 })

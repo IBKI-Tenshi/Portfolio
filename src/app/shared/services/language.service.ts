@@ -10,7 +10,6 @@ export class LanguageService {
   private currentLangSubject = new BehaviorSubject<string>('en');  // Standardwert ist Englisch
   currentLang$ = this.currentLangSubject.asObservable();
 
-  // Methode zum Wechseln der Sprache
   switchLanguage(lang: 'en' | 'de') {
     this.currentLangSubject.next(lang);
   }

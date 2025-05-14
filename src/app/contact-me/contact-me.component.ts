@@ -18,10 +18,17 @@ export class ContactMeComponent implements AfterViewInit {
   @ViewChild('fade_animation_img') fade_animation_img!: ElementRef<HTMLImageElement>;
   @ViewChild('confirmationBox') confirmationBox!: ElementRef<HTMLDivElement>;
 
+    constructor(
+    private fadeAnimationEffect: FadeAnimationEffectService,
+    private languageService: LanguageService
+  ) {
+    this.languageService.currentLang$.subscribe(lang => {
+      this.currentLang = lang;
+    });
+  }
+
   contactForm!: FormGroup;
   currentLang = 'en';
-
-  
   translations: any = {
     en: {
       overline: 'CONTACT ME' as string,
@@ -44,15 +51,6 @@ export class ContactMeComponent implements AfterViewInit {
       freue mich darauf, von dir zu hören und gemeinsam etwas Großartiges zu schaffen.` as string
     }
   };
-
-  constructor(
-    private fadeAnimationEffect: FadeAnimationEffectService,
-    private languageService: LanguageService
-  ) {
-    this.languageService.currentLang$.subscribe(lang => {
-      this.currentLang = lang;
-    });
-  }
 
   ngAfterViewInit(): void {
     const fade_icon = this.fade_animation_img.nativeElement;
