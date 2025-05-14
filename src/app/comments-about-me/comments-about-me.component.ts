@@ -47,34 +47,34 @@ export class CommentsAboutMeComponent implements AfterViewInit {
 
   thoughts = [
     {
-      name: 'Marco Lenschau',
+      name: 'Marco',
       title: 'Frontend Developer',
       comment: {
         en: '“A valuable addition to any team – even in difficult situations, he keeps a clear head and provides thoughtful solutions.”',
         de: '„Eine wertvolle Bereicherung für jedes Team – auch in schwierigen Situationen behält er stets einen klaren Kopf und liefert durchdachte Lösungsansätze.“'
       },
-      profileLink: 'link',
-      backgroundimage: '/assets/images/thoughts_background_1.png'
+      // profileLink: 'link',
+      backgroundimage: '/assets/images/thoughts_background_1.webp'
     },
     {
-      name: 'Peter Pfautsch',
+      name: 'Peter',
       title: 'Frontend Developer',
       comment: {
         en: '"Borna really enriched our group with his expertise and his friendly, easygoing manner – always helpful and fully engaged."',
         de: '"Borna hat unsere Gruppe mit seinem Fachwissen und seiner freundlichen, lockeren Art echt bereichert – immer hilfsbereit und voll dabei."'
       },
-      profileLink: 'link',
-      backgroundimage: '/assets/images/thoughts_background_2.png'
+      // profileLink: 'https://www.linkedin.com/in/peter-pfautsch-379bb62aa/',
+      backgroundimage: '/assets/images/thoughts_background_2.webp'
     },
     {
-      name: 'ccc',
+      name: 'Mohamad',
       title: 'Frontend Developer',
       comment: {
-        en: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet facere esse...',
-        de: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet facere esse...'
+        en: '"Borna works reliably and brings a pleasant calmness to the team. Working with him was always constructive and truly enjoyable."',
+        de: '„Borna arbeitet zuverlässig und bringt eine angenehme Ruhe ins Team. Die Zusammenarbeit mit ihm war stets konstruktiv und hat wirklich Spaß gemacht.“'
       },
-      profileLink: 'link',
-      backgroundimage: '/assets/images/thoughts_background_1.png'
+      // profileLink: 'link',
+      backgroundimage: '/assets/images/thoughts_background_1.webp'
     },
   ];
 }

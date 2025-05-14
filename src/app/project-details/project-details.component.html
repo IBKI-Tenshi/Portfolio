@@ -5,13 +5,13 @@
     <div class="info_div dFlex">
 
       <button class="dFlex_ac close-button" (click)="closeOverlay()">
-        <img class="switch_project_arrow" src="/assets/images/back_arrow.png" alt="">
+        <img class="switch_project_arrow" src="/assets/images/back_arrow.webp" alt="">
         {{ getText('goBack') }}
       </button>
 
       <div id="title_div">
         <h2>{{ project.title[currentLang] }}</h2>
-        <img #fade_animation_img src="/assets/images/about_me_underline.png" alt="">
+        <img #fade_animation_img src="/assets/images/about_me_underline.webp" alt="">
       </div>
 
       <h3>{{ getText('description') }}</h3>
@@ -47,12 +47,12 @@
 
       <div class="navigation-buttons dFlex">
         <button class="dFlex_ac" (click)="previousProject()">
-          <img class="switch_project_arrow" src="/assets/images/last_project_arrow.png" alt="">
+          <img class="switch_project_arrow" src="/assets/images/last_project_arrow.webp" alt="">
           {{ getText('previousProject') }}
         </button>
         <button class="dFlex_ac" (click)="nextProject()">
           {{ getText('nextProject') }}
-          <img class="switch_project_arrow" src="/assets/images/next_project_arrow.png" alt="">
+          <img class="switch_project_arrow" src="/assets/images/next_project_arrow.webp" alt="">
         </button>
       </div>
     </div>

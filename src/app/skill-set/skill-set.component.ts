@@ -63,7 +63,7 @@ export class SkillSetComponent implements AfterViewInit {
       overline: 'MY Stack',
       title: 'Skill set',
       description: 'I have experience with modern frontend technologies and enjoy learning new things – flexible, motivated, and open to whatever comes.',
-      pull_to_peel: 'Pull to peel',
+      pull_to_peel: 'Click to peel',
       interested_line1: "Also, I'm interested",
       interested_line2: "in diving into:",
       react: 'React',

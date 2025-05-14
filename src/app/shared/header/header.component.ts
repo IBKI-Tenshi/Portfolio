@@ -16,14 +16,14 @@ export class HeaderComponent {
   translations: { [key: string]: { [key: string]: string } } = {
     en: {
       navLink1: 'About me',
-      navLink2: 'Projects',
-      navLink3: 'Skills',
+      navLink2: 'Skills',
+      navLink3: 'Projects',
       navLink4: 'Contact'
     },
     de: {
       navLink1: 'Über mich',
-      navLink2: 'Projekte',
-      navLink3: 'Fähigkeiten',
+      navLink2: 'Fähigkeiten',
+      navLink3: 'Projekte',
       navLink4: 'Kontakt'
     }
   };

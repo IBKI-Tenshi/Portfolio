@@ -3,7 +3,7 @@
     height: 100vh;
     flex-direction: column;
     background-color: black;
-    background-image: url('/assets/images/project_info_background.png');
+    background-image: url('/assets/images/project_info_background.webp');
     background-size: 125% auto;
     background-repeat: no-repeat;
 }
@@ -79,7 +79,7 @@
     }
 }
 
-/* Styling für den Close-Button */
+
 .close-button {
     width: fit-content;
     cursor: pointer;
@@ -94,14 +94,12 @@
 }
 
 
-/* Styling für die Projektlinks */
 .project-links {
     margin-bottom: 20px;
     margin-top: 40px;
     gap: 16px;
 }
 
-/* Styling für die Navigation Buttons */
 .navigation-buttons {
     display: flex;
     justify-content: space-between;
@@ -109,14 +107,11 @@
 }
 
 .navigation-buttons button {
-    // padding: 10px 20px;
     font-size: 18px;
     background-color: transparent;
     color: white;
     border: none;
-    // border-radius: 10px;
     cursor: pointer;
-    // transition: background-color 0.3s;
 }
 
 .navigation-buttons button:hover {
@@ -175,8 +170,6 @@ p {
     .image_and_links_div {
         width: 50%;
         flex-direction: column;
-        // background-color: rgba(0, 255, 255, 0.249);
-        // align-items: center;
         align-items: flex-end;
         justify-content: center;
 
@@ -201,8 +194,6 @@ p {
     .image_and_links_div {
         width: 50%;
         flex-direction: column;
-        // background-color: rgba(0, 255, 255, 0.249);
-        // align-items: center;
         align-items: flex-end;
         justify-content: center;
 
@@ -222,7 +213,7 @@ p {
 
 @media (max-width: 850px) {
     .project-details-screen {
-        background-image: url('/assets/images/project_info_background_mobile.png');
+        background-image: url('/assets/images/project_info_background_mobile.webp');
         background-size: auto 125%;
         height: 100%;
     }
@@ -290,10 +281,19 @@ p {
 
     #header {
         width: 1400px;
-        
     }
 
-    .project-details-content{
+    .close-button {
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+
+    .switch_project_arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .project-details-content {
         width: 1300px;
     }
 }

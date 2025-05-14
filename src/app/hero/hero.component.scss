@@ -1,8 +1,6 @@
 #hero_component {
-    height: 100vh; // am ende muss es 100vh haben
-    // width: 100%;
-
-    background-image: url('/assets/images/Hero_background.png');
+    height: 100vh;
+    background-image: url('/assets/images/Hero_background.webp');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     flex-direction: column;
@@ -38,7 +36,7 @@
     padding: 10px 20px;
     color: white;
     background-color: transparent;
-    cursor: pointer;
+    cursor: default;
     width: 140px;
     position: relative;
     overflow: hidden;
@@ -207,6 +205,48 @@ h1 {
 
 // --  Media Queries  --
 
+// big monitor
+@media (min-width: 1920px) {
+
+    // #hero_component {
+    //     width: 100%;
+    // }
+
+    #header_component {
+        width: 1400px;
+    }
+
+    #central_div {
+        width: 1000px;
+    }
+
+    .big_screen_div {
+        width: 1200px;
+        // position: relative;
+        margin-top: 100px;
+    }
+
+    .social_icons {
+        position: relative;
+        // left: 64px;
+        bottom: 0;
+        flex-direction: column;
+        align-self: flex-start;
+        gap: 4px;
+
+        >a {
+            >img {
+                border-radius: 50%;
+                transition: background-color 0.5s ease;
+
+                &:hover {
+                    background-color: #3355FF;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 1200px) {
     #central_div {
         width: 70%;
@@ -233,8 +273,34 @@ h1 {
 }
 
 
-// tablets
+@media (max-width: 900px) {
+    #h1_second {
+        align-self: flex-start;
+    }
+}
 
+@media (max-width: 850px) {
+
+    .normal {
+        font-size: 80px;
+    }
+
+    .transformed {
+        font-size: 96px;
+    }
+
+    #my_picture {
+        height: 230px;
+        width: calc(0.75 * 230px);
+
+        >img {
+            height: 160px;
+            width: calc(0.75 * 160px);
+        }
+    }
+}
+
+// tablets
 @media screen and (min-width: 720px) and (max-width: 1028px) and (orientation: portrait) {
     #central_div {
         padding-top: 92px;
@@ -262,38 +328,16 @@ h1 {
             }
         }
     }
-
-
 }
 
-
-
-@media (max-width: 835px) {
-
-    //  --  main headline  --
-    .normal {
-        font-size: 80px;
-    }
-
-    .transformed {
-        font-size: 96px;
-    }
-
+@media (max-width: 700px) {
     #my_picture {
-        height: 230px;
-        width: calc(0.75 * 230px);
-        // position: relative;
-
-        >img {
-            height: 160px;
-            width: calc(0.75 * 160px);
-        }
+        position: relative;
+        display: flex;
     }
 }
 
 // Mobile
-
-// main headline
 @media (max-width: 450px) {
 
     #central_div {
@@ -373,43 +417,5 @@ h1 {
 
     .transformed {
         font-size: 56px;
-    }
-}
-
-// big monitor
-
-@media (min-width: 1920px) {
-    #header_component {
-        width: 1400px;
-    }
-
-    #central_div {
-        width: 1000px;
-    }
-
-    .big_screen_div {
-        width: 1200px;
-        // position: relative;
-        margin-top: 100px;
-    }
-
-    .social_icons {
-        position: relative;
-        // left: 64px;
-        bottom: 0;
-        flex-direction: column;
-        align-self: flex-start;
-        gap: 4px;
-
-        >a {
-            >img {
-                border-radius: 50%;
-                transition: background-color 0.5s ease;
-
-                &:hover {
-                    background-color: #3355FF;
-                }
-            }
-        }
     }
 }

@@ -13,7 +13,7 @@ export class ThoughtsComponent {
   @Input() thought: any;
   hovered = false;
 
-  overlayImage = '/assets/images/thoughts_hover.png';
+  overlayImage = '/assets/images/thoughts_hover.webp';
 
   currentLang = 'en';
 
