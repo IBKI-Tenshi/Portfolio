@@ -99,9 +99,9 @@ export class SkillSetComponent implements AfterViewInit {
   ];
 
   peelLayers = [
-    "/assets/images/pull_to_peel/pull_to_peel_1.png",
-    "/assets/images/pull_to_peel/pull_to_peel_2.png",
-    "/assets/images/pull_to_peel/pull_to_peel_3.png",
-    "/assets/images/pull_to_peel/pull_to_peel_4.png"
+    "/assets/images/pull_to_peel/pull_to_peel_1.webp",
+    "/assets/images/pull_to_peel/pull_to_peel_2.webp",
+    "/assets/images/pull_to_peel/pull_to_peel_3.webp",
+    "/assets/images/pull_to_peel/pull_to_peel_4.webp"
   ];
 }

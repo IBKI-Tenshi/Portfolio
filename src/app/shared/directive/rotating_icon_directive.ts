@@ -7,22 +7,38 @@ import { Directive, ElementRef, Renderer2, HostListener } from '@angular/core';
 })
 export class RotatingIconDirective {
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(private el: ElementRef, private renderer: Renderer2) {
+    // Check auf Mobile-Ansicht
+    if (window.innerWidth <= 760) {
+      // Nach 4 Sekunden automatisch triggern
+      setTimeout(() => {
+        const hostElement = this.el.nativeElement as HTMLElement;
+        const button = hostElement.querySelector('#hello_button');
+
+        if (button && button.classList.contains('event_target')) {
+          this.triggerHoverEffect();
+        }
+      }, 3000);
+    }
+  }
+
+  private triggerHoverEffect(): void {
+    const hostElement = this.el.nativeElement as HTMLElement;
+
+    this.renderer.addClass(hostElement, 'hovered');
+
+    const icon = hostElement.querySelector('.waving_icon') as HTMLElement;
+    if (icon) {
+      this.renderer.addClass(icon, 'visible');
+    }
+  }
 
   @HostListener('mouseover', ['$event'])
   onMouseOver(event: MouseEvent) {
     const target = event.target as HTMLElement;
 
-    // soll nur triggern wenn man auf dem button hovert
     if (target.classList.contains('event_target')) {
-      const hostElement = this.el.nativeElement as HTMLElement;
-
-      this.renderer.addClass(hostElement, 'hovered');
-
-      const icon = hostElement.querySelector('.waving_icon') as HTMLElement;
-      if (icon) {
-        this.renderer.addClass(icon, 'visible');
-      }
+      this.triggerHoverEffect();
     }
   }
 

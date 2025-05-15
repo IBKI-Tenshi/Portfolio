@@ -76,6 +76,29 @@
     }
 }
 
+#hello_button.hovered {
+    width: 190px !important;
+}
+
+#hello_button.hovered::after {
+    clip-path: inset(0% 0% 0% 0%) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 h1 {
     color: white;
     font-size: 112px;
