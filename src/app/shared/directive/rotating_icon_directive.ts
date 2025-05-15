@@ -8,9 +8,7 @@ import { Directive, ElementRef, Renderer2, HostListener } from '@angular/core';
 export class RotatingIconDirective {
 
   constructor(private el: ElementRef, private renderer: Renderer2) {
-    // Check auf Mobile-Ansicht
     if (window.innerWidth <= 760) {
-      // Nach 4 Sekunden automatisch triggern
       setTimeout(() => {
         const hostElement = this.el.nativeElement as HTMLElement;
         const button = hostElement.querySelector('#hello_button');

@@ -1,11 +1,10 @@
-
 <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="dFlex">
 
   <!-- Name -->
   <div class="input_div dFlex">
     <label for="name">{{ getText('nameLabel') }}</label>
-    <input [(ngModel)]="contactData.name" type="text" id="name" name="name" required
-      pattern="^[A-Za-zÄÖÜäöüß\s-]{2,20}$" #name="ngModel" [placeholder]="getText('namePlaceholder')" />
+    <input [(ngModel)]="contactData.name" type="text" id="name" name="name" required pattern="^[A-Za-zÄÖÜäöüß \-]{2,20}$"
+      #name="ngModel" [placeholder]="getText('namePlaceholder')" />
     <div class="error" *ngIf="name.invalid && name.touched">
       {{ getText('nameError') }}
     </div>
@@ -15,7 +14,8 @@
   <div class="input_div dFlex">
     <label for="email">{{ getText('emailLabel') }}</label>
     <input [(ngModel)]="contactData.email" type="email" id="email" name="email" required
-      pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #email="ngModel" [placeholder]="getText('emailPlaceholder')" />
+      pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #email="ngModel"
+      [placeholder]="getText('emailPlaceholder')" />
     <div class="error" *ngIf="email.invalid && email.touched">
       {{ getText('emailError') }}
     </div>
@@ -51,6 +51,9 @@
     <label for="privacy">
       {{ getText('checkboxText') }} <a routerLink="/privacyPolicy">{{ getText('toAccept') }}</a>.
     </label>
+    <div class="error" *ngIf="privacy.invalid && privacy.touched">
+      {{ getText('checkboxError') || 'Bitte akzeptiere die Datenschutzrichtlinie.' }}
+    </div>
   </div>
 
   <!-- Senden-Button -->
@@ -58,7 +61,9 @@
     {{ getText('sendButton') }}
   </button>
 
+  <!-- Bestätigungsbox -->
+  <div #confirmationBox class="confirmation_box d_none">
+    {{ getText('confirmationMessage') || 'Nachricht erfolgreich gesendet!' }}
+  </div>
 
-  
-   <!-- <button (click)="markFormAsTouched(contactForm)">test</button> -->
 </form>

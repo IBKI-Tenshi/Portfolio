@@ -66,6 +66,24 @@
 
 //________________________________________________
 
+// big monitor
+@media (min-width: 1920px) {
+    #contact_me_component {
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+
+        >#contact_me_div {
+            width: 1400px;
+            margin-top: 128px;
+        }
+    }
+
+    .footer {
+        width: 1400px;
+    }
+}
+
 @media (max-width: 450px) {
     #contact_me_component {
         padding-top: 100px;
@@ -97,16 +115,18 @@
         position: static;
         width: 100%;
 
+        >a{
         >img {
             position: absolute;
             right: 5%;
-            top: 7%;
+            top: 10%;
             width: 100px;
             height: 100px;
             transform: rotate(+10deg);
             align-self: flex-end;
             background-color: white;
         }
+    }
     }
 }
 
@@ -118,20 +138,3 @@
     }
 }
 
-// big monitor
-@media (min-width: 1920px) {
-    #contact_me_component {
-        height: 100vh;
-        align-items: center;
-        justify-content: center;
-
-        >#contact_me_div {
-            width: 1400px;
-            margin-top: 128px;
-        }
-    }
-
-    .footer {
-        width: 1400px;
-    }
-}

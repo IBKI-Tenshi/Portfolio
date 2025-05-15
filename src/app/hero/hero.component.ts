@@ -80,13 +80,11 @@ export class HeroComponent implements OnInit, OnDestroy, AfterViewInit {
       setTimeout(() => {
         if (this.helloDivRef) {
           this.helloDivRef.nativeElement.classList.add('hovered');
-          console.log('hovered zu hello div hinzugefügt');
         }
         if (this.helloButtonRef) {
           this.helloButtonRef.nativeElement.classList.add('hovered');
-          console.log('hovered zu hello button hinzugefügt');
         }
-      }, 4000);
+      }, 3000);
     }
   }
 
