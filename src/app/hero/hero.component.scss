@@ -84,21 +84,6 @@
     clip-path: inset(0% 0% 0% 0%) !important;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 h1 {
     color: white;
     font-size: 112px;
@@ -159,7 +144,6 @@ h1 {
 
 .letter-pair:hover .normal {
     opacity: 0;
-    // display: none;            // wenn aktiv passt der wortfluss aber der übergangseffekt dann nicht mehr
 }
 
 .letter-pair:hover .transformed {
@@ -167,14 +151,7 @@ h1 {
     display: block;
 }
 
-// .smaler_letter {
-//     &:hover {
-//         font-size: 1px; 
-//     }
-// }
-
 #my_picture {
-    // width: 203px;
     height: 244px;
     width: calc(0.75 * 244px);
     position: absolute;
@@ -197,7 +174,6 @@ h1 {
         font-size: 24px;
         font-family: 'Kalam', sans-serif;
     }
-
 
     &:hover {
         >img {
@@ -231,10 +207,6 @@ h1 {
 // big monitor
 @media (min-width: 1920px) {
 
-    // #hero_component {
-    //     width: 100%;
-    // }
-
     #header_component {
         width: 1400px;
     }
@@ -245,13 +217,11 @@ h1 {
 
     .big_screen_div {
         width: 1200px;
-        // position: relative;
         margin-top: 100px;
     }
 
     .social_icons {
         position: relative;
-        // left: 64px;
         bottom: 0;
         flex-direction: column;
         align-self: flex-start;
@@ -354,9 +324,21 @@ h1 {
 }
 
 @media (max-width: 700px) {
+
+   #hero_component {
+    height: 100%;
+    }
+
+    #central_div {
+padding-top: 0px;
+padding-bottom: 80px;
+    }
+
     #my_picture {
         position: relative;
         display: flex;
+        align-self: center;
+        bottom: 10%;
     }
 }
 
@@ -380,6 +362,7 @@ h1 {
     #my_picture {
         position: relative;
         display: flex;
+        align-self: auto;
         height: 260px;
         width: calc(0.75 * 260px);
         left: 50%;

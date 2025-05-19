@@ -51,7 +51,6 @@ footer {
     &:hover {
         >img {
             clip-path: inset(0 0 0 0);
-            /* Bild wird sichtbar beim Hover */
         }
     }
 }
@@ -64,7 +63,6 @@ footer {
 
 .link_div {
     flex-direction: column;
-    // background-color: rgba(255, 166, 0, 0.419);
     width: 140px;
 
     .icon_wrapper {
@@ -84,10 +82,8 @@ footer {
     }
 }
 
-// adjustet rotation of origin .visible class
 .visible {
     transform: rotate(2deg);
-
 }
 
 .footer_link {
@@ -138,10 +134,4 @@ footer {
     .footer_link {
         border: transparent;
     }
-}
-
-@media (max-width: 450px) {
-        #footer_links {
-            // flex-direction: column;
-        }
 }

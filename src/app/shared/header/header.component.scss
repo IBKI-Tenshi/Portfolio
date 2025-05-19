@@ -42,7 +42,6 @@
   }
 }
 
-
 // clip-path: inset(100% 0 0 0); /* unten nach oben */
 // clip-path: inset(0 100% 0 0); /* links nach rechts */
 // clip-path: inset(0 0 100% 0); /* oben nach unten */
@@ -148,17 +147,13 @@
   }
 }
 
-
 //_____________________________________
-
 
 @media (min-width: 1920px) {
   #header {
     padding: 12px 0;
   }
 }
-
-
 
 #burger_btn {
   display: none;

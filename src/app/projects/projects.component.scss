@@ -71,14 +71,12 @@
         padding: 24px;
         gap: 40px;
 
-        // Titelbereich (immer links oben)
         >#title_div {
             display: flex;
             flex-direction: column;
             padding-top: 88px;
         }
 
-        // Die Titelzeile mit dem Underline-Image
         #title {
             width: 50%;
             position: relative;
@@ -105,14 +103,11 @@
 
         // Platzierung der einzelnen Projekt-Komponenten
         app-project-div {
-
-            // Erstes Projekt direkt neben dem Titel platzieren
             &:nth-of-type(1) {
                 grid-column: 2;
                 grid-row: 1;
             }
 
-            // Alle weiteren Projekte im Grid-Flow (2 Spalten)
             &:nth-of-type(n+2) {
                 grid-column: span 1;
             }

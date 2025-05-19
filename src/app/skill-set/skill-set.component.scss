@@ -1,6 +1,5 @@
 #skill_set_component {
     height: 100vh;
-    // width: 100%;
     padding: 64px;
 
     background-image: url('/assets/images/skill_set_background.webp');
@@ -140,8 +139,6 @@
     }
 }
 
-
-
 .peel-layer {
     position: absolute;
     width: 200px;
@@ -182,12 +179,6 @@
         padding-top: 8px;
     }
 }
-
-
-
-
-
-
 
 @media (max-width: 1150px) {
 
@@ -267,8 +258,6 @@
     }
 }
 
-
-
 @media (max-width: 450px) {
 
     #skill_set_component {
@@ -336,12 +325,7 @@
 // big monitor
 @media(min-width: 1920px) {
 
-    // #skill_set_component {
-    //     width: 100%;
-    // }
-
     #title_and_description {
-        // width: 100%;
         width: 1400px;
         flex-direction: row;
         justify-content: center;
@@ -376,12 +360,12 @@
     #title_and_description {
 
 
-    >#description {
-        background-image: url('/assets/images/white_paper.webp');
-        width: 280px;
-        height: 300px;
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
+        >#description {
+            background-image: url('/assets/images/white_paper.webp');
+            width: 280px;
+            height: 300px;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
     }
-}
 }
