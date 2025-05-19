@@ -1,10 +1,11 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { LanguageService } from '../services/language.service';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [NgIf],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -32,6 +33,11 @@ export class HeaderComponent {
     this.languageService.currentLang$.subscribe(lang => {
       this.currentLang = lang;
     });
+  }
+
+  toggleLanguage() {
+    const newLang = this.currentLang === 'en' ? 'de' : 'en';
+    this.switchLanguage(newLang as 'en' | 'de');
   }
 
   switchLanguage(lang: 'en' | 'de') {
