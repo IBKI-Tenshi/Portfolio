@@ -70,7 +70,7 @@
 .language-toggle {
   gap: 16px;
   flex-direction: row;
-  cursor: pointer; // gesamter Bereich klickbar
+  cursor: pointer;
   user-select: none;
 
   span {
@@ -213,7 +213,7 @@
   }
 
   .nav-link>img {
-    display: none; // Optional, wenn Hover-Frames mobil nicht gebraucht werden
+    display: none;
   }
 
   .social_icons_mobile {

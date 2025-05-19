@@ -9,9 +9,8 @@ export const PROJECTS = [
       de: 'Ein Aufgabenmanager, inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag & Drop, weise Benutzer und Kategorien zu.'
     },
     info_details: {
-      en: 'Deeper information about the Join project.',
-      de: 'Tiefere Informationen über das Join-Projekt.'
-    },
+      en: 'This project was developed as a team effort, with tasks and functions divided among members. My main responsibilities included establishing a stable connection to Firebase and implementing the design to ensure an intuitive and functional user experience.',
+      de: 'Das Projekt wurde im Team umgesetzt, wobei wir uns Funktionen und Aufgaben teilten. Meine Hauptaufgaben umfassten die stabile Anbindung an Firebase und die Umsetzung des Designs, um eine intuitive und funktionale Nutzererfahrung zu schaffen.'},
     duration: {
       en: '4 weeks',
       de: '4 Wochen'
@@ -50,8 +49,8 @@ export const PROJECTS = [
       de: 'Jump-&-Run-Spiel auf objektorientierter Basis. Hilf Pepe, Münzen und Tabasco zu sammeln, um gegen das verrückte Huhn zu kämpfen.'
     },
     info_details: {
-      en: 'Deeper information about the El Pollo Loco project.',
-      de: 'Tiefere Informationen über das El Pollo Loco-Projekt.'
+      en: 'The game is based on an object-oriented architecture. The level environment is fully loaded at startup and reset upon restart. Core mechanics such as collisions, item interactions, and enemy behavior are modularly structured through the use of classes.',
+      de: 'Das Spiel basiert auf einer objektorientierten Architektur. Die Levelumgebung wird beim Start vollständig geladen und bei Neustart zurückgesetzt. Spielmechaniken wie Kollisionen, Interaktionen mit Items sowie das Verhalten von Gegnern sind durch Klassen modular aufgebaut.'
     },
     duration: {
       en: '3 weeks',
@@ -87,8 +86,8 @@ export const PROJECTS = [
       de: 'Interaktive Pokédex-App, die Pokémon-Daten von der offiziellen PokéAPI abruft. Stöbere durch verschiedene Pokémon und erfahre Details.'
     },
     info_details: {
-      en: 'Deeper information about the Pokédex project.',
-      de: 'Tiefere Informationen über das Pokédex-Projekt.'
+      en: 'The focus of the Pokédex project was to accurately parse the extensive and complex JSON data from the PokéAPI. I ensured that key information such as base stats and evolution chains was reliably retrieved and displayed. By using asynchronous programming, I created a smooth user experience with data being dynamically loaded without delay.',
+      de: 'Beim Pokédex-Projekt lag der Schwerpunkt darauf, die umfangreichen und komplexen JSON-Daten der PokéAPI gezielt auszuwerten. Ich habe dafür gesorgt, dass wichtige Details wie Basiswerte und Entwicklungsketten zuverlässig geladen und verarbeitet werden. Durch den Einsatz asynchroner Programmierung konnte ich eine flüssige Nutzererfahrung sicherstellen, bei der die Daten dynamisch und ohne Verzögerung angezeigt werden.'
     },
     duration: {
       en: '2 weeks',
