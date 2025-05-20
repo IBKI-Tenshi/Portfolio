@@ -273,7 +273,6 @@ p {
             border-radius: 20px;
         }
     }
-
 }
 
 @media (max-width: 600px) {
@@ -281,7 +280,6 @@ p {
         background-size: auto 145%;
     }
 }
-
 
 @media (max-width: 400px) {
     .project-details-screen {
@@ -293,6 +291,8 @@ p {
     }
 }
 
-@media (max-width: 450px) {
-
+@media (max-width: 360px) {
+    .needed_skills_div {
+        flex-direction: column;
+    }
 }

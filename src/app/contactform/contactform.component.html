@@ -3,12 +3,14 @@
   <!-- Name -->
   <div class="input_div dFlex">
     <label for="name">{{ getText('nameLabel') }}</label>
-    <input [(ngModel)]="contactData.name" type="text" id="name" name="name" required pattern="^[A-Za-zÄÖÜäöüß \-]{2,20}$"
-      #name="ngModel" [placeholder]="getText('namePlaceholder')" />
-    <div class="error" *ngIf="name.invalid && name.touched">
-      {{ getText('nameError') }}
+    <input [(ngModel)]="contactData.name" type="text" id="name" name="name" required
+      pattern="^[A-Za-zÄÖÜäöüß \-]{2,20}$" #name="ngModel" [placeholder]="getText('namePlaceholder')" />
+
+    <div class="error" [class.visible]="name.invalid && name.touched">
+      {{ name.invalid && name.touched ? getText('nameError') : '\u00A0' }}
     </div>
   </div>
+
 
   <!-- Email -->
   <div class="input_div dFlex">
@@ -16,27 +18,27 @@
     <input [(ngModel)]="contactData.email" type="email" id="email" name="email" required
       pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #email="ngModel"
       [placeholder]="getText('emailPlaceholder')" />
-    <div class="error" *ngIf="email.invalid && email.touched">
-      {{ getText('emailError') }}
+
+    <div class="error" [class.visible]="email.invalid && email.touched">
+      {{ email.invalid && email.touched ? getText('emailError') : '\u00A0' }}
     </div>
   </div>
 
-  <!-- Message -->
   <div class="input_div dFlex">
     <label for="message">{{ getText('messageLabel') }}</label>
     <textarea #autoTextarea [(ngModel)]="contactData.message" id="message" name="message" required minlength="10"
       maxlength="1000" pattern="[\s\S]*\S[\s\S]*" #message="ngModel" (input)="autoResize(autoTextarea)"
       [placeholder]="getText('messagePlaceholder')"></textarea>
 
-    <div class="error" *ngIf="message.invalid && message.touched">
-      {{ getText('messageError') }}
+    <div class="error" [class.visible]="message.invalid && message.touched">
+      <ng-container *ngIf="message.touched && message.invalid; else noErrorMsg">
+        <div *ngIf="message.errors?.['minlength']">{{ getText('minLengthError') }}</div>
+        <div *ngIf="message.errors?.['pattern']">{{ getText('patternError') }}</div>
+        <div *ngIf="!message.errors?.['minlength'] && !message.errors?.['pattern']">{{ getText('messageError') }}</div>
+      </ng-container>
+      <ng-template #noErrorMsg>&nbsp;</ng-template>
     </div>
-    <div class="error" *ngIf="message.errors?.['minlength'] && message.touched">
-      {{ getText('minLengthError') }}
-    </div>
-    <div class="error" *ngIf="message.errors?.['pattern'] && message.touched">
-      {{ getText('patternError') }}
-    </div>
+
     <div class="char-count" *ngIf="message.value?.length">
       {{ message.value.length }}/1000 {{ getText('charCount') }}
       <span *ngIf="message.value.length == 1000" class="error">
@@ -60,8 +62,6 @@
   <button type="submit" class="the_red_button send_button" [disabled]="!contactForm.valid">
     {{ getText('sendButton') }}
   </button>
-
-  <button (click)="showConfirmedMessage()">test</button>
 
   <!-- Bestätigungsbox -->
   <div #confirmationBox class="message_confirmation dFlex_ac_jc d_none">

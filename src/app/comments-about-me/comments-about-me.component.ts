@@ -53,7 +53,8 @@ export class CommentsAboutMeComponent implements AfterViewInit {
         en: '“A valuable addition to any team – even in difficult situations, he keeps a clear head and provides thoughtful solutions.”',
         de: '„Eine wertvolle Bereicherung für jedes Team – auch in schwierigen Situationen behält er stets einen klaren Kopf und liefert durchdachte Lösungsansätze.“'
       },
-      // profileLink: 'link',
+      linkedIn: 'https://www.linkedin.com/in/marco-lenschau-271214317/?trk=public_post_feed-actor-name&originalSubdomain=de',
+      github: 'https://github.com/SnowCoder404',
       backgroundimage: '/assets/images/thoughts_background_1.webp'
     },
     {
@@ -63,7 +64,8 @@ export class CommentsAboutMeComponent implements AfterViewInit {
         en: '"Borna really enriched our group with his expertise and his friendly, easygoing manner – always helpful and fully engaged."',
         de: '"Borna hat unsere Gruppe mit seinem Fachwissen und seiner freundlichen, lockeren Art echt bereichert – immer hilfsbereit und voll dabei."'
       },
-      // profileLink: 'https://www.linkedin.com/in/peter-pfautsch-379bb62aa/',
+      linkedIn: 'https://www.linkedin.com/in/peter-pfautsch-379bb62aa/',
+      github: 'https://github.com/M1roel',
       backgroundimage: '/assets/images/thoughts_background_2.webp'
     },
     {
@@ -73,7 +75,8 @@ export class CommentsAboutMeComponent implements AfterViewInit {
         en: '"Borna works reliably and brings a pleasant calmness to the team. Working with him was always constructive and truly enjoyable."',
         de: '„Borna arbeitet zuverlässig und bringt eine angenehme Ruhe ins Team. Die Zusammenarbeit mit ihm war stets konstruktiv und hat wirklich Spaß gemacht.“'
       },
-      // profileLink: 'link',
+      linkedIn: '',
+      github: '',
       backgroundimage: '/assets/images/thoughts_background_1.webp'
     },
   ];

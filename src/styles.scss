@@ -8,11 +8,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  // overflow-x: hidden; // damit header keine scrollbar entstehen lässt
   width: 100%;
-
   font-family: 'Bricolage_Grotesque', sans-serif;
-
 }
 
 // Main Font
@@ -179,9 +176,6 @@ h3{
   transform-origin: left;
 }
 
-
-
-
 .waving_icon {
   transform: rotate(-180deg);
   transition: opacity 0.45s ease, transform 0.45s ease;
@@ -216,17 +210,9 @@ h3{
 }
 
 
-// .test_width{
-//   display: flex;
-//   width: 320px !important;
-//   background-color: rgba(127, 255, 212, 0.467);
-// }
-
-
-
 @media (max-width: 450px) {
   body {
-    width: 100vw;
+    width: 100%;
   }
   .wrapper_padding {
     padding: 0;
@@ -244,9 +230,3 @@ h3{
     font-size: 20px;
   }
 }
-
-
-// big monitor
-// @media(min-width: 1920px) {
-
-// }

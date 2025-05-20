@@ -151,6 +151,8 @@ h1 {
     display: block;
 }
 
+#get_in_touch_button {}
+
 #my_picture {
     height: 244px;
     width: calc(0.75 * 244px);
@@ -426,10 +428,6 @@ h1 {
         height: 100%;
     }
 
-    #central_div {
-        width: 400px;
-    }
-
     h1 {
         color: white;
         font-size: 100px;
@@ -443,5 +441,19 @@ h1 {
 
     .transformed {
         font-size: 56px;
+    }
+
+    .big_screen_div {
+        display: none;
+    }
+}
+
+@media (max-width: 340px) {
+    .normal {
+        font-size: 48px;
+    }
+
+    .transformed {
+        font-size: 48px;
     }
 }

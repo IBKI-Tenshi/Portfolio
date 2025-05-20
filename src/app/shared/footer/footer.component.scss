@@ -135,3 +135,10 @@ footer {
         border: transparent;
     }
 }
+
+@media (max-width: 340px) {
+    #footer_links {
+        align-items: center;
+        flex-direction: column;
+    }
+}
