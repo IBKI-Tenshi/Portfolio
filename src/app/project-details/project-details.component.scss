@@ -4,14 +4,15 @@
     flex-direction: column;
     background-color: black;
     background-image: url('/assets/images/project_info_background.webp');
-    background-size: cover;
+    // background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
 .project-details-content {
     padding: 20px;
     border-radius: 8px;
-    height: 100vh;
+    height: 100%;
     padding: 64px;
     padding-top: 0;
     padding-bottom: 64px;
@@ -143,6 +144,7 @@ p {
 @media(min-width: 1920px) {
     .project-details-screen {
         align-items: center;
+        height: 100vh;
     }
 
     #header {
@@ -161,6 +163,19 @@ p {
 
     .project-details-content {
         width: 1300px;
+    }
+}
+
+// tall monitor
+@media (min-height: 1050px) and (max-width: 1919px) {
+    .project-details-screen {
+        height: 100vh;
+    }
+
+    .info_div {
+        width: 50%;
+        padding-left: 40px;
+
     }
 }
 
@@ -236,8 +251,7 @@ p {
 @media (max-width: 850px) {
     .project-details-screen {
         background-image: url('/assets/images/project_info_background_mobile.webp');
-        background-size: auto 125%;
-        height: 100%;
+        // padding-bottom: 64px;
     }
 
     .header_mobile {

@@ -101,6 +101,8 @@ p {
 
   #about_me_component {
     justify-content: center;
+    height: auto;
+    padding: 64px;
   }
 
   #content_div {
@@ -114,7 +116,6 @@ p {
     padding-bottom: 24px;
   }
 }
-
 
 @media (max-width: 1140px) {
 
@@ -150,8 +151,6 @@ p {
     padding: 0 24px;
   }
 }
-
-@media (max-width: 860px) {}
 
 @media (max-width: 850px) {
   #content_div {

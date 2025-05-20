@@ -69,13 +69,13 @@
 // big monitor
 @media (min-width: 1920px) {
     #contact_me_component {
-        height: 100vh;
         align-items: center;
         justify-content: center;
 
         >#contact_me_div {
             width: 1400px;
-            margin-top: 128px;
+            // margin-top: 128px;
+            padding: 80px;
         }
     }
 

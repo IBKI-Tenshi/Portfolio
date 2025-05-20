@@ -1,24 +1,3 @@
-<!-- <div class="thought dFlex_ac" [ngClass]="{ 'hovered': hovered }" (mouseenter)="hovered = true"
-  (mouseleave)="hovered = false" [style.background-image]="'url(' + thought.backgroundimage + ')'">
-
-  <p class="comment">{{ comment }}</p>
-
-  <div class="colleague_info">
-    <div class="name_and_title">
-      <span>{{ thought.name }}</span>
-      <span>{{ thought.title }}</span>
-    </div>
-    <a href="{{ thought.linkedIn }}" target="_blank" rel="noopener noreferrer">
-      <img class="link_img" src="/assets/icons/linkedin-icon-black.svg" alt="">
-    </a>
-    <a href="{{ thought.github }}" target="_blank" rel="noopener noreferrer">
-      <img class="link_img" src="/assets/icons/square-github-black.svg" alt="">
-    </a>
-    <span>{{ thought.profileLink }}</span>
-  </div>
-
-</div> -->
-
 
 <div class="thought dFlex_ac" 
      [ngClass]="{ 'hovered': hovered }" 
@@ -50,7 +29,6 @@
       <img class="link_img" src="/assets/icons/square-github-black.svg" alt="GitHub">
     </a>
 
-    <!-- Falls du auch den Profil-Link optional machen willst -->
     <span *ngIf="thought.profileLink">{{ thought.profileLink }}</span>
   </div>
 </div>

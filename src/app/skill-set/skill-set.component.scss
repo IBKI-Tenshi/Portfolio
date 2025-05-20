@@ -185,6 +185,11 @@
 // big monitor
 @media(min-width: 1920px) {
 
+    #skill_set_component {
+        height: auto;
+        padding-bottom: 120px;
+    }
+
     #title_and_description {
         width: 1400px;
         flex-direction: row;
