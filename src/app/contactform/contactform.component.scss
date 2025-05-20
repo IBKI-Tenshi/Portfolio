@@ -1,4 +1,3 @@
-
 #form_div {
     padding-top: 96px;
 }
@@ -116,16 +115,17 @@ textarea::placeholder {
         color: rgb(247, 197, 24);
     }
 }
+
 // checkbox end
 
 .send_button {
     width: 140px;
 }
 
-#message_confirmation {
+.message_confirmation {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 0;
     transform: translate(-50%, -50%);
     width: 400px;
     height: 240px;
@@ -139,4 +139,12 @@ textarea::placeholder {
     border-color: white;
     border-width: 3px;
     border-style: solid;
+}
+
+@media (max-width: 650px) {
+    .message_confirmation {
+        top: 80%;
+        left: 50%;
+        width: 90%;
+    }
 }

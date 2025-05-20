@@ -325,13 +325,13 @@ h1 {
 
 @media (max-width: 700px) {
 
-   #hero_component {
-    height: 100%;
+    #hero_component {
+        height: 100%;
     }
 
     #central_div {
-padding-top: 0px;
-padding-bottom: 80px;
+        padding-top: 0px;
+        padding-bottom: 80px;
     }
 
     #my_picture {
@@ -342,13 +342,29 @@ padding-bottom: 80px;
     }
 }
 
+@media (max-width: 670px) {
+
+    #h1_second {
+        margin-bottom: 16px;
+    }
+
+    #my_picture {
+        margin-top: 40px;
+        bottom: 10%;
+    }
+}
+
 // Mobile
-@media (max-width: 450px) {
+@media (max-width: 470px) {
 
     #central_div {
         height: 100%;
         padding: 8px 24px 0 24px;
         gap: 24px;
+
+        >#hello_div {
+            margin-left: 24px;
+        }
     }
 
     .normal {
@@ -405,9 +421,13 @@ padding-bottom: 80px;
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     #hero_component {
         height: 100%;
+    }
+
+    #central_div {
+        width: 400px;
     }
 
     h1 {

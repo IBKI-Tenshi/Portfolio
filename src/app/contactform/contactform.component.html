@@ -61,8 +61,10 @@
     {{ getText('sendButton') }}
   </button>
 
+  <button (click)="showConfirmedMessage()">test</button>
+
   <!-- Bestätigungsbox -->
-  <div #confirmationBox class="confirmation_box d_none">
+  <div #confirmationBox class="message_confirmation dFlex_ac_jc d_none">
     {{ getText('confirmationMessage') || 'Nachricht erfolgreich gesendet!' }}
   </div>
 

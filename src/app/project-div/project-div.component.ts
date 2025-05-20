@@ -20,4 +20,16 @@ export class ProjectDivComponent {
       this.currentLang = lang as 'en' | 'de';
     });
   }
+
+    getText(key: string): string {
+    const translations:any = {
+      en: {
+        project_button: 'Project Details'
+      },
+      de: {
+        project_button: 'Projekt Details'
+      }
+    };
+    return translations[this.currentLang]?.[key] || key;
+  }
 }

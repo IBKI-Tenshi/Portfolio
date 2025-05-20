@@ -64,7 +64,7 @@
     }
 }
 
-//________________________________________________
+/* ------------------ MEDIA QUERIES ------------------ */
 
 // big monitor
 @media (min-width: 1920px) {
@@ -84,7 +84,7 @@
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 650px) {
     #contact_me_component {
         padding-top: 100px;
         padding: 24px;
@@ -115,20 +115,66 @@
         position: static;
         width: 100%;
 
-        >a{
-        >img {
-            position: absolute;
-            right: 5%;
-            top: 10%;
-            width: 100px;
-            height: 100px;
-            transform: rotate(+10deg);
-            align-self: flex-end;
-            background-color: white;
+        >a {
+            >img {
+                position: absolute;
+                right: 5%;
+                top: 10%;
+                width: 100px;
+                height: 100px;
+                transform: rotate(+10deg);
+                align-self: flex-end;
+                background-color: white;
+            }
         }
-    }
-    }
+    } 
 }
+
+// @media (max-width: 450px) {
+//     #contact_me_component {
+//         padding-top: 100px;
+//         padding: 24px;
+//         background-size: cover;
+
+//         >#contact_me_div {
+//             padding-top: 200px;
+//             flex-direction: column;
+//         }
+//     }
+
+//     #text_div {
+//         width: 100%;
+
+//         >img {
+//             width: 153px;
+//             height: 24px;
+//             clip-path: inset(0 0 0 0);
+//             position: absolute;
+//             left: 10%;
+//             bottom: 0;
+
+//         }
+//     }
+
+//     #input_infos {
+//         padding-top: 16px;
+//         position: static;
+//         width: 100%;
+
+//         >a {
+//             >img {
+//                 position: absolute;
+//                 right: 5%;
+//                 top: 10%;
+//                 width: 100px;
+//                 height: 100px;
+//                 transform: rotate(+10deg);
+//                 align-self: flex-end;
+//                 background-color: white;
+//             }
+//         }
+//     }
+// }
 
 @media (max-width: 380px) {
     #text_div {
@@ -137,4 +183,3 @@
         }
     }
 }
-

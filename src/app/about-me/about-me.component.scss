@@ -8,11 +8,12 @@
   flex-direction: column;
 
   >div {
-    width: 560px;
+    width: 580px;
     height: 152px;
     color: white;
     background-position: center;
     background-size: contain;
+    // background-size: cover;
     background-repeat: no-repeat;
 
     >img {
@@ -125,8 +126,19 @@ p {
     width: 50%;
 
     >div {
-      width: 480px;
+      width: 500px;
       height: 136px;
+
+      >img {
+        width: 32px;
+        height: 32px;
+      }
+
+      >span {
+        font-size: 20px;
+        font-weight: 400;
+        padding-left: 16px;
+      }
     }
   }
 
@@ -139,7 +151,9 @@ p {
   }
 }
 
-@media (max-width: 820px) {
+@media (max-width: 860px) {}
+
+@media (max-width: 850px) {
   #content_div {
     padding: 24px;
     flex-direction: column-reverse;
@@ -203,12 +217,24 @@ p {
   }
 }
 
-@media (max-width: 670px) {
+@media (max-width: 675px) {
   #wrapper_left {
 
     >div {
       width: 480px;
       height: 140px;
+
+      
+      >img {
+        width: 32px;
+        height: 32px;
+      }
+
+      >span {
+        font-size: 20px;
+        font-weight: 400;
+        padding-left: 16px;
+      }
     }
   }
 }
@@ -241,7 +267,7 @@ p {
 }
 
 // Mobile
-@media (max-width: 450px) {
+@media (max-width: 460px) {
 
   .wrapper_padding {
     padding: 0;
@@ -260,7 +286,7 @@ p {
 
   #wrapper_left {
     >div {
-      width: 300px;
+      width: 320px;
       height: 120px;
       color: white;
 
@@ -286,7 +312,7 @@ p {
 
 
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
 
   #about_me_component {
     width: 320px;

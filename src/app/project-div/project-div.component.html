@@ -1,7 +1,7 @@
 <div id="project_div" class="dFlex">
   <div class="img_div">
     <img class="projekt_img" [src]="project.image" alt="Projektbild">
-    <button class="the_red_button">zum projekt</button>
+    <button class="the_red_button">{{ getText('project_button') }}</button>
   </div>
 
   <img *ngIf="project.highlighted" class="featured_sticker" src="/assets/images/featured_project_sticker.png" alt="Featured project">

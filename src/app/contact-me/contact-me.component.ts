@@ -40,7 +40,7 @@ export class ContactMeComponent implements AfterViewInit {
     },
     de: {
       overline: 'KONTAKTIERE MICH' as string,
-      headline: 'Bereit für eine Zusammenarbeit?' as string,
+      headline: 'Bereit um zusammen zu arbeiten?' as string,
       paragraph: `Ich freue mich darauf, von dir zu hören und gemeinsam an spannenden Projekten zu arbeiten! 
       Wenn du auf der Suche nach einem engagierten Entwickler bist, der mit Begeisterung an neuen Herausforderungen arbeitet, 
       dann zögere nicht, mich zu kontaktieren.

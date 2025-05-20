@@ -7,19 +7,19 @@
     <button id="burger_btn" (click)="toggleMenu()">☰</button>
 
     <nav id="nav_container" [class.open]="isMenuOpen">
-        <a class="nav-link dFlex" href="#about_me_component" (click)="emitCloseOverlay()">
+        <a class="nav-link dFlex" href="#about_me_component" (click)="emitCloseOverlay_navbar()">
             {{ getNavLink(1) }}
             <img class="hover_top_to_bottom" src="/assets/images/header_img/about_me_frame.png" alt="">
         </a>
-        <a class="nav-link dFlex" href="#skill_set_component" (click)="emitCloseOverlay()">
+        <a class="nav-link dFlex" href="#skill_set_component" (click)="emitCloseOverlay_navbar()">
             {{ getNavLink(2) }}
             <img class="hover_left_to_right" src="/assets/images/header_img/skills_frame.png" alt="">
         </a>
-        <a class="nav-link dFlex" href="#projects_component" (click)="emitCloseOverlay()">
+        <a class="nav-link dFlex" href="#projects_component" (click)="emitCloseOverlay_navbar()">
             {{ getNavLink(3) }}
             <img class="hover_left_to_right" src="/assets/images/header_img/projects_frame.png" alt="">
         </a>
-        <a class="nav-link dFlex" href="#contact_me_component" (click)="emitCloseOverlay()">
+        <a class="nav-link dFlex" href="#contact_me_component" (click)="emitCloseOverlay_navbar()">
             {{ getNavLink(4) }}
             <img class="hover_left_to_right" src="/assets/images/header_img/contact_frame.png" alt="">
         </a>
