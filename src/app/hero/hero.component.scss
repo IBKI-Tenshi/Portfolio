@@ -230,7 +230,7 @@ h1 {
 @media (max-width: 930px) {
     #central_div {
         width: 80%;
-        padding: 32px 32px 0 32px;
+        padding: 16px 32px 0 32px;
     }
 
     #my_picture {
@@ -295,10 +295,6 @@ h1 {
 
 @media (max-width: 700px) {
 
-    #hero_component {
-        height: 100%;
-    }
-
     #central_div {
         padding-top: 0px;
         padding-bottom: 80px;
@@ -308,9 +304,26 @@ h1 {
         position: relative;
         display: flex;
         align-self: center;
-        bottom: 10%;
+        margin-top: -64px;
+        margin-left: -64px;
+    }
+
+    .social_icons {
+        display: none;
     }
 }
+
+@media (max-height: 700px) and (max-width: 580px) {
+
+    #my_picture {
+        // margin-top: -64px;
+        margin-left: -224px;
+    }
+
+
+
+}
+
 
 @media (max-width: 670px) {
 
@@ -319,7 +332,7 @@ h1 {
     }
 
     #my_picture {
-        margin-top: 40px;
+        // margin-top: 40px;
         bottom: 10%;
     }
 }
@@ -330,7 +343,7 @@ h1 {
     #central_div {
         height: 100%;
         padding: 8px 24px 0 24px;
-        gap: 24px;
+        // gap: 24px;
 
         >#hello_div {
             margin-left: 24px;
@@ -346,24 +359,26 @@ h1 {
     }
 
     #my_picture {
-        position: relative;
-        display: flex;
         align-self: auto;
-        height: 260px;
-        width: calc(0.75 * 260px);
+        height: 200px;
+        width: calc(0.75 * 200px);
         left: 50%;
-        margin-bottom: 72px;
+        bottom: 5%;
         transform: translateX(-50%) rotate(7deg);
 
+        margin-top: 0;
+        margin-left: 0;
+
         >img {
-            height: 200px;
-            width: calc(0.75 * 200px);
+            height: 160px;
+            width: calc(0.75 * 160px);
             padding: 8px;
             filter: grayscale(0%);
         }
 
         >span {
             padding: 0px;
+            font-size: 18px;
         }
 
         &:hover {
@@ -372,16 +387,9 @@ h1 {
             }
         }
     }
-
-    .social_icons {
-        display: none;
-    }
 }
 
 @media (max-width: 450px) {
-    #hero_component {
-        height: 100%;
-    }
 
     h1 {
         color: white;
@@ -399,12 +407,58 @@ h1 {
     }
 }
 
-@media (max-width: 340px) {
+@media (max-width: 400px) {
+
+    #central_div {
+        gap: 12px;
+        padding-top: 0;
+
+        >#hello_div {
+            width: 100px;
+
+            &.hovered {
+                width: 150px;
+            }
+
+            >img {
+                height: 32px;
+                width: 32px;
+            }
+        }
+    }
+
     .normal {
         font-size: 48px;
     }
 
     .transformed {
         font-size: 48px;
+    }
+
+    #h1_second {
+        margin-bottom: 0;
+    }
+
+    #hello_button {
+        font-size: 12px;
+        padding: 8px 8px;
+        width: 100px;
+
+        >span {
+            font-size: 12px;
+        }
+
+        &:hover {
+            width: 150px;
+        }
+    }
+
+    #hello_button.hovered {
+        width: 150px !important;
+    }
+
+    #get_in_touch_button {
+        font-size: 12px;
+        padding: 8px 12px;
     }
 }
