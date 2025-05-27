@@ -10,12 +10,10 @@
 }
 
 .project-details-content {
-    padding: 20px;
     border-radius: 8px;
     height: 100%;
     padding: 64px;
     padding-top: 0;
-    padding-bottom: 64px;
     position: relative;
 }
 
@@ -141,7 +139,7 @@ p {
 //_________________________________________
 
 // big monitor
-@media(min-width: 1920px) {
+@media(min-width: 1700px) {
     .project-details-screen {
         align-items: center;
         height: 100vh;
@@ -166,10 +164,19 @@ p {
     }
 }
 
-// tall monitor
-@media (min-height: 1050px) and (max-width: 1919px) {
+@media (min-height: 930px) and (max-width: 1919px) and (min-width: 900px) {
     .project-details-screen {
         height: 100vh;
+    }
+}
+
+@media (min-height: 900px) and (max-width: 1919px) and (min-width: 851px) {
+    // .project-details-screen {
+    //     height: 100vh;
+    // }
+
+    .project-details-content {
+        padding: 24px;
     }
 
     .info_div {
@@ -251,7 +258,7 @@ p {
 @media (max-width: 850px) {
     .project-details-screen {
         background-image: url('/assets/images/project_info_background_mobile.webp');
-        // padding-bottom: 64px;
+        background-size: 100% 125%;
     }
 
     .header_mobile {
